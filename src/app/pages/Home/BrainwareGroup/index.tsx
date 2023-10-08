@@ -62,5 +62,6 @@ export const BrainwareGroup = () => (
         {skillIcon[Skill.SQLServer]}
       </Stack>
     }
+    withStickyHeader
   />
 );

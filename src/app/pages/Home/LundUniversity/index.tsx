@@ -16,6 +16,7 @@ export const LundUniversity = () => (
         {skillIcon.Java}
       </Stack>
     }
+    withStickyHeader
   >
     <MasterThesis />
   </ExperienceSection>

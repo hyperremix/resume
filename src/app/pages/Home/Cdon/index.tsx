@@ -53,5 +53,6 @@ export const Cdon = () => (
         {skillIcon[Skill.SQLServer]}
       </Stack>
     }
+    withStickyHeader
   />
 );

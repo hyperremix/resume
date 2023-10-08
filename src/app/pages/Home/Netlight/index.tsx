@@ -8,7 +8,13 @@ import { IoTSuite } from './IoTSuite';
 import { Mro } from './Mro';
 
 export const Netlight = () => (
-  <ExperienceSection title="Netlight" timePeriod="04.2016 - Present" icon={<NetlightIcon />}>
+  <ExperienceSection
+    title="Netlight"
+    timePeriod="04.2016 - Present"
+    icon={<NetlightIcon />}
+    role="Consultant | Manager"
+    withStickyHeader
+  >
     <IoTSuite />
     <AgTechECommerce />
     <Gambling />
