@@ -10,23 +10,14 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import dayjs from 'dayjs';
 import * as React from 'react';
-import { Children, ReactNode } from 'react';
+import { TExperience } from 'state/experiences/TExperience';
+import { skillIcon } from 'types/skillIcon';
 import { TimelineWrapper } from '../TimelineWrapper';
 
 type Props = {
-  title: string;
-  titleVariant?: 'h5' | 'h6';
-  icon?: ReactNode;
-  role?: string;
-  location?: string;
-  timePeriod: string;
-  companyDescription?: ReactNode;
-  projectDescription?: ReactNode;
-  roleDescription?: ReactNode;
-  skills?: ReactNode;
-  withStickyHeader?: boolean;
-  children?: ReactNode;
+  experience: TExperience;
 };
 
 export const ExperienceSection = (props: Props) => {
@@ -35,30 +26,31 @@ export const ExperienceSection = (props: Props) => {
 };
 
 export const SmallLayout = ({
-  icon,
-  title,
-  titleVariant = 'h5',
-  role,
-  location,
-  timePeriod,
-  companyDescription,
-  projectDescription,
-  roleDescription,
-  skills,
-  withStickyHeader = false,
-  children,
+  experience: {
+    title,
+    from,
+    to,
+    icon,
+    role,
+    location,
+    companyDescription,
+    projectDescription,
+    roleDescription,
+    skills,
+    subExperiences,
+  },
 }: Props) => (
   <Stack>
-    {withStickyHeader ? (
+    {!!subExperiences ? (
       <ListSubheader sx={{ pl: 0, color: 'inherit' }}>
         <Stack direction="row" alignItems="center" gap={1}>
           {icon ? icon : <CircleOutlinedIcon />}
-          <Typography variant={titleVariant}>{title}</Typography>
+          <Typography variant="h6">{title}</Typography>
         </Stack>
         {role && <Typography sx={{ mb: -2 }}>{role}</Typography>}
         {location && <Typography>{location}</Typography>}
         <Typography variant="caption" color="secondary">
-          {timePeriod}
+          {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
         </Typography>
         <Divider />
       </ListSubheader>
@@ -66,12 +58,12 @@ export const SmallLayout = ({
       <>
         <Stack direction="row" alignItems="center" gap={1}>
           {icon ? icon : <CircleOutlinedIcon />}
-          <Typography variant={titleVariant}>{title}</Typography>
+          <Typography variant="h6">{title}</Typography>
         </Stack>
         {role && <Typography>{role}</Typography>}
         {location && <Typography>{location}</Typography>}
         <Typography variant="caption" color="secondary">
-          {timePeriod}
+          {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
         </Typography>
       </>
     )}
@@ -94,17 +86,21 @@ export const SmallLayout = ({
           {skills && (
             <Stack>
               <Typography variant="h6">Skills</Typography>
-              {skills}
+              {skills && (
+                <Stack direction="row" gap={1} flexWrap="wrap">
+                  {skills.map((skill) => skillIcon[skill])}
+                </Stack>
+              )}
             </Stack>
           )}
         </Stack>
       )}
     </Stack>
-    {children && (
+    {subExperiences && (
       <List>
-        {Children.map(children, (child, index) => (
-          <ListItem key={index} sx={{ pl: 0 }}>
-            {child}
+        {subExperiences.map((subExperience) => (
+          <ListItem key={subExperience.title} sx={{ pl: 0 }}>
+            <ExperienceSection experience={subExperience} />
           </ListItem>
         ))}
       </List>
@@ -113,27 +109,29 @@ export const SmallLayout = ({
 );
 
 export const LargeLayout = ({
-  icon,
-  title,
-  titleVariant = 'h5',
-  role,
-  location,
-  timePeriod,
-  companyDescription,
-  projectDescription,
-  roleDescription,
-  skills,
-  children,
+  experience: {
+    title,
+    from,
+    to,
+    icon,
+    role,
+    location,
+    companyDescription,
+    projectDescription,
+    roleDescription,
+    skills,
+    subExperiences,
+  },
 }: Props) => (
   <Stack>
     <Stack direction="row" alignItems="center" gap={2}>
       {icon ? icon : <CircleOutlinedIcon />}
-      <Typography variant={titleVariant}>{title}</Typography>
+      <Typography variant="h6">{title}</Typography>
     </Stack>
     {role && <Typography>{role}</Typography>}
     {location && <Typography>{location}</Typography>}
     <Typography variant="caption" color="secondary">
-      {timePeriod}
+      {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
     </Typography>
     <Stack>
       {(companyDescription || projectDescription || roleDescription || skills) && (
@@ -154,17 +152,21 @@ export const LargeLayout = ({
           {skills && (
             <Stack>
               <Typography variant="h6">Skills</Typography>
-              {skills}
+              {skills && (
+                <Stack direction="row" gap={1} flexWrap="wrap">
+                  {skills.map((skill) => skillIcon[skill])}
+                </Stack>
+              )}
             </Stack>
           )}
         </Stack>
       )}
     </Stack>
-    {children && (
+    {subExperiences && (
       <Stack pl={4} gap={2} py={2} sx={{}}>
-        {Children.map(children, (child) => (
-          <TimelineWrapper>
-            {Children.count(children) > 1 && (
+        {subExperiences.map((experience) => (
+          <TimelineWrapper key={experience.title}>
+            {subExperiences.length > 1 && (
               <Box
                 sx={{
                   position: 'absolute',
@@ -179,7 +181,7 @@ export const LargeLayout = ({
                 }}
               />
             )}
-            {child}
+            <ExperienceSection experience={experience} />
           </TimelineWrapper>
         ))}
       </Stack>

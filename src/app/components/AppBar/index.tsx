@@ -26,7 +26,7 @@ export const AppBar = ({ maxWidth }: Props) => {
 
   return (
     <MuiAppBar position="static" sx={{ boxShadow: 0 }}>
-      <Toolbar>
+      <Toolbar sx={{ p: 0 }}>
         <Container maxWidth={maxWidth}>
           {isExtraSmallScreen ? (
             <ExtraSmallLayout />
@@ -68,7 +68,7 @@ const Pitch = () => (
 const ProfilePicture = () => (
   <Avatar
     alt="Fredrik Pettersson"
-    src="https://s.gravatar.com/avatar/e358a919f2a68d4dc95e586d76feaac6f3defb7104dabf9c303c76e077a91065?s=120"
+    src="https://s.gravatar.com/avatar/e358a919f2a68d4dc95e586d76feaac6f3defb7104dabf9c303c76e077a91065?s=240"
     sx={{ width: 120, height: 120 }}
   />
 );
@@ -90,7 +90,7 @@ const SocialMediaLinks = () => (
 );
 
 const ExtraSmallLayout = () => (
-  <Stack alignItems="center" gap={2} p={2}>
+  <Stack alignItems="center" gap={1} py={2}>
     <Stack alignItems="center">
       <Name />
       <Role />

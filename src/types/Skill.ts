@@ -1,5 +1,6 @@
 export enum Skill {
   // Languages
+  JavaScript = 'JavaScript',
   TypeScript = 'TypeScript',
   Java = 'Java',
   Kotlin = 'Kotlin',
@@ -12,23 +13,26 @@ export enum Skill {
   // Frameworks
   Vue = 'Vue',
   React = 'React',
+  Angular = 'Angular',
+  AngularJS = 'AngularJS',
   ReactNative = 'React Native',
   NestJS = 'NestJS',
   ServerlessFramework = 'Serverless Framework',
   SpringBoot = 'Spring Boot',
-  Angular = 'Angular',
   Helm = 'Helm',
   VertX = 'Vert.x',
-  DotNetCore = '.NET Core',
+  DotNetFramework = '.NET Framework',
 
   // Databases
   MongoDB = 'MongoDB',
   PostgreSQL = 'PostgreSQL',
   AWSDynamoDB = 'AWS DynamoDB',
   SQLServer = 'SQL Server',
+  Kafka = 'Kafka',
 
   // CI/CD
   GitHubActions = 'GitHub Actions',
+  GitLabCI = 'GitLabCI',
   Jenkins = 'Jenkins',
   TeamCity = 'TeamCity',
   Kubernetes = 'Kubernetes',
@@ -57,7 +61,6 @@ export enum Skill {
   // Tools
   Expo = 'Expo',
   Docker = 'Docker',
-  GitHub = 'GitHub',
   Auth0 = 'Auth0',
   Keycloak = 'Keycloak',
 

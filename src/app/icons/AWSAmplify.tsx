@@ -6,7 +6,7 @@ export const AWSAmplify = () => (
     <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
       <g>
         <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-          <rect fill="white" stroke-width="0" y="0" x="0" height="100%" width="100%" />
+          <rect fill="white" strokeWidth="0" y="0" x="0" height="100%" width="100%" />
         </g>
       </g>
       <g>
@@ -14,7 +14,7 @@ export const AWSAmplify = () => (
           <g
             stroke="null"
             transform="matrix(0.24427158490029297,0,0,0.262266745435647,0.3869015167067027,7.026955368797123) "
-            fill-rule="evenodd"
+            fillRule="evenodd"
             fill="none"
             id="svg_7"
           >

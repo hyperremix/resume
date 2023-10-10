@@ -7,7 +7,7 @@ type Props = {
 
 export const ResumeTitle = ({ title }: Props) => (
   <>
-    <Typography variant="h3">{title}</Typography>
+    <Typography variant="h4">{title}</Typography>
     <Stack pb={1}>
       <Divider />
     </Stack>
