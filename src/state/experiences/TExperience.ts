@@ -10,7 +10,7 @@ export type TExperience = {
   role?: string;
   companyDescription?: string;
   projectDescription?: string;
-  roleDescription?: string;
+  roleDescription?: ReactNode;
   skills?: Skill[];
   subExperiences?: TExperience[];
 };

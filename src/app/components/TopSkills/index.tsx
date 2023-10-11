@@ -8,7 +8,7 @@ import { skillIcon } from 'types/skillIcon';
 export const TopSkills = () => {
   const [top10Skills, setTop10Skills] = useState<{ skill: Skill; months: number }[]>([]);
 
-  useEffect(() => setTop10Skills(getSortedSkills().slice(0, 13)), []);
+  useEffect(() => setTop10Skills(getSortedSkills().slice(0, 14)), []);
 
   return (
     <Stack direction="row" gap={1} flexWrap="wrap">

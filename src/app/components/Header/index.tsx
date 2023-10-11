@@ -1,11 +1,8 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PlaceIcon from '@mui/icons-material/Place';
 import {
+  AppBar,
   Avatar,
   Breakpoint,
   Container,
-  AppBar as MuiAppBar,
   Stack,
   Theme,
   Toolbar,
@@ -14,18 +11,17 @@ import {
   useTheme,
 } from '@mui/material';
 import React from 'react';
-import { SocialMediaLink } from '../SocialMediaLink';
 
 type Props = {
   maxWidth?: Breakpoint;
 };
 
-export const AppBar = ({ maxWidth }: Props) => {
+export const Header = ({ maxWidth }: Props) => {
   const isExtraSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('sm'));
   const isSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
 
   return (
-    <MuiAppBar position="static" sx={{ boxShadow: 0 }}>
+    <AppBar position="static" sx={{ boxShadow: 0 }}>
       <Toolbar sx={{ p: 0 }}>
         <Container maxWidth={maxWidth}>
           {isExtraSmallScreen ? (
@@ -37,7 +33,7 @@ export const AppBar = ({ maxWidth }: Props) => {
           )}
         </Container>
       </Toolbar>
-    </MuiAppBar>
+    </AppBar>
   );
 };
 
@@ -73,22 +69,6 @@ const ProfilePicture = () => (
   />
 );
 
-const SocialMediaLinks = () => (
-  <Stack direction="row" gap={1.5} flexWrap="wrap" justifyContent="center">
-    <SocialMediaLink icon={<PlaceIcon />} title="Hamburg, Germany" />
-    <SocialMediaLink
-      icon={<GitHubIcon />}
-      href="https://github.com/hyperremix"
-      title="github.com/hyperremix"
-    />
-    <SocialMediaLink
-      icon={<LinkedInIcon />}
-      href="https://www.linkedin.com/in/fredpe/"
-      title="linkedin.com/in/fredpe"
-    />
-  </Stack>
-);
-
 const ExtraSmallLayout = () => (
   <Stack alignItems="center" gap={1} py={2}>
     <Stack alignItems="center">
@@ -97,7 +77,6 @@ const ExtraSmallLayout = () => (
     </Stack>
     <ProfilePicture />
     <Pitch />
-    <SocialMediaLinks />
   </Stack>
 );
 
@@ -118,9 +97,6 @@ const SmallLayout = () => (
       <ProfilePicture />
     </Stack>
     <Pitch />
-    <Stack alignItems="center" py={2}>
-      <SocialMediaLinks />
-    </Stack>
   </Stack>
 );
 
@@ -133,8 +109,6 @@ const LargeLayout = () => (
         <Pitch />
       </Stack>
       <ProfilePicture />
-      <Stack direction="row" gap={1}></Stack>
     </Stack>
-    <SocialMediaLinks />
   </Stack>
 );

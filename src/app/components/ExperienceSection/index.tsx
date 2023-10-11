@@ -10,7 +10,7 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material';
-import dayjs from 'dayjs';
+import { getDateInFormat, getRelativeTime } from 'i18n/datetime';
 import * as React from 'react';
 import { TExperience } from 'state/experiences/TExperience';
 import { skillIcon } from 'types/skillIcon';
@@ -49,9 +49,7 @@ export const SmallLayout = ({
         </Stack>
         {role && <Typography sx={{ mb: -2 }}>{role}</Typography>}
         {location && <Typography>{location}</Typography>}
-        <Typography variant="caption" color="secondary">
-          {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
-        </Typography>
+        <TimePeriod from={from} to={to} />
         <Divider />
       </ListSubheader>
     ) : (
@@ -62,19 +60,17 @@ export const SmallLayout = ({
         </Stack>
         {role && <Typography>{role}</Typography>}
         {location && <Typography>{location}</Typography>}
-        <Typography variant="caption" color="secondary">
-          {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
-        </Typography>
+        <TimePeriod from={from} to={to} />
       </>
     )}
     <Stack>
       {(companyDescription || projectDescription || roleDescription || skills) && (
         <Stack pt={1} gap={1}>
-          {companyDescription}
+          <Typography>{companyDescription}</Typography>
           {projectDescription && (
             <Stack>
               <Typography variant="h6">Project</Typography>
-              {projectDescription}
+              <Typography>{projectDescription}</Typography>
             </Stack>
           )}
           {roleDescription && (
@@ -130,9 +126,7 @@ export const LargeLayout = ({
     </Stack>
     {role && <Typography>{role}</Typography>}
     {location && <Typography>{location}</Typography>}
-    <Typography variant="caption" color="secondary">
-      {`${dayjs(from).format('MM/YYYY')} - ${dayjs(to).format('MM/YYYY')}`}
-    </Typography>
+    <TimePeriod from={from} to={to} />
     <Stack>
       {(companyDescription || projectDescription || roleDescription || skills) && (
         <Stack pt={1} gap={1}>
@@ -187,4 +181,13 @@ export const LargeLayout = ({
       </Stack>
     )}
   </Stack>
+);
+
+const TimePeriod = ({ from, to }: { from: Date; to?: Date }) => (
+  <Typography variant="caption" color="secondary">
+    {`${getDateInFormat(from, 'MM/YYYY')} - ${getDateInFormat(to, 'MM/YYYY')} | ${getRelativeTime(
+      from,
+      to,
+    )}`}
+  </Typography>
 );

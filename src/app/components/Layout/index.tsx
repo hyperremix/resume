@@ -1,6 +1,7 @@
 import { Box, Breakpoint, Container, Divider } from '@mui/material';
 import React, { ReactNode } from 'react';
-import { AppBar } from '../AppBar';
+import { Footer } from '../Footer';
+import { Header } from '../Header';
 
 type Props = {
   tabs?: ReactNode;
@@ -10,7 +11,7 @@ type Props = {
 
 export const Layout = ({ tabs, maxWidth, children }: Props) => (
   <>
-    <AppBar />
+    <Header />
     {tabs && (
       <>
         <Divider />
@@ -20,5 +21,6 @@ export const Layout = ({ tabs, maxWidth, children }: Props) => (
     <Container maxWidth={maxWidth}>
       <Box my={3}>{children}</Box>
     </Container>
+    <Footer />
   </>
 );
