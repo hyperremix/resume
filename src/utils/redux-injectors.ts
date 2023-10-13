@@ -3,7 +3,10 @@ import { InjectReducerParams, InjectSagaParams, RootStateKeyType } from './types
 
 /* Wrap redux-injectors with stricter types */
 
-export const useInjectReducer = <Key extends RootStateKeyType>(params: InjectReducerParams<Key>) =>
-  useReducer(params);
+export function useInjectReducer<Key extends RootStateKeyType>(params: InjectReducerParams<Key>) {
+  return useReducer(params);
+}
 
-export const useInjectSaga = (params: InjectSagaParams) => useSaga(params);
+export function useInjectSaga(params: InjectSagaParams) {
+  return useSaga(params);
+}

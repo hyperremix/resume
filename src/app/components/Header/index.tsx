@@ -1,8 +1,11 @@
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {
   AppBar,
   Avatar,
   Breakpoint,
   Container,
+  IconButton,
   Stack,
   Theme,
   Toolbar,
@@ -10,15 +13,20 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
+import { ColorModeContext } from 'theme/ColorModeContext';
 
 type Props = {
   maxWidth?: Breakpoint;
 };
 
 export const Header = ({ maxWidth }: Props) => {
+  const theme = useTheme();
+
   const isExtraSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('sm'));
   const isSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
+
+  const colorMode = useContext(ColorModeContext);
 
   return (
     <AppBar position="static" sx={{ boxShadow: 0 }}>
@@ -32,6 +40,12 @@ export const Header = ({ maxWidth }: Props) => {
             <LargeLayout />
           )}
         </Container>
+        <IconButton
+          sx={{ position: 'absolute', top: 16, right: 16 }}
+          onClick={colorMode.toggleColorMode}
+        >
+          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+        </IconButton>
       </Toolbar>
     </AppBar>
   );
@@ -43,15 +57,11 @@ const Name = () => (
   </Typography>
 );
 
-const Role = () => {
-  const theme = useTheme();
-
-  return (
-    <Typography sx={{ color: theme.palette.primary.main }} variant="h6" noWrap gutterBottom>
-      Software Generalist
-    </Typography>
-  );
-};
+const Role = () => (
+  <Typography variant="h6" noWrap gutterBottom>
+    Software Generalist
+  </Typography>
+);
 
 const Pitch = () => (
   <Typography gutterBottom>

@@ -9,6 +9,7 @@ import {
   Theme,
   Typography,
   useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import { getDateInFormat, getRelativeTime } from 'i18n/datetime';
 import * as React from 'react';
@@ -118,70 +119,74 @@ export const LargeLayout = ({
     skills,
     subExperiences,
   },
-}: Props) => (
-  <Stack>
-    <Stack direction="row" alignItems="center" gap={2}>
-      {icon ? icon : <CircleOutlinedIcon />}
-      <Typography variant="h6">{title}</Typography>
-    </Stack>
-    {role && <Typography>{role}</Typography>}
-    {location && <Typography>{location}</Typography>}
-    <TimePeriod from={from} to={to} />
+}: Props) => {
+  const theme = useTheme();
+
+  return (
     <Stack>
-      {(companyDescription || projectDescription || roleDescription || skills) && (
-        <Stack pt={1} gap={1}>
-          {companyDescription}
-          {projectDescription && (
-            <Stack>
-              <Typography variant="h6">Project</Typography>
-              {projectDescription}
-            </Stack>
-          )}
-          {roleDescription && (
-            <Stack>
-              <Typography variant="h6">Role</Typography>
-              {roleDescription}
-            </Stack>
-          )}
-          {skills && (
-            <Stack>
-              <Typography variant="h6">Skills</Typography>
-              {skills && (
-                <Stack direction="row" gap={1} flexWrap="wrap">
-                  {skills.map((skill) => skillIcon[skill])}
-                </Stack>
+      <Stack direction="row" alignItems="center" gap={2}>
+        {icon ? icon : <CircleOutlinedIcon />}
+        <Typography variant="h6">{title}</Typography>
+      </Stack>
+      {role && <Typography>{role}</Typography>}
+      {location && <Typography>{location}</Typography>}
+      <TimePeriod from={from} to={to} />
+      <Stack>
+        {(companyDescription || projectDescription || roleDescription || skills) && (
+          <Stack pt={1} gap={1}>
+            {companyDescription}
+            {projectDescription && (
+              <Stack>
+                <Typography variant="h6">Project</Typography>
+                {projectDescription}
+              </Stack>
+            )}
+            {roleDescription && (
+              <Stack>
+                <Typography variant="h6">Role</Typography>
+                {roleDescription}
+              </Stack>
+            )}
+            {skills && (
+              <Stack>
+                <Typography variant="h6">Skills</Typography>
+                {skills && (
+                  <Stack direction="row" gap={1} flexWrap="wrap">
+                    {skills.map((skill) => skillIcon[skill])}
+                  </Stack>
+                )}
+              </Stack>
+            )}
+          </Stack>
+        )}
+      </Stack>
+      {subExperiences && (
+        <Stack pl={4} gap={2} py={2} sx={{}}>
+          {subExperiences.map((experience) => (
+            <TimelineWrapper key={experience.title}>
+              {subExperiences.length > 1 && (
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    left: -29,
+                    top: 12,
+                    width: 12,
+                    height: 12,
+                    borderRadius: '50%',
+                    borderStyle: 'solid',
+                    borderWidth: 2,
+                    borderColor: theme.palette.text.primary,
+                  }}
+                />
               )}
-            </Stack>
-          )}
+              <ExperienceSection experience={experience} />
+            </TimelineWrapper>
+          ))}
         </Stack>
       )}
     </Stack>
-    {subExperiences && (
-      <Stack pl={4} gap={2} py={2} sx={{}}>
-        {subExperiences.map((experience) => (
-          <TimelineWrapper key={experience.title}>
-            {subExperiences.length > 1 && (
-              <Box
-                sx={{
-                  position: 'absolute',
-                  left: -29,
-                  top: 12,
-                  width: 12,
-                  height: 12,
-                  borderRadius: '50%',
-                  borderStyle: 'solid',
-                  borderWidth: 2,
-                  borderColor: 'white',
-                }}
-              />
-            )}
-            <ExperienceSection experience={experience} />
-          </TimelineWrapper>
-        ))}
-      </Stack>
-    )}
-  </Stack>
-);
+  );
+};
 
 const TimePeriod = ({ from, to }: { from: Date; to?: Date }) => (
   <Typography variant="caption" color="secondary">
