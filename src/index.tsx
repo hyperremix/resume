@@ -34,8 +34,4 @@ root.render(
   </Provider>,
 );
 
-if (module.hot) {
-  module.hot.accept(['./i18n/i18n'], () => {});
-}
-
 reportWebVitals();
