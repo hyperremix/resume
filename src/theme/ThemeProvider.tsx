@@ -1,45 +1,64 @@
 import {
   CssBaseline,
   ThemeProvider as MuiThemeProvider,
+  ThemeOptions,
   createTheme,
   responsiveFontSizes,
-  useMediaQuery,
 } from '@mui/material';
-import React, { useMemo, useState } from 'react';
-import { ColorModeContext } from './ColorModeContext';
+import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
+import { useThemeSlice } from './slice';
+import { selectTheme } from './slice/selectors';
 
 type Props = {
   children: React.ReactNode;
 };
 
 export const ThemeProvider = ({ children }: Props) => {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const [mode, setMode] = useState<'light' | 'dark'>(prefersDarkMode ? 'dark' : 'light');
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () => setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light')),
-    }),
-    [],
-  );
+  useThemeSlice();
 
-  const theme = useMemo(
-    () =>
-      responsiveFontSizes(
-        createTheme({
-          palette: {
-            mode,
-          },
-        }),
-      ),
-    [mode],
-  );
+  const themeState = useSelector(selectTheme);
+
+  const theme = useMemo(() => {
+    const themeOptions: ThemeOptions = {
+      palette: {
+        mode: themeState.darkMode ? 'dark' : 'light',
+      },
+      typography:
+        themeState.typographySize === 'pdf'
+          ? {
+              h4: {
+                fontSize: 18,
+                lineHeight: 1.22,
+                letterSpacing: 0.1176,
+              },
+              h6: {
+                fontSize: 12,
+                lineHeight: 1.16,
+                letterSpacing: 0.12,
+              },
+              caption: {
+                fontSize: 10,
+                lineHeight: 1.2,
+                letterSpacing: 0.53328,
+              },
+              body1: {
+                fontSize: 10,
+                lineHeight: 1.2,
+                letterSpacing: 0.15008,
+              },
+            }
+          : {},
+    };
+    return themeState.typographySize === 'pdf'
+      ? createTheme(themeOptions)
+      : responsiveFontSizes(createTheme(themeOptions));
+  }, [themeState]);
 
   return (
-    <ColorModeContext.Provider value={colorMode}>
-      <MuiThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </MuiThemeProvider>
-    </ColorModeContext.Provider>
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </MuiThemeProvider>
   );
 };

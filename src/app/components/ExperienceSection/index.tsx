@@ -11,10 +11,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { TExperience } from 'experiences/TExperience';
+import { skillIcon } from 'experiences/skillIcon';
 import { getDateInFormat, getRelativeTime } from 'i18n/datetime';
 import * as React from 'react';
-import { TExperience } from 'state/experiences/TExperience';
-import { skillIcon } from 'types/skillIcon';
 import { TimelineWrapper } from '../TimelineWrapper';
 
 type Props = {
@@ -27,19 +27,7 @@ export const ExperienceSection = (props: Props) => {
 };
 
 export const SmallLayout = ({
-  experience: {
-    title,
-    from,
-    to,
-    icon,
-    role,
-    location,
-    companyDescription,
-    projectDescription,
-    roleDescription,
-    skills,
-    subExperiences,
-  },
+  experience: { title, from, to, icon, role, location, subExperiences, ...description },
 }: Props) => (
   <Stack>
     {!!subExperiences ? (
@@ -64,35 +52,10 @@ export const SmallLayout = ({
         <TimePeriod from={from} to={to} />
       </>
     )}
-    <Stack>
-      {(companyDescription || projectDescription || roleDescription || skills) && (
-        <Stack pt={1} gap={1}>
-          <Typography>{companyDescription}</Typography>
-          {projectDescription && (
-            <Stack>
-              <Typography variant="h6">Project</Typography>
-              <Typography>{projectDescription}</Typography>
-            </Stack>
-          )}
-          {roleDescription && (
-            <Stack>
-              <Typography variant="h6">Role</Typography>
-              {roleDescription}
-            </Stack>
-          )}
-          {skills && (
-            <Stack>
-              <Typography variant="h6">Skills</Typography>
-              {skills && (
-                <Stack direction="row" gap={1} flexWrap="wrap">
-                  {skills.map((skill) => skillIcon[skill])}
-                </Stack>
-              )}
-            </Stack>
-          )}
-        </Stack>
-      )}
-    </Stack>
+    {(description.companyDescription ||
+      description.projectDescription ||
+      description.roleDescription ||
+      description.skills) && <ExperienceDescription {...description} />}
     {subExperiences && (
       <List>
         {subExperiences.map((subExperience) => (
@@ -106,19 +69,7 @@ export const SmallLayout = ({
 );
 
 export const LargeLayout = ({
-  experience: {
-    title,
-    from,
-    to,
-    icon,
-    role,
-    location,
-    companyDescription,
-    projectDescription,
-    roleDescription,
-    skills,
-    subExperiences,
-  },
+  experience: { title, from, to, icon, role, location, subExperiences, ...description },
 }: Props) => {
   const theme = useTheme();
 
@@ -131,35 +82,10 @@ export const LargeLayout = ({
       {role && <Typography>{role}</Typography>}
       {location && <Typography>{location}</Typography>}
       <TimePeriod from={from} to={to} />
-      <Stack>
-        {(companyDescription || projectDescription || roleDescription || skills) && (
-          <Stack pt={1} gap={1}>
-            {companyDescription}
-            {projectDescription && (
-              <Stack>
-                <Typography variant="h6">Project</Typography>
-                {projectDescription}
-              </Stack>
-            )}
-            {roleDescription && (
-              <Stack>
-                <Typography variant="h6">Role</Typography>
-                {roleDescription}
-              </Stack>
-            )}
-            {skills && (
-              <Stack>
-                <Typography variant="h6">Skills</Typography>
-                {skills && (
-                  <Stack direction="row" gap={1} flexWrap="wrap">
-                    {skills.map((skill) => skillIcon[skill])}
-                  </Stack>
-                )}
-              </Stack>
-            )}
-          </Stack>
-        )}
-      </Stack>
+      {(description.companyDescription ||
+        description.projectDescription ||
+        description.roleDescription ||
+        description.skills) && <ExperienceDescription {...description} />}
       {subExperiences && (
         <Stack pl={4} gap={2} py={2} sx={{}}>
           {subExperiences.map((experience) => (
@@ -187,6 +113,42 @@ export const LargeLayout = ({
     </Stack>
   );
 };
+
+const ExperienceDescription = ({
+  companyDescription,
+  projectDescription,
+  roleDescription,
+  skills,
+}: Pick<
+  TExperience,
+  'companyDescription' | 'projectDescription' | 'roleDescription' | 'skills'
+>) => (
+  <Stack pt={1} gap={1}>
+    <Typography>{companyDescription}</Typography>
+    {projectDescription && (
+      <Stack>
+        <Typography variant="h6">Project</Typography>
+        <Typography>{projectDescription}</Typography>
+      </Stack>
+    )}
+    {roleDescription && (
+      <Stack>
+        <Typography variant="h6">Role</Typography>
+        {roleDescription.map((section, index) => (
+          <Typography key={index}>{section}</Typography>
+        ))}
+      </Stack>
+    )}
+    {skills && (
+      <Stack>
+        <Typography variant="h6">Skills</Typography>
+        <Stack direction="row" gap={1} flexWrap="wrap">
+          {skills.map((skill) => skillIcon[skill])}
+        </Stack>
+      </Stack>
+    )}
+  </Stack>
+);
 
 const TimePeriod = ({ from, to }: { from: Date; to?: Date }) => (
   <Typography variant="caption" color="secondary">

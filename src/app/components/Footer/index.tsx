@@ -2,6 +2,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PlaceIcon from '@mui/icons-material/Place';
 import { AppBar, Stack, Toolbar } from '@mui/material';
+import { ResearchGate } from 'app/icons/ResearchGate';
 import * as React from 'react';
 import { SocialMediaLink } from '../SocialMediaLink';
 
@@ -19,6 +20,11 @@ export const Footer = () => (
           icon={<LinkedInIcon />}
           href="https://www.linkedin.com/in/fredpe/"
           title="linkedin.com/in/fredpe"
+        />
+        <SocialMediaLink
+          icon={<ResearchGate />}
+          href="https://www.researchgate.net/publication/312490994_Using_the_Go_Programming_Language_in_Practice"
+          title="researchgate.net/publication"
         />
       </Stack>
     </Toolbar>

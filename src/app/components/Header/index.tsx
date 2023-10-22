@@ -11,22 +11,24 @@ import {
   Toolbar,
   Typography,
   useMediaQuery,
-  useTheme,
 } from '@mui/material';
-import React, { useContext } from 'react';
-import { ColorModeContext } from 'theme/ColorModeContext';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useThemeSlice } from 'theme/slice';
+import { selectTheme } from 'theme/slice/selectors';
 
 type Props = {
   maxWidth?: Breakpoint;
 };
 
 export const Header = ({ maxWidth }: Props) => {
-  const theme = useTheme();
+  const dispatch = useDispatch();
+  const { actions } = useThemeSlice();
+
+  const { darkMode } = useSelector(selectTheme);
 
   const isExtraSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('sm'));
   const isSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
-
-  const colorMode = useContext(ColorModeContext);
 
   return (
     <AppBar position="static" sx={{ boxShadow: 0 }}>
@@ -42,9 +44,9 @@ export const Header = ({ maxWidth }: Props) => {
         </Container>
         <IconButton
           sx={{ position: 'absolute', top: 16, right: 16 }}
-          onClick={colorMode.toggleColorMode}
+          onClick={() => dispatch(actions.setDarkMode(!darkMode))}
         >
-          {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+          {darkMode ? <Brightness7Icon /> : <Brightness4Icon />}
         </IconButton>
       </Toolbar>
     </AppBar>

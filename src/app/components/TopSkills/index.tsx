@@ -1,9 +1,9 @@
 import { Stack } from '@mui/material';
+import { getSortedSkills } from 'experiences';
+import { Skill } from 'experiences/Skill';
+import { skillIcon } from 'experiences/skillIcon';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { getSortedSkills } from 'state/experiences';
-import { Skill } from 'types/Skill';
-import { skillIcon } from 'types/skillIcon';
 
 export const TopSkills = () => {
   const [top10Skills, setTop10Skills] = useState<{ skill: Skill; months: number }[]>([]);

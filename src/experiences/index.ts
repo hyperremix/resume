@@ -1,4 +1,4 @@
-import { Skill } from 'types/Skill';
+import { Skill } from 'experiences/Skill';
 import { TExperience } from './TExperience';
 import { BrainwareGroupExperience, Cdon2012Experience, Cdon2013Experience } from './experiences';
 import { NetlightExperience } from './experiences/NetlightExperience';

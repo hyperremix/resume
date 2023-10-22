@@ -2,9 +2,9 @@ import { ExperienceSection } from 'app/components/ExperienceSection';
 import { Layout } from 'app/components/Layout';
 import { ResumeSection } from 'app/components/ResumeSection';
 import { TopSkills } from 'app/components/TopSkills';
+import { experiencesState } from 'experiences';
+import { LundUniversityExperience } from 'experiences/experiences/LundUniversityExperience';
 import * as React from 'react';
-import { experiencesState } from 'state/experiences';
-import { LundUniversityExperience } from 'state/experiences/experiences/LundUniversityExperience';
 
 export const Home = () => (
   <Layout maxWidth="md">

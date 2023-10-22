@@ -1,6 +1,6 @@
 import RouterIcon from '@mui/icons-material/Router';
+import { Skill } from 'experiences/Skill';
 import * as React from 'react';
-import { Skill } from 'types/Skill';
 import { TExperience } from '../TExperience';
 
 export const IotSuiteExperience: TExperience = {
@@ -10,7 +10,7 @@ export const IotSuiteExperience: TExperience = {
   role: '',
   companyDescription: '',
   projectDescription: '',
-  roleDescription: '',
+  roleDescription: [],
   skills: [
     Skill.Kotlin,
     Skill.SpringBoot,

@@ -11,7 +11,7 @@ type Props = {
 export const SocialMediaLink = ({ href, icon, title }: Props) => (
   <>
     {href ? (
-      <Link href={href} color="inherit" underline="hover">
+      <Link href={href} color="inherit" underline="hover" target="_blank">
         <Stack direction="row" gap={1}>
           {icon}
           <Typography>{title}</Typography>

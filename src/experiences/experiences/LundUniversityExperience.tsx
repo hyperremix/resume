@@ -1,6 +1,6 @@
 import SchoolIcon from '@mui/icons-material/School';
+import { Skill } from 'experiences/Skill';
 import * as React from 'react';
-import { Skill } from 'types/Skill';
 import { TExperience } from '../TExperience';
 import { MasterThesisExperience } from './MasterThesisExperience';
 

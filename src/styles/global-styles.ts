@@ -26,4 +26,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
   }
+  
+  @media print {
+    body {-webkit-print-color-adjust: exact;}
+  }
 `;
