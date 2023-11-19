@@ -13,8 +13,8 @@ import {
 } from '@mui/material';
 import { TExperience } from 'experiences/TExperience';
 import { skillIcon } from 'experiences/skillIcon';
-import { getDateInFormat, getRelativeTime } from 'i18n/datetime';
 import * as React from 'react';
+import { TimePeriod } from '../TimePeriod';
 import { TimelineWrapper } from '../TimelineWrapper';
 
 type Props = {
@@ -143,18 +143,9 @@ const ExperienceDescription = ({
       <Stack>
         <Typography variant="h6">Skills</Typography>
         <Stack direction="row" gap={1} flexWrap="wrap">
-          {skills.map((skill) => skillIcon[skill])}
+          {skills.map((skill) => skillIcon[skill]())}
         </Stack>
       </Stack>
     )}
   </Stack>
-);
-
-const TimePeriod = ({ from, to }: { from: Date; to?: Date }) => (
-  <Typography variant="caption" color="secondary">
-    {`${getDateInFormat(from, 'MM/YYYY')} - ${getDateInFormat(to, 'MM/YYYY')} | ${getRelativeTime(
-      from,
-      to,
-    )}`}
-  </Typography>
 );

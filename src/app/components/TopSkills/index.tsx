@@ -12,7 +12,7 @@ export const TopSkills = () => {
 
   return (
     <Stack direction="row" gap={1} flexWrap="wrap">
-      {top10Skills.map((skill) => skillIcon[skill.skill])}
+      {top10Skills.map((skill) => skillIcon[skill.skill]())}
     </Stack>
   );
 };
