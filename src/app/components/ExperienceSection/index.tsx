@@ -143,7 +143,7 @@ const ExperienceDescription = ({
       <Stack>
         <Typography variant="h6">Skills</Typography>
         <Stack direction="row" gap={1} flexWrap="wrap">
-          {skills.map((skill) => skillIcon[skill]())}
+          {skills.map((skill) => skillIcon[skill])}
         </Stack>
       </Stack>
     )}

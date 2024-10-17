@@ -54,6 +54,7 @@ export enum Skill {
   E2ETesting = 'E2E Testing',
 
   // AWS
+  AWS = 'AWS',
   AWSLambda = 'AWS Lambda',
   AWSAmplify = 'AWS Amplify',
   AWSS3 = 'AWS S3',
@@ -68,5 +69,5 @@ export enum Skill {
   Scrum = 'Scrum',
   Kanban = 'Kanban',
   Hiring = 'Hiring',
-  CoachingAndMentoring = 'Coaching and Mentoring',
+  CoachingAndMentoring = 'Coaching & Mentoring',
 }

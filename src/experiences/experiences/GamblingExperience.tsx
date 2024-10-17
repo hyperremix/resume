@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TExperience } from '../TExperience';
 
 export const GamblingExperience: TExperience = {
+  slug: 'gambling',
   title: 'Gambling (Lottery)',
   from: new Date('2020-01-01'),
   to: new Date('2021-04-01'),
@@ -14,8 +15,9 @@ export const GamblingExperience: TExperience = {
   projectDescription:
     'Unifying two different platforms into one single platform as part of the team responsible for the core components.',
   roleDescription: [
-    'The team had several challenges during the project. During his time there Fredrik worked on many different topics like cookie consent management, traffic migration (migrated customers), setting up company wide test systems as well as many more. Fredriks biggest contributions to the team was introducing monitoring and alerting. The added transparency enabled them to find a lot of previously unknown bugs not only within the team but throughout the platform. Furthermore, Fredrik designed and implemented a permission management module to allow for easy and extensible permission checks throughout the different microfrontends. Last but not least, Fredrik helped the team become more efficient by improving their agile processes. Through the introduction of several quality gates and focus on clear acceptance criterias and collective alignment on what to achieve both functionally as well as technically, the team went from being regarded as one of the worst performing teams to being one of the best, even inspiring other teams to review their own processes.',
+    "The team faced several challenges during the project. Fredrik worked on various tasks including cookie consent management, traffic migration, and setting up company-wide test systems. His most significant contribution was introducing monitoring and alerting, which added transparency and uncovered previously unknown bugs across the platform. Additionally, Fredrik designed and implemented a permission management module for easy and extensible permission checks across micro-frontends. He also improved the team's efficiency by enhancing agile processes, introducing quality gates, and focusing on clear acceptance criteria and collective alignment. These efforts significantly improved the team's performance and inspired other teams to review their processes.",
   ],
+  highlightedSkills: [Skill.Kotlin, Skill.SpringBoot, Skill.TypeScript, Skill.Angular],
   skills: [
     Skill.Java,
     Skill.Kotlin,

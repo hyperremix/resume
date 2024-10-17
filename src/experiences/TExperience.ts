@@ -1,7 +1,9 @@
 import { Skill } from 'experiences/Skill';
 import { ReactNode } from 'react';
+import { ExperienceSlug } from './ExperienceSlug';
 
 export type TExperience = {
+  slug: ExperienceSlug;
   title: string;
   icon?: ReactNode;
   from: Date;
@@ -11,31 +13,7 @@ export type TExperience = {
   companyDescription?: string;
   projectDescription?: string;
   roleDescription?: string[];
+  highlightedSkills?: Skill[];
   skills?: Skill[];
   subExperiences?: TExperience[];
 };
-// typography:
-//   typographySize === 'pdf'
-//     ? {
-//         h4: {
-//           fontSize: 18,
-//           lineHeight: 1.22,
-//           letterSpacing: 0.1176,
-//         },
-//         h6: {
-//           fontSize: 12,
-//           lineHeight: 1.16,
-//           letterSpacing: 0.12,
-//         },
-//         caption: {
-//           fontSize: 10,
-//           lineHeight: 1.2,
-//           letterSpacing: 0.53328,
-//         },
-//         body1: {
-//           fontSize: 10,
-//           lineHeight: 1.2,
-//           letterSpacing: 0.15008,
-//         },
-//       }
-//     : {},

@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TExperience } from '../TExperience';
 
 export const AgTechECommerceExperience: TExperience = {
+  slug: 'ag-tech',
   title: 'AgTech E-Commerce',
   from: new Date('2021-04-01'),
   to: new Date('2022-11-01'),
@@ -12,10 +13,11 @@ export const AgTechECommerceExperience: TExperience = {
   companyDescription:
     'A Hamburg based, international AgTech e-commerce start-up that is striving to revolutionise and digitalise the market for used agricultural machinery since 2015. The company wants to resolve the many pain points for farmers and dealers operating on this market by bringing transparency to pricing, globalising an otherwise fairly regional market, and prevent fraud.',
   projectDescription:
-    'The purpose of the product is to digitalise trade-in process of used machinery and thus support sales people at a dealership during.',
+    'Digitalization of the trade-in process of used machinery by providing partnered dealers with an intuitive self-service cross-platform app.',
   roleDescription: [
-    "Fredrik's main focus as an engineering manager was to support the company and the team in building a fast, scalable, reliable and maintainable solution from scratch for the trade-in process at dealerships. This included being involved and driving the decision making from high- to low-level topics revolving the application, what technologies to go for, which services to use, team processes as well as conception.",
+    "Fredrik's main focus as an engineering manager was to support E-Farm and the Dealer Solutions team in building a fast, scalable, reliable, and maintainable solution from scratch for the trade-in process at dealerships, called SmartTrade. This included being involved in and driving decision-making from high- to low-level topics related to the application, such as selecting technologies, choosing services, and establishing team processes. Fredrik supported the head of product and engineering in designing solutions for the broader IT landscape. He also took on the role of mentor and coach and was closely involved in the hiring process.",
   ],
+  highlightedSkills: [Skill.React, Skill.Expo, Skill.NestJS, Skill.AWSDynamoDB, Skill.AWSLambda],
   skills: [
     Skill.TypeScript,
     Skill.React,

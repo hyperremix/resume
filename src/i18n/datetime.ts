@@ -7,6 +7,8 @@ export const getDateInFormat = (
   format: string = 'LL',
   locale: string = i18next.language,
 ): string => {
+  if (!date) return 'Present';
+
   const supportedLocale = getSupportedLocale(locale);
   return dayjs(date).locale(supportedLocale).format(format);
 };

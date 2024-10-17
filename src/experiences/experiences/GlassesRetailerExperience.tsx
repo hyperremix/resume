@@ -4,6 +4,7 @@ import React from 'react';
 import { TExperience } from '../TExperience';
 
 export const GlassesRetailerExperience: TExperience = {
+  slug: 'glasses-retailer',
   title: 'Glasses Retailer',
   from: new Date('2016-04-01'),
   to: new Date('2018-07-01'),
@@ -11,10 +12,17 @@ export const GlassesRetailerExperience: TExperience = {
   role: 'Full-Stack Developer & Architect',
   companyDescription: 'The number one optician company in Germany.',
   projectDescription:
-    'In the past, this company did not make much effort to innovate itself in the IT sector. However, with this project they wanted to change that. Agile methodologies, modern technologies and a skilled team was chosen to undertake this task, which started out as a small app for buying contact lenses, but developed into a fully-fledged in-store administration system with two native mobile apps as well as a web app.',
+    'Digitilization of the in-store retail system for selling contact lens products for all establishments in the DACH region.',
   roleDescription: [
-    'During Fredriks first few months in this project, he concentrated on building a stable and reliable framework for implementing Selenium tests. At that time, the tests were only executed manually on the developer machines, which was a huge time consumer as the computer could not be used for anything else while the tests were running. The tests were also flaky, failing sometimes and sometimes not, although nothing changed. In the end the tests ran automatically on the build server after each commit and the only time tests failed, were when actual errors had been made by developers.',
-    'Fredrik was also part of a special task force, which was created as it was found out that the application had performance issues. In this task force, Fredrik helped identify several pain points in the application which in different ways had an impact on the performance. Several action points were formed out of these findings and brought to the different teams in the project which in the end resulted in an improvement in performance of up to 80%! Parallel to these tasks, during the first year Fredrik was also an important part of the team which was responsible for the in-store administration application. As Scrum was used for the project methodology, Fredrik got to be part of defining stories, implementation as well as quality assurance. With time, Fredrik became the hub of information in the team, to whom outside stakeholders as well as team members would consult.',
+    'Fredrik was part of the in-store administration application team. Using Scrum, he participated in defining stories, implementation, and quality assurance. Over time, he became a central point of information for both team members and external stakeholders. During his time on the project, Fredrik focused on stabilizing the Selenium test suite by creating a robust framework and automating its execution on the build server. Fredrik was also part of a special task force addressing performance issues in the application. He helped identify several pain points affecting performance, leading to action points that improved performance by up to 80%.',
+    'Fredrik was selected for a strategically important project in 2017: internationalization. Together with another developer and a product owner, he helped form a new team to prepare the application for multiple countries. They tackled challenges like country-specific product portfolios, localization, logistics, and unique features. As the technical team lead, Fredrik guided the team throughout the project. After two years of focusing almost exclusively on features, the monolithic backend became difficult to maintain and extend due to poor architectural choices. Fredrik was part of a select group tasked with modularizing the backend, beginning with the extraction of the employee management system into a separate module. Fredrik also optimized the build pipeline by reducing dependency on TeamCity through a build script, making it executable on any operating system. Additionally, he built a customized build monitor to provide teams with essential information.',
+  ],
+  highlightedSkills: [
+    Skill.CSharp,
+    Skill.DotNetFramework,
+    Skill.JavaScript,
+    Skill.AngularJS,
+    Skill.MongoDB,
   ],
   skills: [
     Skill.CSharp,

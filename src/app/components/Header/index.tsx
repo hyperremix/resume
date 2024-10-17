@@ -2,7 +2,6 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {
   AppBar,
-  Avatar,
   Breakpoint,
   Container,
   IconButton,
@@ -16,6 +15,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useThemeSlice } from 'theme/slice';
 import { selectTheme } from 'theme/slice/selectors';
+import { ProfilePicture } from '../ProfilePicture';
 
 type Props = {
   maxWidth?: Breakpoint;
@@ -71,14 +71,6 @@ const Pitch = () => (
     fast-paced environments with a focus on what is important. A mentor with a passion for personal
     growth. Enjoys sharing his experience and knowledge with others.
   </Typography>
-);
-
-const ProfilePicture = () => (
-  <Avatar
-    alt="Fredrik Pettersson"
-    src="https://s.gravatar.com/avatar/e358a919f2a68d4dc95e586d76feaac6f3defb7104dabf9c303c76e077a91065?s=240"
-    sx={{ width: 120, height: 120 }}
-  />
 );
 
 const ExtraSmallLayout = () => (

@@ -1,5 +1,5 @@
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-import { Box, Typography } from '@mui/material';
+import { Box, Chip, Typography } from '@mui/material';
 import { TableStack } from 'app/components/TableStack';
 import { TableStackItem } from 'app/components/TableStack/TableStackItem';
 import { TimePeriod } from 'app/components/TimePeriod';
@@ -100,7 +100,17 @@ const ExperienceDescription = ({
         <Typography variant="h6">Skills</Typography>
         {skills.map((skill, index) => (
           <Box key={skill} display="inline-block" ml={index === 0 ? 0 : 0.5} mb={1} fontSize="10px">
-            {skillIcon[skill]({ size: 'small' })}
+            {(skillIcon[skill] as any).type === Typography ? (
+              <Chip sx={{ pl: 1 }} label={skill} variant="outlined" size="small" />
+            ) : (
+              <Chip
+                sx={{ pl: 1 }}
+                icon={skillIcon[skill]}
+                label={skill}
+                variant="outlined"
+                size="small"
+              />
+            )}
           </Box>
         ))}
       </TableStackItem>

@@ -1,4 +1,4 @@
-import { Avatar, Divider, Link, Typography, useTheme } from '@mui/material';
+import { Avatar, Chip, Divider, Link, Typography, useTheme } from '@mui/material';
 import { TableStack } from 'app/components/TableStack';
 import { TableStackItem } from 'app/components/TableStack/TableStackItem';
 import { experiencesState, getSortedSkills } from 'experiences';
@@ -90,9 +90,19 @@ export const Pdf = () => {
                 <TableStackItem sx={{ pb: 1 }}>
                   <Typography variant="h4">Top Skills</Typography>
                   <Divider sx={{ mb: 1 }} />
-                  {top10Skills.map(({ skill }) => (
+                  {experiencesState.topSkills.map((skill) => (
                     <Typography sx={{ mb: 1 }} key={skill}>
-                      {skillIcon[skill]({ size: 'small' })}
+                      {(skillIcon[skill] as any).type === Typography ? (
+                        <Chip sx={{ pl: 1 }} label={skill} variant="outlined" size="small" />
+                      ) : (
+                        <Chip
+                          sx={{ pl: 1 }}
+                          icon={skillIcon[skill]}
+                          label={skill}
+                          variant="outlined"
+                          size="small"
+                        />
+                      )}
                     </Typography>
                   ))}
                 </TableStackItem>

@@ -1,11 +1,11 @@
-import { Link, Stack, Typography } from '@mui/material';
+import { Box, Fade, Link, Stack, Typography, useTheme } from '@mui/material';
 import { socialMediaLinks } from 'links/socialMediaLinks';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 
-export const SocialMediaLinks = () => (
-  <Stack flex={1} py={1} direction="row" gap={1.5} flexWrap="wrap" justifyContent="center">
+export const SocialMediaLinks = ({ withoutLabels = false }: { withoutLabels?: boolean }) => (
+  <Stack direction="row" gap={1.5} flexWrap="wrap">
     {socialMediaLinks.map((link) => (
-      <SocialMediaLink {...link} />
+      <SocialMediaLink key={link.label} {...link} withoutLabel={withoutLabels} />
     ))}
   </Stack>
 );
@@ -14,22 +14,53 @@ type Props = {
   label: string;
   icon: ReactNode;
   href?: string;
+  withoutLabel?: boolean;
 };
 
-const SocialMediaLink = ({ href, icon, label }: Props) => (
-  <>
-    {href ? (
-      <Link href={href} color="inherit" underline="hover" target="_blank">
-        <Stack direction="row" gap={1}>
-          {icon}
-          <Typography>{label}</Typography>
-        </Stack>
-      </Link>
-    ) : (
-      <Stack direction="row" gap={1}>
+const SocialMediaLink = ({ href, icon, label, withoutLabel }: Props) => {
+  const theme = useTheme();
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const socialMediaLinkComponent = (
+    <Stack
+      direction="row"
+      gap={1}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchEnd={() => setIsHovered(!isHovered)}
+      position="relative"
+    >
+      <Box sx={{ color: isHovered ? theme.palette.primary.main : theme.palette.text.primary }}>
         {icon}
-        <Typography>{label}</Typography>
-      </Stack>
-    )}
-  </>
-);
+      </Box>
+      {!withoutLabel && <Typography>{label}</Typography>}
+      {withoutLabel && (
+        <Fade in={isHovered} {...(isHovered ? { timeout: 500 } : {})}>
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: -30,
+              left: '50%',
+              transform: 'translate(-50%)',
+              zIndex: 1,
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              borderRadius: '4px',
+              px: 0.5,
+            }}
+          >
+            <Typography noWrap>{label}</Typography>
+          </Box>
+        </Fade>
+      )}
+    </Stack>
+  );
+
+  if (!href) return socialMediaLinkComponent;
+
+  return (
+    <Link href={href} color="inherit" underline="hover" target="_blank">
+      {socialMediaLinkComponent}
+    </Link>
+  );
+};

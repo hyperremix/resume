@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TExperience } from '../TExperience';
 
 export const MroExperience: TExperience = {
+  slug: 'mro',
   title: 'Aviation MRO',
   from: new Date('2018-07-01'),
   to: new Date('2020-01-01'),
@@ -12,10 +13,12 @@ export const MroExperience: TExperience = {
   companyDescription:
     'A leading provider of maintenance, repair, overhaul and modification services for civil aircraft.',
   projectDescription:
-    'An innovative and holistic platform that offers an extensive variety of digital products and services for MRO by combining multiple apps, web-based, and in one place.',
+    'An innovative and holistic platform that offers an extensive variety of digital products and services for MRO by combining multiple web-based apps in one place.',
   roleDescription: [
-    'A new developer experience team was founded with the purpose of raising the speed andquality of development in all teams of the project. During Fredriks time here, he developed concepts on how teams could easily test their applications using Cypress, introduced Helm to make deployments easier but also reproducable in their OpenShift environment, helped to set up SonarQube and Snyk in order to increase the code quality of all code produced in Aviatar, implented several golang-based prometheus-exporters, implemented a custom usabilla-jira connector using Kotlin, Quarkus and GraalVM, and developed a concept as well as a service for a safe and easy way to handle secrets in microservices using Hashicorp Vault. To share his knowledge Fredrik wrote documentation, blog posts, held several lightning talks and in some cases joined teams that required additional support.',
+    'Initially, Fredrik joined the team responsible for core frontend and backend components. His main task was to support the development of Java-based microservices using Vert.X, as well as Angular components. During his time there, Fredrik noticed the lack of tests and worked to raise awareness and coach the team on the importance of testing to mitigate future issues.',
+    'A new team called Developer Experience was formed to improve the speed and quality of development across all other teams. During his time there, Fredrik developed concepts for easy application testing with Cypress, introduced Helm to facilitate reproducible deployments in an OpenShift environment, and helped set up SonarQube and Snyk to enhance code quality. He also implemented several Golang-based Prometheus exporters, a custom Usabilla-Jira connector using Kotlin, Quarkus, and GraalVM, and a secure method for handling secrets in microservices with HashiCorp Vault. To promote these tools and processes, Fredrik wrote documentation, blog posts, and conducted lightning talks. He occasionally joined other teams to assist them in adopting new concepts and tools.',
   ],
+  highlightedSkills: [Skill.Kotlin, Skill.VertX, Skill.TypeScript, Skill.Angular, Skill.Kubernetes],
   skills: [
     Skill.Java,
     Skill.Kotlin,

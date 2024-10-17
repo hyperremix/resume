@@ -11,6 +11,16 @@ export const experiencesState: ExperiencesState = {
     Cdon2013Experience,
     Cdon2012Experience,
   ],
+  topSkills: [
+    Skill.React,
+    Skill.NestJS,
+    Skill.SpringBoot,
+    Skill.TypeScript,
+    Skill.Kotlin,
+    Skill.MongoDB,
+    Skill.Kubernetes,
+    Skill.AWS,
+  ],
 };
 
 export const getSortedSkills = (): { skill: Skill; months: number }[] => {

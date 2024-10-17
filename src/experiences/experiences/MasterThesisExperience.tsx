@@ -4,6 +4,7 @@ import React from 'react';
 import { TExperience } from '../TExperience';
 
 export const MasterThesisExperience: TExperience = {
+  slug: 'master-thesis',
   title: 'Axis Communications',
   from: new Date('2014-01-01'),
   to: new Date('2014-07-01'),
@@ -17,4 +18,5 @@ export const MasterThesisExperience: TExperience = {
     'The conclusion was that go is really easy to learn, it has great support for writing concurrent software, build tools (in comparison to C) are far easier and the builds are fast. Go also has a built-in package manager which makes it very easy to make use of third party libraries. However, the Go front-end to GCC was complicated to get to work in combination with the specific architecture that Axis is using.',
   ],
   skills: [Skill.Go],
+  highlightedSkills: [Skill.Go],
 };

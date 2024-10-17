@@ -4,6 +4,7 @@ import * as React from 'react';
 import { TExperience } from '../TExperience';
 
 export const Cdon2012Experience: TExperience = {
+  slug: 'cdon-2012',
   title: 'CDON',
   from: new Date('2012-06-01'),
   to: new Date('2012-09-01'),
@@ -15,6 +16,7 @@ export const Cdon2012Experience: TExperience = {
   roleDescription: [
     'During the summer of 2012, Fredrik was hired by CDON to help migrate their legacy code, which was written with .NET WebForms, to .NET MVC. More specifically, the project included the register page, edit user page, recover password page, etc. The assignment was an important step towards the modernization of the website. Also, as .NET MVC is highly testable, the new implementation offered better testability and maintainability of the code base.',
   ],
+  highlightedSkills: [Skill.CSharp, Skill.DotNetFramework, Skill.SQLServer],
   skills: [
     Skill.CSharp,
     Skill.HTML,
