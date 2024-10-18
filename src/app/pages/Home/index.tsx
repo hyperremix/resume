@@ -17,7 +17,6 @@ import {
   React as ReactJs,
 } from 'mdi-material-ui';
 import * as React from 'react';
-import { ScrollRestoration } from 'react-router-dom';
 
 export const Home = () => {
   const theme = useTheme();
@@ -99,7 +98,6 @@ export const Home = () => {
             <HighlightedSkill icon={<MaterialUi />} label="Material UI" />
           </Stack>
         </Stack>
-        <ScrollRestoration getKey={(location) => location.pathname} />
       </Container>
     </>
   );

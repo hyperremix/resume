@@ -5,6 +5,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import { App } from 'app/pages';
 import { ExperiencePage } from 'app/pages/ExperiencePage';
 import { Home } from 'app/pages/Home';
 import { Pdf } from 'app/pages/Pdf';
@@ -30,15 +31,21 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/pdf',
-    element: <Pdf />,
-  },
-  {
-    path: '/experiences/:experienceSlug',
-    element: <ExperiencePage />,
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: '/pdf',
+        element: <Pdf />,
+      },
+      {
+        path: '/experiences/:experienceSlug',
+        element: <ExperiencePage />,
+      },
+    ],
   },
 ]);
 

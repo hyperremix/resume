@@ -5,12 +5,11 @@ import { TimePeriod } from 'app/components/TimePeriod';
 import { experiencesState } from 'experiences';
 import { TExperience } from 'experiences/TExperience';
 import * as React from 'react';
-import { useEffect, useMemo } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useMemo } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 export const ExperiencePage = () => {
   const { experienceSlug } = useParams();
-  const { pathname } = useLocation();
 
   const experience = useMemo(
     () =>
@@ -20,10 +19,6 @@ export const ExperiencePage = () => {
         .find(({ slug }) => slug === experienceSlug),
     [experienceSlug, experiencesState.experiences],
   );
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
 
   return (
     <Container maxWidth="md">
