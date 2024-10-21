@@ -1,4 +1,5 @@
-import { Avatar, Chip, Divider, Link, Typography, useTheme } from '@mui/material';
+import { Chip, Divider, Link, Typography, useTheme } from '@mui/material';
+import { ProfilePicture } from 'app/components/ProfilePicture';
 import { TableStack } from 'app/components/TableStack';
 import { TableStackItem } from 'app/components/TableStack/TableStackItem';
 import { experiencesState, getSortedSkills } from 'experiences';
@@ -55,10 +56,7 @@ export const Pdf = () => {
               </Typography>
             </TableStackItem>
             <TableStackItem>
-              <Avatar
-                sx={{ width: 60, height: 60 }}
-                src="https://s.gravatar.com/avatar/e358a919f2a68d4dc95e586d76feaac6f3defb7104dabf9c303c76e077a91065?s=120"
-              />
+              <ProfilePicture size={120} />
             </TableStackItem>
           </TableStack>
         </TableStackItem>

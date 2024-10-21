@@ -30,7 +30,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/resume',
     element: <App />,
     children: [
       {
@@ -38,11 +38,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/pdf',
+        path: '/resume/pdf',
         element: <Pdf />,
       },
       {
-        path: '/experiences/:experienceSlug',
+        path: '/resume/experiences/:experienceSlug',
         element: <ExperiencePage />,
       },
     ],

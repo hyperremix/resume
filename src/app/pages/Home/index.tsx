@@ -79,7 +79,7 @@ export const Home = () => {
           </Stack>
           <Stack position="absolute" bottom={0} alignItems="center" pb={isSmallScreen ? 1 : 10}>
             <Typography variant="h6">
-              Print <Link href="/pdf">PDF</Link> or
+              Print <Link href="/resume/pdf">PDF</Link> or
             </Typography>
             <Typography variant="h6">Find out more below</Typography>
             <SouthIcon />
