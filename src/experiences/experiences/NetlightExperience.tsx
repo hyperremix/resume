@@ -17,7 +17,7 @@ export const NetlightExperience: TExperience = {
   companyDescription:
     'Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation.',
   projectDescription:
-    'Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation irregardless of tech stack, team setup or company size.',
+    'Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size.',
   subExperiences: [
     IotSuiteExperience,
     AgTechECommerceExperience,
