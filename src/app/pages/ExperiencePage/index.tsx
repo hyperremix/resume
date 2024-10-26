@@ -35,7 +35,7 @@ export const Experience = ({
   experience: { title, from, to, icon, role, location, subExperiences, ...description },
 }: Props) => (
   <>
-    <Button component={Link} startIcon={<ArrowBack />} to="/resume">
+    <Button component={Link} startIcon={<ArrowBack />} to="/">
       Timeline
     </Button>
     <Stack direction="row" alignItems="center" gap={1} sx={{ mb: 2 }}>

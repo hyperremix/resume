@@ -90,7 +90,7 @@ export const Home = () => {
           <Stack position="absolute" bottom={0} alignItems="center" pb={isSmallScreen ? 1 : 10}>
             <Typography variant="h6">
               Print{' '}
-              <Link component={RouterLink} to="/resume/pdf">
+              <Link component={RouterLink} to="/pdf">
                 PDF
               </Link>{' '}
               or
