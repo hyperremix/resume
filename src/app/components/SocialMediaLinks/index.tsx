@@ -44,7 +44,7 @@ const SocialMediaLink = ({ href, icon, label, withoutLabel }: Props) => {
               left: '50%',
               transform: 'translate(-50%)',
               zIndex: 1,
-              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
               borderRadius: '4px',
               px: 0.5,
             }}

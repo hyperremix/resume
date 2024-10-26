@@ -1,12 +1,14 @@
 import SouthIcon from '@mui/icons-material/South';
 import { Container, Link, Stack, Theme, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { HighlightedSkill } from 'app/components/HighlightedSkill';
+import { HoverableLanguage } from 'app/components/HoverableLanguage';
 import { ProfilePicture } from 'app/components/ProfilePicture';
 import { SocialMediaLinks } from 'app/components/SocialMediaLinks';
 import { Timeline } from 'app/components/Timeline';
 import { MongoDB } from 'app/icons/MongoDB';
 import { NestJS } from 'app/icons/NestJS';
 import { experiencesState } from 'experiences';
+import { languages } from 'languages/languages';
 import {
   Aws,
   Kubernetes,
@@ -44,6 +46,13 @@ export const Home = () => {
                 >
                   Sofware Generalist
                 </Typography>
+                <Stack>
+                  <Stack direction="row" alignItems="center" gap={2}>
+                    {Object.entries(languages).map(([key, value]) => (
+                      <HoverableLanguage language={value} key={key} />
+                    ))}
+                  </Stack>
+                </Stack>
                 <Stack direction="row" alignItems="center" gap={1} pt={1}>
                   <SocialMediaLinks withoutLabels />
                 </Stack>

@@ -5,8 +5,8 @@ import { TableStackItem } from 'app/components/TableStack/TableStackItem';
 import { experiencesState, getSortedSkills } from 'experiences';
 import { Skill } from 'experiences/Skill';
 import { LundUniversityExperience } from 'experiences/experiences/LundUniversityExperience';
-import { Languages } from 'experiences/languages';
 import { skillIcon } from 'experiences/skillIcon';
+import { languages } from 'languages/languages';
 import { socialMediaLinks } from 'links/socialMediaLinks';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -108,11 +108,16 @@ export const Pdf = () => {
                   <Typography variant="h4">Languages</Typography>
                   <Divider sx={{ mb: 1 }} />
                   <TableStack>
-                    {Languages.map(({ name, level }) => (
-                      <TableStackItem key={name}>
+                    {Object.entries(languages).map(([key, { icon, name, level }]) => (
+                      <TableStackItem key={key}>
                         <TableStack sx={{ mb: 1 }}>
                           <TableStackItem>
-                            <Typography variant="h6">{name}</Typography>
+                            <TableStack direction="row" alignItems="center" gap={1}>
+                              <TableStackItem sx={{ width: '1px' }}>{icon}</TableStackItem>
+                              <TableStackItem>
+                                <Typography variant="h6">{name}</Typography>
+                              </TableStackItem>
+                            </TableStack>
                           </TableStackItem>
                           <TableStackItem>
                             <Typography sx={{ color: theme.palette.secondary.main }}>

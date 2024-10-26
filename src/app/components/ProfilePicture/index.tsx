@@ -21,7 +21,12 @@ export const ProfilePicture = ({ size = 240 }: Props) => {
           },
         ]}
         lqip={{ active: true }}
-        style={{ borderRadius: '50%', width: `${size / 2}px`, height: `${size / 2}px` }}
+        style={{
+          borderRadius: '50%',
+          width: `${size / 2}px`,
+          height: `${size / 2}px`,
+          cursor: 'pointer',
+        }}
         onClick={() => setIsModalOpen(true)}
       />
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
