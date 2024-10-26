@@ -1,5 +1,14 @@
 import SouthIcon from '@mui/icons-material/South';
-import { Container, Link, Stack, Theme, Typography, useMediaQuery, useTheme } from '@mui/material';
+import {
+  Chip,
+  Container,
+  Link,
+  Stack,
+  Theme,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { HighlightedSkill } from 'app/components/HighlightedSkill';
 import { HoverableLanguage } from 'app/components/HoverableLanguage';
 import { ProfilePicture } from 'app/components/ProfilePicture';
@@ -29,7 +38,12 @@ export const Home = () => {
   return (
     <>
       <Container maxWidth="md">
-        <Stack sx={{ height: '100vh' }} alignItems="center" justifyContent="center">
+        <Stack
+          sx={{ height: '100vh' }}
+          alignItems="center"
+          justifyContent={isSmallScreen ? undefined : 'center'}
+          pt={isSmallScreen ? 2 : undefined}
+        >
           <Stack gap={2}>
             <Stack direction="row" alignItems="center" gap={2}>
               <ProfilePicture />
@@ -66,6 +80,26 @@ export const Home = () => {
               passion for ongoing professional growth. As a team player at heart, he enjoys sharing
               his knowledge and supporting colleagues whenever possible.
             </Typography>
+            <Stack
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              flexWrap="wrap"
+              gap={1}
+            >
+              <Stack direction="row" justifyContent="center" alignItems="center" gap={1}>
+                <Chip label="Fast Learner" />
+                <Chip label="Proactive" />
+                <Chip label="Team Player" />
+                <Chip label="Coach" />
+              </Stack>
+              <Stack direction="row" justifyContent="center" alignItems="center" gap={1}>
+                <Chip label="Mentor" />
+                <Chip label="Leader" />
+                <Chip label="Follower" />
+                <Chip label="Problem Solver" />
+              </Stack>
+            </Stack>
             <Stack
               direction="row"
               justifyContent="center"
