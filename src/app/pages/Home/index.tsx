@@ -1,3 +1,4 @@
+import { GitHub } from '@mui/icons-material';
 import SouthIcon from '@mui/icons-material/South';
 import {
   Chip,
@@ -136,14 +137,25 @@ export const Home = () => {
       </Container>
       <Container maxWidth="lg">
         <Timeline experiences={experiencesState.experiences} />
-        <Stack gap={1} alignItems="center" mt={5}>
-          <Typography>Powered by</Typography>
-          <Stack direction="row" gap={1} alignItems="center">
-            <HighlightedSkill icon={<ReactJs />} label="React" />
-            <Typography display="inline-block" variant="h6">
-              &
-            </Typography>
-            <HighlightedSkill icon={<MaterialUi />} label="Material UI" />
+        <Stack gap={1}>
+          <Stack gap={1} alignItems="center" mt={5}>
+            <Typography>Powered by</Typography>
+            <Stack direction="row" gap={1} alignItems="center">
+              <HighlightedSkill icon={<ReactJs />} label="React" />
+              <Typography display="inline-block" variant="h6">
+                &
+              </Typography>
+              <HighlightedSkill icon={<MaterialUi />} label="Material UI" />
+            </Stack>
+          </Stack>
+          <Stack alignItems="center" mb={2}>
+            <Link
+              href="https://www.github.com/hyperremix/resume"
+              target="_blank"
+              sx={{ color: (theme) => theme.palette.text.primary }}
+            >
+              <GitHub />
+            </Link>
           </Stack>
         </Stack>
       </Container>
