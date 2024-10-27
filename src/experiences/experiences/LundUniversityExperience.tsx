@@ -10,7 +10,7 @@ export const LundUniversityExperience: TExperience = {
   from: new Date('2009-09-01'),
   to: new Date('2014-06-01'),
   icon: <SchoolIcon />,
-  role: 'Student',
+  roles: [{ title: 'Student' }],
   location: 'Lund University, Sweden',
   projectDescription: 'Computer Science and Engineering',
   skills: [Skill.Java],

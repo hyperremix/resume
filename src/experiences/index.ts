@@ -1,6 +1,7 @@
 import { Skill } from 'experiences/Skill';
 import { TExperience } from './TExperience';
 import { BrainwareGroupExperience, Cdon2012Experience, Cdon2013Experience } from './experiences';
+import { LundUniversityExperience } from './experiences/LundUniversityExperience';
 import { NetlightExperience } from './experiences/NetlightExperience';
 import { ExperiencesState } from './types';
 
@@ -10,6 +11,7 @@ export const experiencesState: ExperiencesState = {
     BrainwareGroupExperience,
     Cdon2013Experience,
     Cdon2012Experience,
+    LundUniversityExperience,
   ],
   topSkills: [
     Skill.React,

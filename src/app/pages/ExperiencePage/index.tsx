@@ -32,7 +32,7 @@ type Props = {
 };
 
 export const Experience = ({
-  experience: { title, from, to, icon, role, location, subExperiences, ...description },
+  experience: { title, from, to, icon, roles, location, subExperiences, ...description },
 }: Props) => (
   <>
     <Button component={Link} startIcon={<ArrowBack />} to="/">
@@ -42,13 +42,12 @@ export const Experience = ({
       {icon && React.cloneElement(icon as any, { fontSize: 'large' })}
       <Typography variant="h3">{title}</Typography>
     </Stack>
-    {role && <Typography>{role}</Typography>}
+    {roles && <Typography>{roles.map((role) => role.title).join(' | ')}</Typography>}
     {location && <Typography>{location}</Typography>}
     <TimePeriod from={from} to={to} />
-    {(description.companyDescription ||
-      description.projectDescription ||
-      description.roleDescription ||
-      description.skills) && <ExperienceDescription {...description} />}
+    {(description.companyDescription || description.projectDescription || description.skills) && (
+      <ExperienceDescription roles={roles} {...description} />
+    )}
   </>
 );
 
@@ -59,12 +58,9 @@ export const ExperienceNotFoundDisplay = () => (
 const ExperienceDescription = ({
   companyDescription,
   projectDescription,
-  roleDescription,
   skills,
-}: Pick<
-  TExperience,
-  'companyDescription' | 'projectDescription' | 'roleDescription' | 'skills'
->) => (
+  roles,
+}: Pick<TExperience, 'companyDescription' | 'projectDescription' | 'skills' | 'roles'>) => (
   <Stack pt={1} gap={1}>
     <Typography>{companyDescription}</Typography>
     {projectDescription && (
@@ -73,11 +69,16 @@ const ExperienceDescription = ({
         <Typography>{projectDescription}</Typography>
       </Stack>
     )}
-    {roleDescription && (
+    {roles && (
       <Stack>
-        <Typography variant="h6">Role</Typography>
-        {roleDescription.map((section, index) => (
-          <Typography key={index}>{section}</Typography>
+        <Typography variant="h6">Roles</Typography>
+        {roles.map((role) => (
+          <Stack key={role.title}>
+            <Typography variant="h6">{role.title}</Typography>
+            {role.description?.map((description) => (
+              <Typography>{description}</Typography>
+            ))}
+          </Stack>
         ))}
       </Stack>
     )}

@@ -13,7 +13,7 @@ export const NetlightExperience: TExperience = {
   title: 'Netlight',
   from: new Date('2016-04-01'),
   icon: <NetlightIcon />,
-  role: 'Consultant / Manager',
+  roles: [{ title: 'Consultant / Manager' }],
   companyDescription:
     'Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation.',
   projectDescription:

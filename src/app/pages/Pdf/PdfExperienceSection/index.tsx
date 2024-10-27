@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const PdfExperienceSection = ({
-  experience: { title, from, to, icon, role, location, subExperiences, ...description },
+  experience: { title, from, to, icon, roles, location, subExperiences, ...description },
 }: Props) => {
   return (
     <TableStack>
@@ -29,7 +29,7 @@ export const PdfExperienceSection = ({
             </TableStack>
           </TableStackItem>
           <TableStackItem>
-            <Typography>{role}</Typography>
+            <Typography>{roles?.map((role) => role.title).join(' | ')}</Typography>
           </TableStackItem>
           <TableStackItem>
             <Typography>{location}</Typography>
@@ -42,8 +42,7 @@ export const PdfExperienceSection = ({
       <TableStackItem>
         {(description.companyDescription ||
           description.projectDescription ||
-          description.roleDescription ||
-          description.skills) && <ExperienceDescription {...description} />}
+          description.skills) && <ExperienceDescription roles={roles} {...description} />}
       </TableStackItem>
       <TableStackItem>
         {subExperiences && (
@@ -71,12 +70,9 @@ export const PdfExperienceSection = ({
 const ExperienceDescription = ({
   companyDescription,
   projectDescription,
-  roleDescription,
   skills,
-}: Pick<
-  TExperience,
-  'companyDescription' | 'projectDescription' | 'roleDescription' | 'skills'
->) => (
+  roles,
+}: Pick<TExperience, 'companyDescription' | 'projectDescription' | 'skills' | 'roles'>) => (
   <TableStack gap={0.75}>
     {companyDescription && (
       <TableStackItem>
@@ -89,11 +85,23 @@ const ExperienceDescription = ({
         <Typography>{projectDescription}</Typography>
       </TableStackItem>
     )}
-    {roleDescription && (
-      <TableStackItem>
-        <Typography variant="h6">Role</Typography>
-        <Typography>{roleDescription}</Typography>
-      </TableStackItem>
+    {roles && (
+      <TableStack>
+        <TableStackItem>
+          <Typography variant="h6">Roles</Typography>
+        </TableStackItem>
+        <TableStackItem>
+          {roles.map((role) => (
+            <TableStackItem key={role.title}>
+              <Typography variant="h6">{role.title}</Typography>
+              {role.description &&
+                role.description.map((description) => (
+                  <Typography key={description}>{description}</Typography>
+                ))}
+            </TableStackItem>
+          ))}
+        </TableStackItem>
+      </TableStack>
     )}
     {skills && (
       <TableStackItem>

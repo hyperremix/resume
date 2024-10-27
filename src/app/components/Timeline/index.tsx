@@ -12,7 +12,6 @@ import {
 } from '@mui/material';
 import { useIsOnScreen } from 'app/hooks/useIsOnScreen';
 import { TExperience } from 'experiences/TExperience';
-import { LundUniversityExperience } from 'experiences/experiences/LundUniversityExperience';
 import { skillIcon } from 'experiences/skillIcon';
 import * as React from 'react';
 import { useMemo, useRef } from 'react';
@@ -27,9 +26,7 @@ type Props = {
 export const Timeline = ({ experiences }: Props) => {
   const flatExperiences = useMemo(
     () =>
-      [...experiences, LundUniversityExperience]
-        .map((experience) => [experience, ...(experience.subExperiences ?? [])])
-        .flat(),
+      experiences.map((experience) => [experience, ...(experience.subExperiences ?? [])]).flat(),
     [experiences],
   );
   const isSmallScreen = useMediaQuery<Theme>((theme) => theme.breakpoints.down('md'));
@@ -145,7 +142,7 @@ const Experience = ({ experience, isOnRight }: { experience: TExperience; isOnRi
 
           <Stack sx={timelineStyle}>
             <Typography variant="subtitle2" textAlign={align}>
-              {experience.role}
+              {experience.roles?.map((role) => role.title).join(' | ')}
             </Typography>
             <TimePeriod from={experience.from} to={experience.to} textAlign={align} />
             {experience.projectDescription && (

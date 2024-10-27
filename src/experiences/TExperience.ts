@@ -1,6 +1,7 @@
 import { Skill } from 'experiences/Skill';
 import { ReactNode } from 'react';
 import { ExperienceSlug } from './ExperienceSlug';
+import { TRole } from './TRole';
 
 export type TExperience = {
   slug: ExperienceSlug;
@@ -9,10 +10,9 @@ export type TExperience = {
   from: Date;
   to?: Date;
   location?: string;
-  role?: string;
+  roles?: TRole[];
   companyDescription?: string;
   projectDescription?: string;
-  roleDescription?: string[];
   highlightedSkills?: Skill[];
   skills?: Skill[];
   subExperiences?: TExperience[];
