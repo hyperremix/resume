@@ -1,14 +1,18 @@
 import { Javascript } from '@mui/icons-material';
 import KeyIcon from '@mui/icons-material/Key';
 import { AWSAmplify } from 'app/icons/AWSAmplify';
+import { AWSCognito } from 'app/icons/AWSCognito';
 import { AWSDynamoDB } from 'app/icons/AWSDynamoDB';
+import { AWSKinesis } from 'app/icons/AWSKinesis';
 import { AWSLambda } from 'app/icons/AWSLambda';
 import { AWSS3 } from 'app/icons/AWSS3';
+import { AWSSQS } from 'app/icons/AWSSQS';
 import { Auth0 } from 'app/icons/Auth0';
 import { Css } from 'app/icons/Css';
 import { Cypress } from 'app/icons/Cypress';
 import { Datadog } from 'app/icons/Datadog';
 import { Expo } from 'app/icons/Expo';
+import { GRPC } from 'app/icons/GRPC';
 import { Grafana } from 'app/icons/Grafana';
 import { Helm } from 'app/icons/Helm';
 import { Html } from 'app/icons/Html';
@@ -17,6 +21,7 @@ import { Kibana } from 'app/icons/Kibana';
 import { MongoDB } from 'app/icons/MongoDB';
 import { NestJS } from 'app/icons/NestJS';
 import { OpenShift } from 'app/icons/OpenShift';
+import { Protobuf } from 'app/icons/Protobuf';
 import { Sentry } from 'app/icons/Sentry';
 import { ServerlessFramework } from 'app/icons/ServerlessFramework';
 import { Splunk } from 'app/icons/Splunk';
@@ -102,4 +107,9 @@ export const skillIcon: Record<Skill, ReactElement | undefined> = {
   [Skill.Kafka]: <ApacheKafka />,
   [Skill.GitLabCI]: <Gitlab />,
   [Skill.JavaScript]: <Javascript />,
+  [Skill.AWSKinesis]: <AWSKinesis />,
+  [Skill.AWSSQS]: <AWSSQS />,
+  [Skill.AWSCognito]: <AWSCognito />,
+  [Skill.GRPC]: <GRPC />,
+  [Skill.Protobuf]: <Protobuf />,
 };

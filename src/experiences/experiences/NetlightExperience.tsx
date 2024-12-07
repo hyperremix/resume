@@ -7,6 +7,7 @@ import { GamblingExperience } from './GamblingExperience';
 import { GlassesRetailerExperience } from './GlassesRetailerExperience';
 import { IotSuiteExperience } from './IotSuiteExperience';
 import { MroExperience } from './MroExperience';
+import { RideSharingExperience } from './RideSharingExperience';
 
 export const NetlightExperience: TExperience = {
   slug: 'netlight',
@@ -19,6 +20,7 @@ export const NetlightExperience: TExperience = {
   projectDescription:
     'Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size.',
   subExperiences: [
+    RideSharingExperience,
     IotSuiteExperience,
     AgTechECommerceExperience,
     GamblingExperience,

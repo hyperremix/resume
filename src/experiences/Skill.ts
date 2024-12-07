@@ -9,6 +9,7 @@ export enum Skill {
   CSS = 'CSS',
   Go = 'Go',
   SASS = 'SASS',
+  Protobuf = 'Protobuf',
 
   // Frameworks
   Vue = 'Vue',
@@ -22,6 +23,7 @@ export enum Skill {
   Helm = 'Helm',
   VertX = 'Vert.x',
   DotNetFramework = '.NET Framework',
+  GRPC = 'gRPC',
 
   // Databases
   MongoDB = 'MongoDB',
@@ -58,6 +60,9 @@ export enum Skill {
   AWSLambda = 'AWS Lambda',
   AWSAmplify = 'AWS Amplify',
   AWSS3 = 'AWS S3',
+  AWSKinesis = 'AWS Kinesis',
+  AWSSQS = 'AWS SQS',
+  AWSCognito = 'AWS Cognito',
 
   // Tools
   Expo = 'Expo',

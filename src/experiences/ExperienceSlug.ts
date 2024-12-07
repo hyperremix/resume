@@ -9,4 +9,5 @@ export type ExperienceSlug =
   | 'mro'
   | 'gambling'
   | 'ag-tech'
-  | 'iot-suite';
+  | 'iot-suite'
+  | 'ride-sharing';

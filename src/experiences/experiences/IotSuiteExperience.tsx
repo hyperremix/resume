@@ -7,6 +7,7 @@ export const IotSuiteExperience: TExperience = {
   slug: 'iot-suite',
   title: 'IoT Suite for Smart Heating',
   from: new Date('2022-11-01'),
+  to: new Date('2024-06-12'),
   icon: <RouterIcon />,
   companyDescription:
     'Startup that wants to make real estate climate-friendly, comfortable and economical: To achieve this they digitise and network buildings on behalf of their customers and develop new, intelligent products. They offer efficient, customised workflows and applications for operating IoT infrastructures, and have created a flexible enterprise IoT suite that manages data from many millions of sensors for intelligent applications and services.',
@@ -45,6 +46,7 @@ export const IotSuiteExperience: TExperience = {
     Skill.Kubernetes,
     Skill.Helm,
     Skill.AWSLambda,
+    Skill.AWSCognito,
     Skill.Docker,
     Skill.GitLabCI,
     Skill.Kibana,
