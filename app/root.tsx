@@ -1,5 +1,7 @@
 import { IKContext } from 'imagekitio-react';
+import { PostHogProvider } from 'posthog-js/react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from 'react-router';
+import { environment } from './environment';
 import './index.css';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => (
@@ -22,7 +24,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => (
 
 const Root = () => (
   <IKContext urlEndpoint="https://ik.imagekit.io/hyperremix/resume">
-    <Outlet />
+    <PostHogProvider
+      apiKey={environment.postHogKey}
+      options={{ api_host: environment.postHogHost }}
+    >
+      <Outlet />
+    </PostHogProvider>
   </IKContext>
 );
 
