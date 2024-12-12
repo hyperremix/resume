@@ -73,6 +73,7 @@ export enum Skill {
   Docker = 'Docker',
   Auth0 = 'Auth0',
   Keycloak = 'Keycloak',
+  Vercel = 'Vercel',
 
   // Soft Skills
   Scrum = 'Scrum',

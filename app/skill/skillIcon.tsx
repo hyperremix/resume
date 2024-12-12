@@ -48,6 +48,7 @@ import SpringBoot from '@/icons/tech/spring-boot.svg?react';
 import SqlServer from '@/icons/tech/sql-server.svg?react';
 import Tailwind from '@/icons/tech/tailwind.svg?react';
 import TypeScript from '@/icons/tech/typescript.svg?react';
+import Vercel from '@/icons/tech/vercel.svg?react';
 import Vite from '@/icons/tech/vite.svg?react';
 import Vuejs from '@/icons/tech/vuejs.svg?react';
 import { ReactElement } from 'react';
@@ -117,4 +118,5 @@ export const skillIcon: Record<Skill, ReactElement | undefined> = {
   [Skill.AWSCognito]: <AWSCognito />,
   [Skill.GRPC]: <GRPC />,
   [Skill.Protobuf]: <Protobuf />,
+  [Skill.Vercel]: <Vercel style={{ marginTop: '-2px', marginBottom: '2px' }} />,
 };

@@ -6,4 +6,5 @@ export const poweredBySkills = [
   Skill.Tailwind,
   Skill.Shadcn,
   Skill.Motion,
+  Skill.Vercel,
 ];

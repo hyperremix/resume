@@ -81,7 +81,7 @@ const RightExperience = ({ experience }: { experience: TExperience }) => (
               {experience.highlightedSkills.map((skill, i) => (
                 <motion.div
                   key={skill}
-                  initial={{ x: 100, opacity: 0 }}
+                  initial={{ x: 200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, ease: 'easeInOut', delay: i * 0.1 }}
                   viewport={{ once: true }}
@@ -124,11 +124,11 @@ const LeftExperience = ({ experience }: { experience: TExperience }) => (
             <p className="pt-1 text-start sm:text-end">{experience.projectDescription}</p>
           )}
           {experience.highlightedSkills && (
-            <div className="flex flex-row justify-end gap-2 flex-wrap py-3">
+            <div className="flex flex-row justify-end gap-2 flex-wrap py-3 w-full">
               {experience.highlightedSkills.map((skill, i) => (
                 <motion.div
                   key={skill}
-                  initial={{ x: -100, opacity: 0 }}
+                  initial={{ x: -200, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{
                     duration: 1,
