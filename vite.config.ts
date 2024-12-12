@@ -1,24 +1,27 @@
-import react from '@vitejs/plugin-react';
-import browserslistToEsbuild from 'browserslist-to-esbuild';
+import { reactRouter } from '@react-router/dev/vite';
+import path from 'path';
+import tailwindcss from 'tailwindcss';
 import { defineConfig } from 'vite';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
+import svgr from 'vite-plugin-svgr';
 
+// https://vite.dev/config/
 export default defineConfig({
-  base: '',
   plugins: [
-    react({
-      jsxImportSource: '@emotion/react',
-      babel: {
-        plugins: ['@emotion/babel-plugin'],
+    reactRouter(),
+    svgr({
+      svgrOptions: {
+        icon: true,
       },
     }),
-    viteTsconfigPaths(),
   ],
-  server: {
-    open: true,
-    port: 4000,
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './app'),
+    },
   },
-  build: {
-    target: browserslistToEsbuild(['>0.2%', 'not dead', 'not op_mini all']),
+  css: {
+    postcss: {
+      plugins: [tailwindcss()],
+    },
   },
 });
