@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const AgTechECommerceExperience: TExperience = {
   slug: 'ag-tech',
   title: 'AgTech E-Commerce',
-  from: new Date('2021-04-01'),
-  to: new Date('2022-11-01'),
+  from: '2021-04-01',
+  to: '2022-11-01',
   icon: <Tractor />,
   companyDescription:
     'A Hamburg based, international AgTech e-commerce start-up that is striving to revolutionise and digitalise the market for used agricultural machinery since 2015. The company wants to resolve the many pain points for farmers and dealers operating on this market by bringing transparency to pricing, globalising an otherwise fairly regional market, and prevent fraud.',

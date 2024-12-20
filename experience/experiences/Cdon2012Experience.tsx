@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const Cdon2012Experience: TExperience = {
   slug: 'cdon-2012',
   title: 'CDON',
-  from: new Date('2012-06-01'),
-  to: new Date('2012-09-01'),
+  from: '2012-06-01',
+  to: '2012-09-01',
   icon: <CdonIcon />,
   companyDescription:
     'CDON is one of the leading E-commerce companies in Scandinavia with over two million active customers. They sell movies, music, games, books and electronics among many other things.',

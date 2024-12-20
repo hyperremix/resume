@@ -19,12 +19,3 @@ export const getRelativeTime = (
   const monthsString = months > 0 ? `${Math.floor(months)} month${months > 1 ? 's' : ''}` : '';
   return `${yearsString} ${monthsString}`.trim();
 };
-
-export const getRelativeMonths = (
-  from: string | number | Date | dayjs.Dayjs,
-  to: string | number | Date | dayjs.Dayjs = new Date(),
-): string => {
-  const diff = dayjs(to).diff(from, 'month', true);
-  const months = Math.floor(diff);
-  return `${months}mo`;
-};

@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const MasterThesisExperience: TExperience = {
   slug: 'master-thesis',
   title: 'Axis Communications',
-  from: new Date('2014-01-01'),
-  to: new Date('2014-07-01'),
+  from: '2014-01-01',
+  to: '2014-07-01',
   icon: <Axis />,
   companyDescription:
     'Axis Communications is a Swedish manufacturer of network cameras for the physical security and video surveillance industries. The company is the market leader in this area and operates in several different market segments.',

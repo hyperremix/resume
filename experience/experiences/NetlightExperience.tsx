@@ -11,7 +11,7 @@ import { RideSharingExperience } from './RideSharingExperience';
 export const NetlightExperience: TExperience = {
   slug: 'netlight',
   title: 'Netlight',
-  from: new Date('2016-04-01'),
+  from: '2016-04-01',
   icon: <Netlight />,
   roles: [{ title: 'Consultant / Manager' }],
   companyDescription:

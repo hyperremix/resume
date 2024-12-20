@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const GlassesRetailerExperience: TExperience = {
   slug: 'glasses-retailer',
   title: 'Glasses Retailer',
-  from: new Date('2016-04-01'),
-  to: new Date('2018-07-01'),
+  from: '2016-04-01',
+  to: '2018-07-01',
   icon: <Glasses />,
   companyDescription: 'The number one optician company in Germany.',
   projectDescription:

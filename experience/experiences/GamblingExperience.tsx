@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const GamblingExperience: TExperience = {
   slug: 'gambling',
   title: 'Gambling (Lottery)',
-  from: new Date('2020-01-01'),
-  to: new Date('2021-04-01'),
+  from: '2020-01-01',
+  to: '2021-04-01',
   icon: <Dice />,
   companyDescription:
     'A german market leader for Lotto-Ticket-brokering for federal lotteries in Germany.',

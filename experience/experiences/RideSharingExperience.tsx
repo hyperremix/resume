@@ -5,7 +5,7 @@ import { Skill } from '@/skill/Skill';
 export const RideSharingExperience: TExperience = {
   slug: 'ride-sharing',
   title: 'Ride Sharing',
-  from: new Date('2024-10-22'),
+  from: '2024-10-22',
   icon: <Van />,
   companyDescription:
     'An innovative, growing company, that stands for mobility and community. It has the higher objective of making our cities a better place to live in. They are already on the move with fully electric ride-sharing vehicles for more than two million people.',

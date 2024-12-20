@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const BrainwareGroupExperience: TExperience = {
   slug: 'brainwaregroup',
   title: 'BrainwareGroup',
-  from: new Date('2014-09-01'),
-  to: new Date('2016-04-01'),
+  from: '2014-09-01',
+  to: '2016-04-01',
   icon: <BrainwareGroup />,
   companyDescription:
     'Brainwaregroup is an international company, with headquarters Switzerland, that provides IT service- and contract management solutions. Companies like Vodafone, OMV, Linde, Allianz GI and ERGO are all long-time customers of Brainwaregroups wide arrange of products.',

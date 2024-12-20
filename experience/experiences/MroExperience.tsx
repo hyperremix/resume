@@ -5,8 +5,8 @@ import { Skill } from '@/skill/Skill';
 export const MroExperience: TExperience = {
   slug: 'mro',
   title: 'Aviation MRO',
-  from: new Date('2018-07-01'),
-  to: new Date('2020-01-01'),
+  from: '2018-07-01',
+  to: '2020-01-01',
   icon: <Airplane />,
   companyDescription:
     'A leading provider of maintenance, repair, overhaul and modification services for civil aircraft.',

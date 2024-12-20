@@ -3,8 +3,8 @@
 import { getDateInFormat, getRelativeTime } from '@/utils/dayjs';
 
 type Props = {
-  from: Date;
-  to?: Date;
+  from: string;
+  to?: string;
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
 
 export const TimePeriod = ({ from, to, className, ...props }: Props) => (

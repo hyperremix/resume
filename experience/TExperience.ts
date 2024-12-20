@@ -7,8 +7,8 @@ export type TExperience = {
   slug: ExperienceSlug;
   title: string;
   icon?: ReactNode;
-  from: Date;
-  to?: Date;
+  from: string;
+  to?: string;
   location?: string;
   roles?: TRole[];
   companyDescription?: string;
