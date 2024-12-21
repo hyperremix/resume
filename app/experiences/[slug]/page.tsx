@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { experiences } from '@/experience';
 import { TExperience } from '@/experience/TExperience';
 import ArrowLeft from '@/icons/common/arrow-left';
-import { skillIcon } from '@/skill/skillIcon';
+import { skillConfig } from '@/skill/skillConfig';
 import Link from 'next/link';
 import React from 'react';
 
@@ -79,8 +79,8 @@ const ExperienceDescription = ({
         <div className="flex flex-row flex-wrap gap-2">
           {skills.map((skill) => (
             <Badge key={skill}>
-              {React.cloneElement(skillIcon[skill] ?? <></>, { className: 'text-2xl' })}
-              <p>{skill}</p>
+              {React.cloneElement(skillConfig[skill].icon ?? <></>, { className: 'text-2xl' })}
+              {skillConfig[skill].label && <p>{skillConfig[skill].label}</p>}
             </Badge>
           ))}
         </div>

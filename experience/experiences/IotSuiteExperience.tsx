@@ -42,6 +42,7 @@ export const IotSuiteExperience: TExperience = {
     Skill.Kafka,
     Skill.TypeScript,
     Skill.Vue,
+    Skill.Vite,
     Skill.Kubernetes,
     Skill.Helm,
     Skill.AWSLambda,
@@ -59,5 +60,6 @@ export const IotSuiteExperience: TExperience = {
     Skill.E2ETesting,
     Skill.Hiring,
     Skill.CoachingAndMentoring,
+    Skill.Playwright,
   ],
 };

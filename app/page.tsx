@@ -1,6 +1,7 @@
 import { HighlightedSkill } from '@/components/custom/highlighted-skill';
 import { HoverableLanguage } from '@/components/custom/hoverable-language';
 import { ProfilePicture } from '@/components/custom/profile-picture';
+import { SkillLevels } from '@/components/custom/skill-levels';
 import { SocialMediaLink } from '@/components/custom/social-media-link';
 import { Timeline } from '@/components/custom/timeline';
 import { Badge } from '@/components/ui/badge';
@@ -10,7 +11,6 @@ import Github from '@/icons/tech/github';
 import { languages } from '@/language/languages';
 import { socialMediaLinks } from '@/link/socialMediaLinks';
 import { poweredBySkills } from '@/skill/poweredBySkills';
-import { skillIcon } from '@/skill/skillIcon';
 import { softSkills } from '@/skill/softSkills';
 import Link from 'next/link';
 
@@ -47,7 +47,7 @@ const Home = () => (
         </div>
         <div className="flex flex-row flex-wrap justify-center items-center gap-2">
           {topSkills.map((skill) => (
-            <HighlightedSkill key={skill} icon={skillIcon[skill]} label={skill} />
+            <HighlightedSkill key={skill} skill={skill} />
           ))}
         </div>
       </div>
@@ -67,12 +67,13 @@ const Home = () => (
       </div>
     </div>
     <Timeline experiences={experiences} />
+    <SkillLevels />
     <div className="flex flex-col gap-8 mt-12">
       <div className="flex flex-col gap-3 items-center mt-5">
         <p className="text-xl">Powered by</p>
         <div className="flex flex-row gap-2 items-center">
           {poweredBySkills.map((skill) => (
-            <HighlightedSkill key={skill} icon={skillIcon[skill]} label={skill} />
+            <HighlightedSkill key={skill} skill={skill} />
           ))}
         </div>
       </div>

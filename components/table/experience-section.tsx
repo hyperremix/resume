@@ -1,7 +1,7 @@
 import { TimePeriod } from '@/components/custom/time-period';
 import { Badge } from '@/components/ui/badge';
 import { TExperience } from '@/experience/TExperience';
-import { skillIcon } from '@/skill/skillIcon';
+import { skillConfig } from '@/skill/skillConfig';
 import { TableStack } from './table-stack';
 import { TableStackItem } from './table-stack-item';
 
@@ -101,8 +101,12 @@ const ExperienceDescription = ({
         {skills.map((skill, index) => (
           <div key={skill} className={`inline-block mb-1 ${index === 0 ? '' : 'ml-1'}`}>
             <Badge key={skill} variant="outline">
-              {skillIcon[skill] ? <div>{skillIcon[skill]}</div> : <div style={{ height: '1em' }} />}
-              <p className="text-xs">{skill}</p>
+              {skillConfig[skill].icon ? (
+                <div>{skillConfig[skill].icon}</div>
+              ) : (
+                <div style={{ height: '1em' }} />
+              )}
+              {skillConfig[skill].label && <p className="text-xs">{skillConfig[skill].label}</p>}
             </Badge>
           </div>
         ))}

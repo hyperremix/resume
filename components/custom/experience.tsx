@@ -2,7 +2,6 @@
 
 import { TExperience } from '@/experience/TExperience';
 import OpenInNew from '@/icons/common/open-in-new';
-import { skillIcon } from '@/skill/skillIcon';
 import { motion } from 'motion/react';
 import Link from 'next/link';
 import { HighlightedSkill } from './highlighted-skill';
@@ -67,7 +66,7 @@ const RightExperience = ({ experience }: { experience: TExperience }) => (
                   transition={{ duration: 1, ease: 'easeInOut', delay: i * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <HighlightedSkill key={skill} icon={skillIcon[skill]} label={skill} />
+                  <HighlightedSkill key={skill} skill={skill} />
                 </motion.div>
               ))}
             </div>
@@ -118,7 +117,7 @@ const LeftExperience = ({ experience }: { experience: TExperience }) => (
                   }}
                   viewport={{ once: true }}
                 >
-                  <HighlightedSkill key={skill} icon={skillIcon[skill]} label={skill} />
+                  <HighlightedSkill key={skill} skill={skill} />
                 </motion.div>
               ))}
             </div>

@@ -46,5 +46,7 @@ export const MroExperience: TExperience = {
     Skill.Scrum,
     Skill.UnitTesting,
     Skill.E2ETesting,
+    Skill.Keycloak,
+    Skill.OpenShift,
   ],
 };

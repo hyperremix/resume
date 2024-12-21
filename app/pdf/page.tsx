@@ -7,7 +7,7 @@ import { elevatorPitch, experiences, name, role, topSkills } from '@/experience'
 import { LundUniversityExperience } from '@/experience/experiences/LundUniversityExperience';
 import { languages } from '@/language/languages';
 import { socialMediaLinks } from '@/link/socialMediaLinks';
-import { skillIcon } from '@/skill/skillIcon';
+import { skillConfig } from '@/skill/skillConfig';
 import Link from 'next/link';
 import React from 'react';
 
@@ -49,20 +49,20 @@ const Pdf = () => (
           <TableStackItem className="align-text-top w-48">
             <TableStack>
               <TableStackItem className="pb-1">
-                <p className="text-2xl border-b border-zinc-800 dark:border-zinc-300 pb-1 mb-1">
-                  Top Skills
-                </p>
+                <p className="text-2xl border-b pb-1 mb-1">Top Skills</p>
                 {topSkills.map((skill) => (
                   <Badge key={skill} variant="outline" className="mb-1">
-                    {React.cloneElement(skillIcon[skill] ?? <></>, { className: 'text-2xl' })}
-                    <p className="text-xs">{skill}</p>
+                    {React.cloneElement(skillConfig[skill].icon ?? <></>, {
+                      className: 'text-2xl',
+                    })}
+                    {skillConfig[skill].label && (
+                      <p className="text-xs">{skillConfig[skill].label}</p>
+                    )}
                   </Badge>
                 ))}
               </TableStackItem>
               <TableStackItem>
-                <p className="text-2xl border-b border-zinc-800 dark:border-zinc-300 pb-1 mb-1">
-                  Languages
-                </p>
+                <p className="text-2xl border-b pb-1 mb-1">Languages</p>
                 <TableStack>
                   {Object.entries(languages).map(([key, { icon, name, level }]) => (
                     <TableStackItem key={key}>
@@ -88,9 +88,7 @@ const Pdf = () => (
           <TableStackItem>
             <TableStack gap={2}>
               <TableStackItem>
-                <p className="text-2xl border-b border-zinc-800 dark:border-zinc-300 pb-1 mb-1">
-                  Experiences
-                </p>
+                <p className="text-2xl border-b pb-1 mb-1">Experiences</p>
                 <TableStack>
                   {experiences.map((experience) => (
                     <TableStackItem key={experience.slug}>
@@ -100,9 +98,7 @@ const Pdf = () => (
                 </TableStack>
               </TableStackItem>
               <TableStackItem>
-                <p className="text-2xl border-b border-zinc-800 dark:border-zinc-300 pb-1 mb-1">
-                  Education
-                </p>
+                <p className="text-2xl border-b pb-1 mb-1">Education</p>
                 <ExperienceSection experience={LundUniversityExperience} />
               </TableStackItem>
             </TableStack>
