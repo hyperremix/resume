@@ -41,7 +41,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "npx lint --fix"
+      "npx lint"
     ],
     "*.{md,json}": [
       "prettier --write"
