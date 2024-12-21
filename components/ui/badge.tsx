@@ -9,7 +9,7 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default:
-          'border-transparent dark:border-transparent bg-zinc-400 text-zinc-800 fill-zinc-800 dark:bg-zinc-500 dark:text-zinc-950 dark:fill-zinc-950',
+          'border-transparent dark:border-transparent bg-zinc-950 text-zinc-200 fill-zinc-200 dark:bg-zinc-200 dark:text-zinc-950 dark:fill-zinc-950',
         outline: 'text-zinc-800 dark:text-zinc-300 fill-zinc-800 dark:fill-zinc-300',
       },
     },
