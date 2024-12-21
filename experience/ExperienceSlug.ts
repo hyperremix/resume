@@ -10,4 +10,5 @@ export type ExperienceSlug =
   | 'gambling'
   | 'ag-tech'
   | 'iot-suite'
-  | 'ride-sharing';
+  | 'ride-sharing'
+  | 'parental-leave';
