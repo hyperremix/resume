@@ -1,4 +1,5 @@
 import { TExperience } from '@/experience/TExperience';
+import { translations } from '@/i18n';
 import Netlight from '@/icons/common/netlight';
 import { Skill } from '@/skill/Skill';
 import { AgTechECommerceExperience } from './AgTechECommerceExperience';
@@ -11,14 +12,12 @@ import { RideSharingExperience } from './RideSharingExperience';
 
 export const NetlightExperience: TExperience = {
   slug: 'netlight',
-  title: 'Netlight',
+  title: translations.experience.title.netlight,
   from: '2016-04-01',
   icon: <Netlight />,
-  roles: [{ title: 'Consultant / Manager' }],
-  companyDescription:
-    'Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation.',
-  projectDescription:
-    'Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size.',
+  roles: [{ title: translations.experience.role.consultantManager }],
+  companyDescription: translations.experience.companyDescription.netlight,
+  projectDescription: translations.experience.projectDescription.netlight,
   subExperiences: [
     RideSharingExperience,
     ParentalLeaveExperience,

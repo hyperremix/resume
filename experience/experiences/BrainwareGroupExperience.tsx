@@ -1,24 +1,24 @@
 import { TExperience } from '@/experience/TExperience';
+import { translations } from '@/i18n';
 import BrainwareGroup from '@/icons/common/brainwaregroup';
 import { Skill } from '@/skill/Skill';
 
 export const BrainwareGroupExperience: TExperience = {
   slug: 'brainwaregroup',
-  title: 'BrainwareGroup',
+  title: translations.experience.title.brainware,
   from: '2014-09-01',
   to: '2016-04-01',
   icon: <BrainwareGroup />,
-  companyDescription:
-    'Brainwaregroup is an international company, with headquarters Switzerland, that provides IT service- and contract management solutions. Companies like Vodafone, OMV, Linde, Allianz GI and ERGO are all long-time customers of Brainwaregroups wide arrange of products.',
-  projectDescription: 'Automatic software recognition for an IT-licence compliance product',
+  companyDescription: translations.experience.companyDescription.brainware,
+  projectDescription: translations.experience.projectDescription.brainware,
   roles: [
     {
-      title: 'Developer',
+      title: translations.experience.role.developer,
       description: [
-        'The company had a small development team that struggled to keep up with customer demands while trying to innovate their products. Fredrik was hired to help alleviate this pressure by working on new projects as well as maintaining the existing code. Significant projects included implementing a command-line tool GUI, migrating from SourceSafe to Git, and integrating Elasticsearch. ',
-        "The command-line tool GUI, initially Fredrik's idea, aimed to help the development team with easy debugging of numerous command-line tools. Its potential was quickly recognized, leading to more features being added, and it is now used company-wide.",
-        'The company initially used Visual SourceSafe for version control, which made parallel work difficult due to poor branching and merging capabilities. Fredrik introduced Git and a new workflow and branching model, which have been successfully adopted and appreciated.',
-        "To improve search performance in brainwaregroup's products, Fredrik mirrored the database in Elasticsearch. This switch allowed search queries to be directed to Elasticsearch instead of the database, providing nearly instant results.",
+        translations.experience.roleDescription.brainware[0],
+        translations.experience.roleDescription.brainware[1],
+        translations.experience.roleDescription.brainware[2],
+        translations.experience.roleDescription.brainware[3],
       ],
     },
   ],

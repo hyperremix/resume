@@ -1,5 +1,4 @@
 import { Skill } from '@/skill/Skill';
-import { getMonthsBetween } from '@/utils/dayjs';
 import { TExperience } from './TExperience';
 import { BrainwareGroupExperience } from './experiences/BrainwareGroupExperience';
 import { Cdon2012Experience } from './experiences/Cdon2012Experience';
@@ -16,20 +15,15 @@ export const experiences = [
 ];
 
 export const topSkills = [
-  Skill.React,
   Skill.TypeScript,
+  Skill.React,
   Skill.Kotlin,
+  Skill.SpringBoot,
   Skill.Kubernetes,
   Skill.AWS,
-  Skill.SpringBoot,
   Skill.NestJS,
   Skill.MongoDB,
 ];
-
-export const name = 'Fredrik Pettersson';
-export const role = 'Software Generalist';
-export const elevatorPitch =
-  'Fredrik is a versatile professional with expertise in a broad range of technologies and disciplines. His core lies in all aspects of software development, and he excels in dynamic teams operating in fast-paced environments, prioritizing what is most important at any given moment. Fredrik is dedicated to problem-solving and has a passion for ongoing professional growth. As a team player at heart, he enjoys sharing his knowledge and supporting colleagues whenever possible.';
 
 export const getSortedSkills = (): { skill: Skill; months: number }[] => {
   const skills = getRecursiveSkills(experiences);
@@ -59,6 +53,18 @@ export const getRecursiveSkills = (experiences: TExperience[]): Partial<Record<S
   }
 
   return skills;
+};
+
+const getMonthsBetween = (from: string, to?: string): number => {
+  const fromDateTime = new Date(from);
+  const toDateTime = to ? new Date(to) : new Date();
+
+  const yearsDifference = toDateTime.getFullYear() - fromDateTime.getFullYear();
+  const monthsDifference = toDateTime.getMonth() - fromDateTime.getMonth();
+
+  const totalMonths = yearsDifference * 12 + monthsDifference;
+
+  return totalMonths;
 };
 
 const withoutBasicSkills = (experience: Skill): boolean =>

@@ -1,9 +1,11 @@
 'use client';
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { translations } from '@/i18n';
 import { Skill } from '@/skill/Skill';
 import { skillConfig } from '@/skill/skillConfig';
 import { motion } from 'motion/react';
+import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 
 type Props = {
@@ -13,20 +15,22 @@ type Props = {
 };
 
 export const SkillGauge = ({ skill, months, maxMonths }: Props) => {
+  const t = useTranslations();
+
   const degree = useMemo(() => Math.floor((months / maxMonths) * 75), [months, maxMonths]);
-  const years = useMemo(() => {
+  const tooltipContent = useMemo(() => {
     const years = Math.floor(months / 12);
     return years === 0
-      ? `${months} month${months > 1 ? 's' : ''}`
-      : `${years} year${years > 1 ? 's' : ''}`;
-  }, [months]);
+      ? t(translations.skillGaugeMonthsTooltip, { months })
+      : t(translations.skillGaugeYearsTooltip, { years });
+  }, [months, t]);
 
   return (
     <TooltipProvider>
       <Tooltip delayDuration={0}>
         <TooltipTrigger
           className="relative size-40 group"
-          aria-label={`${skill} - ${months} months of experience`}
+          aria-label={t(translations.skillGaugeLabel, { skill: skillConfig[skill].label, months })}
         >
           <svg
             className="rotate-[135deg] size-full"
@@ -64,7 +68,7 @@ export const SkillGauge = ({ skill, months, maxMonths }: Props) => {
           </div>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{years}</p>
+          <p>{tooltipContent}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

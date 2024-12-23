@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "description": "Resume of Fredrik Pettersson"
+  },
+  "home": {
+    "view": "View",
+    "pdf": "printable version",
+    "or": "or",
+    "findOutMoreBelow": "find out more below",
+    "builtWith": "Built with"
+  },
+  "name": "Fredrik Pettersson",
+  "role": "Software Generalist",
+  "elevatorPitch": "Fredrik is a versatile professional with expertise in a broad range of technologies and disciplines. His core lies in all aspects of software development, and he excels in dynamic teams operating in fast-paced environments, prioritizing what is most important at any given moment. Fredrik is dedicated to problem-solving and has a passion for ongoing professional growth. As a team player at heart, he enjoys sharing his knowledge and supporting colleagues whenever possible.",
+  "profilePictureAriaLabel": "Profile picture of Fredrik Pettersson",
+  "locationLabel": "Hamburg, Germany",
+  "githubProfileLabel": "GitHub profile",
+  "linkedinProfileLabel": "LinkedIn profile",
+  "researchGateProfileLabel": "ResearchGate profile",
+  "skillsHeader": "Skills",
+  "skillGaugeYearsTooltip": "{years, plural, one {# year} other {# years}}",
+  "skillGaugeMonthsTooltip": "{months, plural, one {# month} other {# months}}",
+  "skillGaugeLabel": "{skill} - {months, plural, one {# month} other {# months}} of experience",
+  "language": {
+    "Swedish": {
+      "name": "Swedish",
+      "level": "Native or Bilingual Proficiency"
+    },
+    "English": {
+      "name": "English",
+      "level": "Full Professional Proficiency"
+    },
+    "German": {
+      "name": "German",
+      "level": "Bilingual Proficiency"
+    }
+  },
+  "pdf": {
+    "topSkillsHeader": "Top Skills",
+    "languagesHeader": "Languages",
+    "experiencesHeader": "Experiences",
+    "educationHeader": "Education"
+  },
+  "experience": {
+    "title": {
+      "axis": "Axis Communications",
+      "university": "M.Sc. in Engineering",
+      "CDON": "CDON",
+      "brainware": "Brainware Group",
+      "glassesRetailer": "Glasses Retailer",
+      "mro": "Aviation MRO",
+      "gambling": "Gambling (Lottery)",
+      "agTech": "AgTech E-Commerce",
+      "iotSuite": "IoT Suite for Smart Heating",
+      "parentalLeave": "Parental Leave",
+      "rideSharing": "Ride Sharing Service",
+      "netlight": "Netlight"
+    },
+    "role": {
+      "engineeringManager": "Engineering Manager",
+      "developer": "Developer",
+      "techLeadFullStackDeveloper": "Tech Lead & Full Stack Developer",
+      "fullStackDeveloperAndArchitect": "Full Stack Developer & Architect",
+      "teamTechLead": "Team / Tech Lead",
+      "productOwner": "Product Owner",
+      "student": "Student",
+      "masterThesisStudent": "Master Thesis Student",
+      "fullStackDeveloper": "Full Stack Developer",
+      "devOps": "DevOps",
+      "consultantManager": "Consultant / Manager"
+    },
+    "projectDescription": {
+      "axis": "Using the Go Programming Language in Practice.",
+      "university": "Computer Science and Engineering.",
+      "CDON2012": ".NET WebForms migration to .NET MVC.",
+      "CDON2013": "Introduction of the subscription based membership CDON+.",
+      "brainware": "Automatic software recognition for an IT-licence compliance product.",
+      "glassesRetailer": "Digitilization of the in-store retail system for selling contact lens products for all establishments in the DACH region.",
+      "mro": "An innovative and holistic platform that offers an extensive variety of digital products and services for MRO by combining multiple web-based apps in one place.",
+      "gambling": "Unifying two different platforms into one single platform as part of the team responsible for the core components.",
+      "agTech": "Digitalization of the trade-in process of used machinery by providing partnered dealers with an intuitive self-service cross-platform app.",
+      "iotSuite": "Digitilization of the real estate industry through an IoT suite that makes heating climate-friendly, comfortable and economical for both tenants and landlords.",
+      "rideSharing": "Implementation of multi-tenant capabilities in the user module, which handles registration, login, and profile management, while ensuring core functionalities remain intact in the live system.",
+      "netlight": "Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size."
+    },
+    "companyDescription": {
+      "axis": "Axis Communications is a Swedish manufacturer of network cameras for the physical security and video surveillance industries. The company is the market leader in this area and operates in several different market segments.",
+      "CDON": "CDON is one of the leading E-commerce companies in Scandinavia with over two million active customers. They sell movies, music, games, books and electronics among many other things.",
+      "brainware": "Brainwaregroup is an international company, with headquarters Switzerland, that provides IT service- and contract management solutions. Companies like Vodafone, OMV, Linde, Allianz GI and ERGO are all long-time customers of Brainwaregroups wide arrange of products.",
+      "glassesRetailer": "The number one optician company in Germany.",
+      "mro": "A leading provider of maintenance, repair, overhaul and modification services for civil aircraft.",
+      "gambling": "A german market leader for Lotto-Ticket-brokering for federal lotteries in Germany.",
+      "agTech": "A Hamburg based, international AgTech e-commerce start-up that is striving to revolutionise and digitalise the market for used agricultural machinery since 2015. The company wants to resolve the many pain points for farmers and dealers operating on this market by bringing transparency to pricing, globalising an otherwise fairly regional market, and prevent fraud.",
+      "iotSuite": "Startup that wants to make real estate climate-friendly, comfortable and economical: To achieve this they digitise and network buildings on behalf of their customers and develop new, intelligent products. They offer efficient, customised workflows and applications for operating IoT infrastructures, and have created a flexible enterprise IoT suite that manages data from many millions of sensors for intelligent applications and services.",
+      "rideSharing": "An innovative, growing company, that stands for mobility and community. It has the higher objective of making our cities a better place to live in. They are already on the move with fully electric ride-sharing vehicles for more than two million people.",
+      "netlight": "Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation."
+    },
+    "roleDescription": {
+      "axis": {
+        "0": "At the time the company mostly developed their software using C, but started to glance at other, more modern, languages. The purpose of the thesis was to investigate the challenges of introducing Go as the main language for development of their software. Because the standard compiler for Go did not support the architecture in many companies products, the Go front-end to GCC (GNU Compiler Collection) was also to be investigated.",
+        "1": "The conclusion was that go is really easy to learn, it has great support for writing concurrent software, build tools (in comparison to C) are far easier and the builds are fast. Go also has a built-in package manager which makes it very easy to make use of third party libraries. However, the Go front-end to GCC was complicated to get to work in combination with the specific architecture that Axis is using."
+      },
+      "CDON2012": "During the summer of 2012, Fredrik was hired by CDON to help migrate their legacy code, which was written with .NET WebForms, to .NET MVC. More specifically, the project included the register page, edit user page, recover password page, etc. The assignment was an important step towards the modernization of the website. Also, as .NET MVC is highly testable, the new implementation offered better testability and maintainability of the code base.",
+      "CDON2013": "During the summer of 2013, Fredrik was part of the development team bringing the feature CDON+ to the website. CDON+ is a paid membership that gives customers free shipping on every purchase above SEK 100 and a way to collect points that are translated into a gift card at the end of a year. Fredrik was involved in all parts of the project, including planning, database design, business logic implementation as well as GUI design.",
+      "brainware": {
+        "0": "The company had a small development team that struggled to keep up with customer demands while trying to innovate their products. Fredrik was hired to help alleviate this pressure by working on new projects as well as maintaining the existing code. Significant projects included implementing a command-line tool GUI, migrating from SourceSafe to Git, and integrating Elasticsearch.",
+        "1": "The command-line tool GUI, initially Fredrik's idea, aimed to help the development team with easy debugging of numerous command-line tools. Its potential was quickly recognized, leading to more features being added, and it is now used company-wide.",
+        "2": "The company initially used Visual SourceSafe for version control, which made parallel work difficult due to poor branching and merging capabilities. Fredrik introduced Git and a new workflow and branching model, which have been successfully adopted and appreciated.",
+        "3": "To improve search performance in brainwaregroup's products, Fredrik mirrored the database in Elasticsearch. This switch allowed search queries to be directed to Elasticsearch instead of the database, providing nearly instant results."
+      },
+      "glassesRetailer": {
+        "0": "Fredrik was part of the in-store administration application team. Using Scrum, he participated in defining stories, implementation, and quality assurance. Over time, he became a central point of information for both team members and external stakeholders. During his time on the project, Fredrik focused on stabilizing the Selenium test suite by creating a robust framework and automating its execution on the build server. Fredrik was also part of a special task force addressing performance issues in the application. He helped identify several pain points affecting performance, leading to action points that improved performance by up to 80%.",
+        "1": "Fredrik was selected for a strategically important project in 2017: internationalization. Together with another developer and a product owner, he helped form a new team to prepare the application for multiple countries. They tackled challenges like country-specific product portfolios, localization, logistics, and unique features. As the technical team lead, Fredrik guided the team throughout the project. After two years of focusing almost exclusively on features, the monolithic backend became difficult to maintain and extend due to poor architectural choices. Fredrik was part of a select group tasked with modularizing the backend, beginning with the extraction of the employee management system into a separate module. Fredrik also optimized the build pipeline by reducing dependency on TeamCity through a build script, making it executable on any operating system. Additionally, he built a customized build monitor to provide teams with essential information."
+      },
+      "mro": {
+        "fullStackDeveloper": "Fredrik joined the team responsible for core frontend and backend components. His main task was to support the development of Java-based microservices using Vert.X, as well as Angular components. During his time there, Fredrik noticed the lack of tests and worked to raise awareness and coach the team on the importance of testing to mitigate future issues.",
+        "devOps": "A new team called Developer Experience was formed to improve the speed and quality of development across all other teams. During his time there, Fredrik developed concepts for easy application testing with Cypress, introduced Helm to facilitate reproducible deployments in an OpenShift environment, and helped set up SonarQube and Snyk to enhance code quality. He also implemented several Golang-based Prometheus exporters, a custom Usabilla-Jira connector using Kotlin, Quarkus, and GraalVM, and a secure method for handling secrets in microservices with HashiCorp Vault. To promote these tools and processes, Fredrik wrote documentation, blog posts, and conducted lightning talks. He occasionally joined other teams to assist them in adopting new concepts and tools."
+      },
+      "gambling": "The team faced several challenges during the project. Fredrik worked on various tasks including cookie consent management, traffic migration, and setting up company-wide test systems. His most significant contribution was introducing monitoring and alerting, which added transparency and uncovered previously unknown bugs across the platform. Additionally, Fredrik designed and implemented a permission management module for easy and extensible permission checks across micro-frontends. He also improved the team's efficiency by enhancing agile processes, introducing quality gates, and focusing on clear acceptance criteria and collective alignment. These efforts significantly improved the team's performance and inspired other teams to review their processes.",
+      "agTech": "Fredrik's main focus as an engineering manager was to support the company and the team in building a fast, scalable, reliable, and maintainable solution from scratch for the trade-in process at dealerships. This included being involved in and driving decision-making from high- to low-level topics related to the application, such as selecting technologies, choosing services, and establishing team processes. Fredrik supported the head of product and engineering in designing solutions for the broader IT landscape. He also took on the role of mentor and coach and was closely involved in the hiring process.",
+      "iotSuite": {
+        "productOwner": "Fredrik was responsible for conceptualizing, scoping, and planning new features for the customer portal in close collaboration with management, other Product Owners, and his team. In this fast-paced environment, it was essential to provide management and other POs with estimates, risk evaluations, and potential opportunities to support the development of related products. Fredrik also took on the task of translating external requirements into user stories for the development team to work on.",
+        "teamTechLead": "Fredrik's primary responsibility as a tech lead was to support and enable the team and each developer to perform and deliver at a high level. The role also involved close collaboration with the Product Owner during the conception phase and ensuring clear communication of expectations to the development team, as well as providing realistic evaluations to the product department and management. Additionally, Fredrik was responsible for ensuring that while product goals were met, tech debt remained low, and we addressed technical excellence topics such as disaster recovery, observability, and metrics."
+      },
+      "rideSharing": "While being part of the regular development process, Fredrik also supported the team by advising and coaching on observability, test automation and continuous delivery."
+    },
+    "homeLinkLabel": "Home"
+  },
+  "projectHeader": "Project",
+  "rolesHeader": "Roles",
+  "skillCategory": {
+    "Languages": "Languages",
+    "Frameworks": "Frameworks",
+    "CI_CD": "CI/CD",
+    "Monitoring": "Monitoring",
+    "Tools": "Tools",
+    "Databases": "Databases",
+    "Cloud": "Cloud",
+    "SoftSkills": "Soft Skills",
+    "Testing": "Testing",
+    "IAM": "IAM",
+    "Methodologies": "Methodologies"
+  },
+  "softSkill": {
+    "fastLearner": "Fast Learner",
+    "proactive": "Proactive",
+    "teamPlayer": "Team Player",
+    "coach": "Coach",
+    "mentor": "Mentor",
+    "leader": "Leader",
+    "follower": "Follower",
+    "problemSolver": "Problem Solver"
+  },
+  "present": "Present",
+  "duration": "{years, plural, =0 {} one {# year} other {# years}}{months, plural, =0 {} one { # month} other { # months}}"
+}

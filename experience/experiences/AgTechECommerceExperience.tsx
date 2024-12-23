@@ -1,23 +1,20 @@
 import { TExperience } from '@/experience/TExperience';
+import { translations } from '@/i18n';
 import Tractor from '@/icons/common/tractor';
 import { Skill } from '@/skill/Skill';
 
 export const AgTechECommerceExperience: TExperience = {
   slug: 'ag-tech',
-  title: 'AgTech E-Commerce',
+  title: translations.experience.title.agTech,
   from: '2021-04-01',
   to: '2022-11-01',
   icon: <Tractor />,
-  companyDescription:
-    'A Hamburg based, international AgTech e-commerce start-up that is striving to revolutionise and digitalise the market for used agricultural machinery since 2015. The company wants to resolve the many pain points for farmers and dealers operating on this market by bringing transparency to pricing, globalising an otherwise fairly regional market, and prevent fraud.',
-  projectDescription:
-    'Digitalization of the trade-in process of used machinery by providing partnered dealers with an intuitive self-service cross-platform app.',
+  companyDescription: translations.experience.companyDescription.agTech,
+  projectDescription: translations.experience.projectDescription.agTech,
   roles: [
     {
-      title: 'Engineering Manager',
-      description: [
-        "Fredrik's main focus as an engineering manager was to support the company and the team in building a fast, scalable, reliable, and maintainable solution from scratch for the trade-in process at dealerships. This included being involved in and driving decision-making from high- to low-level topics related to the application, such as selecting technologies, choosing services, and establishing team processes. Fredrik supported the head of product and engineering in designing solutions for the broader IT landscape. He also took on the role of mentor and coach and was closely involved in the hiring process.",
-      ],
+      title: translations.experience.role.engineeringManager,
+      description: [translations.experience.roleDescription.agTech],
     },
   ],
   highlightedSkills: [Skill.React, Skill.Expo, Skill.NestJS, Skill.AWSDynamoDB, Skill.AWSLambda],

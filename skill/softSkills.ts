@@ -1,10 +1,12 @@
+import { translations } from '@/i18n';
+
 export const softSkills = [
-  'Fast Learner',
-  'Proactive',
-  'Team Player',
-  'Coach',
-  'Mentor',
-  'Leader',
-  'Follower',
-  'Problem Solver',
+  translations.softSkill.fastLearner,
+  translations.softSkill.proactive,
+  translations.softSkill.teamPlayer,
+  translations.softSkill.coach,
+  translations.softSkill.mentor,
+  translations.softSkill.leader,
+  translations.softSkill.follower,
+  translations.softSkill.problemSolver,
 ];

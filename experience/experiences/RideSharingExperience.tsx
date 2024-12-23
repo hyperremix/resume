@@ -1,22 +1,19 @@
 import { TExperience } from '@/experience/TExperience';
+import { translations } from '@/i18n';
 import Van from '@/icons/common/van';
 import { Skill } from '@/skill/Skill';
 
 export const RideSharingExperience: TExperience = {
   slug: 'ride-sharing',
-  title: 'Ride Sharing',
+  title: translations.experience.title.rideSharing,
   from: '2024-10-22',
   icon: <Van />,
-  companyDescription:
-    'An innovative, growing company, that stands for mobility and community. It has the higher objective of making our cities a better place to live in. They are already on the move with fully electric ride-sharing vehicles for more than two million people.',
-  projectDescription:
-    'Implementation of multi-tenant capabilities in the user module, which handles registration, login, and profile management, while ensuring core functionalities remain intact in the live system.',
+  companyDescription: translations.experience.companyDescription.rideSharing,
+  projectDescription: translations.experience.projectDescription.rideSharing,
   roles: [
     {
-      title: 'Engineer and Advisor',
-      description: [
-        'While being part of the regular development process, Fredrik also supported the team by advising and coaching on observability, test automation and continuous delivery.',
-      ],
+      title: translations.experience.role.fullStackDeveloper,
+      description: [translations.experience.roleDescription.rideSharing],
     },
   ],
   highlightedSkills: [
