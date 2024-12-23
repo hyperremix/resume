@@ -12,6 +12,7 @@ import { skillConfig } from '@/skill/skillConfig';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
 import { SkillGauge } from './skill-gauge';
+import { Typography } from './typography';
 
 export const SkillLevels = () => {
   const t = useTranslations();
@@ -32,7 +33,7 @@ export const SkillLevels = () => {
 
   return (
     <div className="flex flex-col">
-      <h1 className="text-2xl">{t(translations.skillsHeader)}</h1>
+      <Typography variant="h1">{t(translations.skillsHeader)}</Typography>
       <Accordion type="single" collapsible>
         {Object.entries(groupedSortedSkills).map(([category, sortedSkills]) => (
           <AccordionItem key={category} value={category} className="flex flex-col gap-4">

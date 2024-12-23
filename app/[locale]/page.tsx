@@ -5,6 +5,7 @@ import { ProfilePicture } from '@/components/custom/profile-picture';
 import { SkillLevels } from '@/components/custom/skill-levels';
 import { SocialMediaLink } from '@/components/custom/social-media-link';
 import { Timeline } from '@/components/custom/timeline';
+import { Typography } from '@/components/custom/typography';
 import { Badge } from '@/components/ui/badge';
 import { experiences, topSkills } from '@/experience';
 import { translations } from '@/i18n';
@@ -26,11 +27,14 @@ const Home = () => {
         <div className="flex flex-row items-center gap-4">
           <ProfilePicture className="size-28 sm:size-40" />
           <div className="flex flex-col">
-            <h1 className="text-2xl sm:text-4xl">{t(translations.name)}</h1>
+            <Typography variant="h1">{t(translations.name)}</Typography>
             <div className="flex flex-col items-start gap-2">
-              <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+              <Typography
+                variant="h2"
+                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
+              >
                 {t(translations.role)}
-              </span>
+              </Typography>
               <div className="flex flex-row items-center gap-3">
                 {Object.entries(languages).map(([key, value]) => (
                   <HoverableLanguage language={value} key={key} />
@@ -45,11 +49,13 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <p className="text-center lg:text-left">{t(translations.elevatorPitch)}</p>
+        <Typography className="text-center lg:text-left">
+          {t(translations.elevatorPitch)}
+        </Typography>
         <div className="flex flex-col gap-4">
           <div className="flex flex-row flex-wrap justify-center items-center gap-2">
             {softSkills.map((skill) => (
-              <Badge key={skill}>{t(skill)}</Badge>
+              <Badge key={skill}>{<Typography variant="small">{t(skill)}</Typography>}</Badge>
             ))}
           </div>
           <div className="flex flex-row flex-wrap justify-center items-center gap-2">
@@ -59,7 +65,7 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute bottom-1 flex flex-col items-center">
-          <p className="text-lg">
+          <Typography variant="h4">
             {`${t(translations.home.view)} `}
             <Link
               className="underline text-blue-500 hover:text-blue-700 visited:text-purple-500"
@@ -68,8 +74,8 @@ const Home = () => {
               {t(translations.home.pdf)}
             </Link>
             {` ${t(translations.home.or)}`}
-          </p>
-          <p className="text-lg">{t(translations.home.findOutMoreBelow)}</p>
+          </Typography>
+          <Typography variant="h4">{t(translations.home.findOutMoreBelow)}</Typography>
           <ArrowDown className="text-2xl" />
         </div>
       </div>
@@ -77,7 +83,7 @@ const Home = () => {
       <SkillLevels />
       <div className="flex flex-col gap-8 mt-12">
         <div className="flex flex-col gap-3 items-center mt-5">
-          <p className="text-xl">{t(translations.home.builtWith)}</p>
+          <Typography variant="h3">{t(translations.home.builtWith)}</Typography>
           <div className="flex flex-row gap-2 items-center">
             {poweredBySkills.map((skill) => (
               <HighlightedSkill key={skill} skill={skill} />

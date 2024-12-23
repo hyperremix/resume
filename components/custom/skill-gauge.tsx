@@ -7,6 +7,7 @@ import { skillConfig } from '@/skill/skillConfig';
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { useMemo } from 'react';
+import { Typography } from './typography';
 
 type Props = {
   skill: Skill;
@@ -63,12 +64,12 @@ export const SkillGauge = ({ skill, months, maxMonths }: Props) => {
           </svg>
 
           <div className="absolute top-1/2 start-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-1 text-center">
-            <span className="text-4xl font-bold">{skillConfig[skill].icon}</span>
-            {skillConfig[skill].label && <p>{skillConfig[skill].label}</p>}
+            <span className="text-4xl">{skillConfig[skill].icon}</span>
+            {skillConfig[skill].label && <Typography>{skillConfig[skill].label}</Typography>}
           </div>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{tooltipContent}</p>
+          <Typography>{tooltipContent}</Typography>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

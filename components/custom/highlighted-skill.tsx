@@ -1,6 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Skill } from '@/skill/Skill';
 import { skillConfig } from '@/skill/skillConfig';
+import { Typography } from './typography';
 
 type Props = {
   skill: Skill;
@@ -22,7 +23,7 @@ export const HighlightedSkill = ({ skill }: Props) => {
           </div>
         </TooltipTrigger>
         <TooltipContent>
-          <p>{label ?? skill}</p>
+          <Typography>{label ?? skill}</Typography>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

@@ -1,6 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { TLanguage } from '@/language/TLanguage';
 import { useTranslations } from 'next-intl';
+import { Typography } from './typography';
 
 type Props = {
   language: TLanguage;
@@ -16,7 +17,7 @@ export const HoverableLanguage = ({ language: { icon, name, level } }: Props) =>
           {icon}
         </TooltipTrigger>
         <TooltipContent>
-          <p>{t(name) + ' - ' + t(level)}</p>
+          <Typography>{t(name) + ' - ' + t(level)}</Typography>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

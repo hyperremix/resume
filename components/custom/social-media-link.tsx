@@ -1,6 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Link } from '@/link/Link';
 import { useTranslations } from 'next-intl';
+import { Typography } from './typography';
 
 type Props = {
   link: Link;
@@ -22,7 +23,7 @@ export const SocialMediaLink = ({ link: { href, icon, label, ariaLabel } }: Prop
           )}
         </TooltipTrigger>
         <TooltipContent>
-          <p>{label}</p>
+          <Typography>{label}</Typography>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

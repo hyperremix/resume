@@ -2,6 +2,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { translations } from '@/i18n';
 import MapMarker from '@/icons/common/map-marker';
 import { useTranslations } from 'next-intl';
+import { Typography } from './typography';
 
 export const LocationLink = () => {
   const t = useTranslations();
@@ -13,7 +14,7 @@ export const LocationLink = () => {
           <MapMarker />
         </TooltipTrigger>
         <TooltipContent>
-          <p>{t(translations.locationLabel)}</p>
+          <Typography>{t(translations.locationLabel)}</Typography>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

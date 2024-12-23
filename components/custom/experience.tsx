@@ -7,6 +7,7 @@ import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import { HighlightedSkill } from './highlighted-skill';
 import { TimePeriod } from './time-period';
+import { Typography } from './typography';
 
 export const Experience = ({
   experience,
@@ -53,15 +54,17 @@ const RightExperience = ({
           <div className="flex flex-row items-center justify-between gap-1 w-full">
             <div className="flex flex-row items-center gap-2 relative">
               <div className="sm:absolute sm:-left-10 sm:top-1 sm:-ml-0.5 text-2xl">{icon}</div>
-              <span className="text-2xl">{t(title)}</span>
+              <Typography variant="h2">{t(title)}</Typography>
             </div>
             <OpenInNew className="sm:hidden " />
           </div>
 
           <div className="sm:ml-4.5 relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-left-8 before:top-2">
-            <p>{roles?.map((role) => t(role.title)).join(' | ')}</p>
+            <Typography>{roles?.map((role) => t(role.title)).join(' | ')}</Typography>
             <TimePeriod from={from} to={to} />
-            {projectDescription && <p className="pt-1">{t(projectDescription)}</p>}
+            {projectDescription && (
+              <Typography className="pt-1">{t(projectDescription)}</Typography>
+            )}
             {highlightedSkills && (
               <div className="flex flex-row justify-start gap-2 flex-wrap py-3">
                 {highlightedSkills.map((skill, i) => (
@@ -104,16 +107,18 @@ const LeftExperience = ({
           <div className="flex flex-row items-center justify-between sm:justify-end gap-1 w-full">
             <div className="flex flex-row items-center gap-2 relative">
               <div className="sm:absolute sm:-right-10 sm:top-1 sm:-mr-0.5 text-2xl">{icon}</div>
-              <span className="text-2xl">{t(title)}</span>
+              <Typography variant="h2">{t(title)}</Typography>
             </div>
             <OpenInNew className="sm:hidden " />
           </div>
 
           <div className="sm:mr-4.5 relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-right-8 before:top-2 flex flex-col items-start sm:items-end">
-            <p>{roles?.map((role) => t(role.title)).join(' | ')}</p>
+            <Typography>{roles?.map((role) => t(role.title)).join(' | ')}</Typography>
             <TimePeriod from={from} to={to} />
             {projectDescription && (
-              <p className="pt-1 text-start sm:text-end">{t(projectDescription)}</p>
+              <Typography className="pt-1 text-start sm:text-end">
+                {t(projectDescription)}
+              </Typography>
             )}
             {highlightedSkills && (
               <div className="flex flex-row justify-end gap-2 flex-wrap py-3 w-full">

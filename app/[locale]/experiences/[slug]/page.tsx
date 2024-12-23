@@ -1,4 +1,5 @@
 import { TimePeriod } from '@/components/custom/time-period';
+import { Typography } from '@/components/custom/typography';
 import { Badge } from '@/components/ui/badge';
 import { experiences } from '@/experience';
 import { TExperience } from '@/experience/TExperience';
@@ -36,14 +37,14 @@ const ExperienceContent = ({
     <>
       <Link href="/" className="flex flex-row items-center gap-1 mb-2">
         <ArrowLeft className="text-3xl fill-zinc-800 dark:fill-zinc-300" />
-        <p>{t(translations.experience.homeLinkLabel)}</p>
+        <Typography>{t(translations.experience.homeLinkLabel)}</Typography>
       </Link>
-      <h1 className="flex flex-row items-center gap-2 mb-2 text-4xl">
+      <Typography variant="h1" className="flex flex-row items-center gap-2 mb-2">
         {icon}
         {t(title)}
-      </h1>
-      {roles && <p>{roles.map((role) => t(role.title)).join(' | ')}</p>}
-      {location && <p>{location}</p>}
+      </Typography>
+      {roles && <Typography>{roles.map((role) => t(role.title)).join(' | ')}</Typography>}
+      {location && <Typography>{location}</Typography>}
       <TimePeriod from={from} to={to} />
       {(description.companyDescription || description.projectDescription || description.skills) && (
         <ExperienceDescription roles={roles} {...description} />
@@ -52,7 +53,9 @@ const ExperienceContent = ({
   );
 };
 
-const ExperienceNotFoundDisplay = () => <p>Ooops this experience does not exist.</p>;
+const ExperienceNotFoundDisplay = () => (
+  <Typography>Ooops this experience does not exist.</Typography>
+);
 
 const ExperienceDescription = ({
   companyDescription,
@@ -64,32 +67,36 @@ const ExperienceDescription = ({
 
   return (
     <div className="flex flex-col gap-1 pt-1">
-      <p>{t(companyDescription)}</p>
+      <Typography>{t(companyDescription)}</Typography>
       {projectDescription && (
         <>
-          <h2 className="text-2xl">{t(translations.projectHeader)}</h2>
-          <p>{t(projectDescription)}</p>
+          <Typography variant="h2">{t(translations.projectHeader)}</Typography>
+          <Typography>{t(projectDescription)}</Typography>
         </>
       )}
       {roles && (
         <>
-          <h2 className="text-2xl">{t(translations.rolesHeader)}</h2>
+          <Typography variant="h2">{t(translations.rolesHeader)}</Typography>
           {roles.map((role, i) => (
             <div key={i}>
-              <h3 className="text-lg font-bold">{t(role.title)}</h3>
-              {role.description?.map((description, i) => <p key={i}>{t(description)}</p>)}
+              <Typography variant="h3">{t(role.title)}</Typography>
+              {role.description?.map((description, i) => (
+                <Typography key={i}>{t(description)}</Typography>
+              ))}
             </div>
           ))}
         </>
       )}
       {skills && (
         <>
-          <h2 className="text-2xl">{t(translations.skillsHeader)}</h2>
+          <Typography variant="h2">{t(translations.skillsHeader)}</Typography>
           <div className="flex flex-row flex-wrap gap-2">
             {skills.map((skill) => (
               <Badge key={skill}>
                 {React.cloneElement(skillConfig[skill].icon ?? <></>, { className: 'text-2xl' })}
-                {skillConfig[skill].label && <p>{skillConfig[skill].label}</p>}
+                {skillConfig[skill].label && (
+                  <Typography variant="small">{skillConfig[skill].label}</Typography>
+                )}
               </Badge>
             ))}
           </div>

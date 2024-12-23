@@ -3,6 +3,7 @@
 import { translations } from '@/i18n';
 import { useFormatter, useTranslations } from 'next-intl';
 import { useMemo } from 'react';
+import { Typography } from './typography';
 
 type Props = {
   from: string;
@@ -28,7 +29,7 @@ export const TimePeriod = ({ from, to, className, ...props }: Props) => {
   }, [from, to]);
 
   return (
-    <p className={`text-pink-500 ${className}`} {...props}>
+    <Typography className={`text-pink-500 ${className}`} {...props}>
       {`${format.dateTime(new Date(from), {
         month: '2-digit',
         year: 'numeric',
@@ -40,6 +41,6 @@ export const TimePeriod = ({ from, to, className, ...props }: Props) => {
             })
           : t(translations.present)
       } | ${t(translations.duration, { years, months })}`}
-    </p>
+    </Typography>
   );
 };
