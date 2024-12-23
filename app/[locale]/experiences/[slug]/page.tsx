@@ -38,10 +38,10 @@ const ExperienceContent = ({
         <ArrowLeft className="text-3xl fill-zinc-800 dark:fill-zinc-300" />
         <p>{t(translations.experience.homeLinkLabel)}</p>
       </Link>
-      <div className="flex flex-row items-center gap-2 mb-2 text-4xl">
+      <h1 className="flex flex-row items-center gap-2 mb-2 text-4xl">
         {icon}
-        <p>{t(title)}</p>
-      </div>
+        {t(title)}
+      </h1>
       {roles && <p>{roles.map((role) => t(role.title)).join(' | ')}</p>}
       {location && <p>{location}</p>}
       <TimePeriod from={from} to={to} />
@@ -67,16 +67,16 @@ const ExperienceDescription = ({
       <p>{t(companyDescription)}</p>
       {projectDescription && (
         <>
-          <p className="text-2xl">{t(translations.projectHeader)}</p>
+          <h2 className="text-2xl">{t(translations.projectHeader)}</h2>
           <p>{t(projectDescription)}</p>
         </>
       )}
       {roles && (
         <>
-          <p className="text-2xl">{t(translations.rolesHeader)}</p>
+          <h2 className="text-2xl">{t(translations.rolesHeader)}</h2>
           {roles.map((role, i) => (
             <div key={i}>
-              <p className="text-lg font-bold">{t(role.title)}</p>
+              <h3 className="text-lg font-bold">{t(role.title)}</h3>
               {role.description?.map((description, i) => <p key={i}>{t(description)}</p>)}
             </div>
           ))}
@@ -84,7 +84,7 @@ const ExperienceDescription = ({
       )}
       {skills && (
         <>
-          <p className="text-2xl">{t(translations.skillsHeader)}</p>
+          <h2 className="text-2xl">{t(translations.skillsHeader)}</h2>
           <div className="flex flex-row flex-wrap gap-2">
             {skills.map((skill) => (
               <Badge key={skill}>

@@ -24,12 +24,12 @@ export const ExperienceSection = ({
             <TableStack direction="row" alignItems="center" gap={2}>
               <TableStackItem className="w-px text-lg">{icon}</TableStackItem>
               <TableStackItem>
-                <p className="text-xl">{t(title)}</p>
+                <h2 className="text-xl font-bold">{t(title)}</h2>
               </TableStackItem>
             </TableStack>
           </TableStackItem>
           <TableStackItem>
-            <p className="text-lg">{roles?.map((role) => t(role.title)).join(' | ')}</p>
+            <p className="text-xs font-bold">{roles?.map((role) => t(role.title)).join(' | ')}</p>
           </TableStackItem>
           <TableStackItem>
             <p className="text-sm">{location}</p>
@@ -76,7 +76,7 @@ const ExperienceDescription = ({
       )}
       {projectDescription && (
         <TableStackItem>
-          <p className="text-lg">{t(translations.projectHeader)}</p>
+          <h3 className="text-lg">{t(translations.projectHeader)}</h3>
           <p className="text-xs">{t(projectDescription)}</p>
         </TableStackItem>
       )}
@@ -84,13 +84,13 @@ const ExperienceDescription = ({
         <TableStackItem>
           <TableStack>
             <TableStackItem>
-              <p className="text-lg">{t(translations.rolesHeader)}</p>
+              <h3 className="text-lg">{t(translations.rolesHeader)}</h3>
             </TableStackItem>
             <TableStackItem>
               <TableStack>
                 {roles.map((role, i) => (
                   <TableStackItem key={i}>
-                    <p className="text-sm">{t(role.title)}</p>
+                    <h4 className="text-sm font-bold">{t(role.title)}</h4>
                     {role.description &&
                       role.description.map((description, i) => (
                         <p className="text-xs" key={i}>
@@ -106,7 +106,7 @@ const ExperienceDescription = ({
       )}
       {skills && (
         <TableStackItem>
-          <p className="text-lg">{t(translations.skillsHeader)}</p>
+          <h3 className="text-lg">{t(translations.skillsHeader)}</h3>
           {skills.map((skill, index) => (
             <div key={skill} className={`inline-block mb-1 ${index === 0 ? '' : 'ml-1'}`}>
               <Badge key={skill} variant="outline">

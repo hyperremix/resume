@@ -23,8 +23,8 @@ const Pdf = () => {
         <TableStackItem>
           <TableStack direction="row" alignItems="center">
             <TableStackItem>
-              <p className="text-lg">{t(translations.name)}</p>
-              <p className="text-sm text-pink-500 pb-2">{t(translations.role)}</p>
+              <p className="text-lg font-bold">{t(translations.name)}</p>
+              <p className="text-sm font-bold text-pink-500 pb-2">{t(translations.role)}</p>
               <p className="text-xs">{t(translations.elevatorPitch)}</p>
             </TableStackItem>
             <TableStackItem className="float-right w-48">
@@ -49,15 +49,15 @@ const Pdf = () => {
             <TableStackItem className="align-text-top w-48">
               <TableStack>
                 <TableStackItem className="pb-1">
-                  <p className="text-2xl border-b pb-1 mb-1">
+                  <h1 className="text-2xl font-bold border-b pb-1 mb-1">
                     {t(translations.pdf.topSkillsHeader)}
-                  </p>
+                  </h1>
                   <TableStack direction="column">
                     {topSkills.map((skill) => (
                       <TableStackItem key={skill}>
                         <Badge key={skill} variant="outline" className="mb-1">
                           {React.cloneElement(skillConfig[skill].icon ?? <></>, {
-                            className: 'text-2xl',
+                            className: 'text-2xl font-bold',
                           })}
                           {skillConfig[skill].label && (
                             <p className="text-xs">{skillConfig[skill].label}</p>
@@ -68,9 +68,9 @@ const Pdf = () => {
                   </TableStack>
                 </TableStackItem>
                 <TableStackItem>
-                  <p className="text-2xl border-b pb-1 mb-1">
+                  <h1 className="text-2xl font-bold border-b pb-1 mb-1">
                     {t(translations.pdf.languagesHeader)}
-                  </p>
+                  </h1>
                   <TableStack>
                     {Object.entries(languages).map(([key, { icon, name, level }]) => (
                       <TableStackItem key={key}>
@@ -96,9 +96,9 @@ const Pdf = () => {
             <TableStackItem>
               <TableStack gap={2}>
                 <TableStackItem>
-                  <p className="text-2xl border-b pb-1 mb-1">
+                  <h1 className="text-2xl font-bold border-b pb-1 mb-1">
                     {t(translations.pdf.experiencesHeader)}
-                  </p>
+                  </h1>
                   <TableStack>
                     {experiences.map((experience) => (
                       <TableStackItem key={experience.slug}>
@@ -108,9 +108,9 @@ const Pdf = () => {
                   </TableStack>
                 </TableStackItem>
                 <TableStackItem>
-                  <p className="text-2xl border-b pb-1 mb-1">
+                  <h1 className="text-2xl font-bold border-b pb-1 mb-1">
                     {t(translations.pdf.educationHeader)}
-                  </p>
+                  </h1>
                   <ExperienceSection experience={LundUniversityExperience} />
                 </TableStackItem>
               </TableStack>
