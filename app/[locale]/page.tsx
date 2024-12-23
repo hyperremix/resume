@@ -24,7 +24,7 @@ const Home = () => {
     <div className="max-w-4xl mx-auto flex flex-col gap-4">
       <div className="flex flex-col gap-4 items-center h-screen p-2 justify-start md:p-0 md:justify-center">
         <div className="flex flex-row items-center gap-4">
-          <ProfilePicture />
+          <ProfilePicture className="size-28 sm:size-40" />
           <div className="flex flex-col">
             <h1 className="text-2xl sm:text-4xl">{t(translations.name)}</h1>
             <div className="flex flex-col items-start gap-2">

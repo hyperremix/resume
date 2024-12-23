@@ -21,7 +21,7 @@ const Pdf = () => {
     <div className="text-zinc-800 dark:text-zinc-300 fill-zinc-800 dark:fill-zinc-300">
       <TableStack gap={1} className="mx-auto">
         <TableStackItem>
-          <TableStack direction="row" alignItems="center">
+          <TableStack direction="row" alignItems="center" gap={2}>
             <TableStackItem>
               <p className="text-lg font-bold">{t(translations.name)}</p>
               <p className="text-sm font-bold text-pink-500 pb-2">{t(translations.role)}</p>
