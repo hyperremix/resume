@@ -17,6 +17,7 @@
   "githubProfileLabel": "GitHub profile",
   "linkedinProfileLabel": "LinkedIn profile",
   "researchGateProfileLabel": "ResearchGate profile",
+  "personalWebsiteLabel": "Personal Website Link",
   "skillsHeader": "Skills",
   "skillGaugeYearsTooltip": "{years, plural, one {# year} other {# years}}",
   "skillGaugeMonthsTooltip": "{months, plural, one {# month} other {# months}}",

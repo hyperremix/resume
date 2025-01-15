@@ -9,7 +9,7 @@ import { experiences, topSkills } from '@/experience';
 import { LundUniversityExperience } from '@/experience/experiences/LundUniversityExperience';
 import { translations } from '@/i18n';
 import { languages } from '@/language/languages';
-import { socialMediaLinks } from '@/link/socialMediaLinks';
+import { pdfSocialMediaLinks } from '@/link/socialMediaLinks';
 import { skillConfig } from '@/skill/skillConfig';
 import { useTranslations } from 'next-intl';
 import React from 'react';
@@ -37,7 +37,7 @@ const Pdf = () => {
             <TableStackItem>
               <LocationTableLink />
             </TableStackItem>
-            {socialMediaLinks.map((link, index) => (
+            {pdfSocialMediaLinks.map((link, index) => (
               <TableStackItem key={index}>
                 <SocialMediaTableLink link={link} />
               </TableStackItem>
