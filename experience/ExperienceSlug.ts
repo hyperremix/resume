@@ -11,4 +11,5 @@ export type ExperienceSlug =
   | 'ag-tech'
   | 'iot-suite'
   | 'ride-sharing'
-  | 'parental-leave';
+  | 'parental-leave'
+  | 'tchibo';

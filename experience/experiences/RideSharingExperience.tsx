@@ -7,6 +7,7 @@ export const RideSharingExperience: TExperience = {
   slug: 'ride-sharing',
   title: translations.experience.title.rideSharing,
   from: '2024-10-22',
+  to: '2025-04-01',
   icon: <Van />,
   companyDescription: translations.experience.companyDescription.rideSharing,
   projectDescription: translations.experience.projectDescription.rideSharing,

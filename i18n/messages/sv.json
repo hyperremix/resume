@@ -55,7 +55,8 @@
       "iotSuite": "IoT Suite för smart uppvärmning",
       "parentalLeave": "Föräldraledighet",
       "rideSharing": "Samåkningstjänst",
-      "netlight": "Netlight"
+      "netlight": "Netlight",
+      "tchibo": "Tchibo"
     },
     "role": {
       "engineeringManager": "Engineering Manager",
@@ -68,7 +69,8 @@
       "masterThesisStudent": "Examensarbetsstudent",
       "fullStackDeveloper": "Full Stack Utvecklare",
       "devOps": "DevOps",
-      "consultantManager": "Konsult / Manager"
+      "consultantManager": "Konsult / Manager",
+      "headOfEngineering": "Head of Engineering"
     },
     "projectDescription": {
       "axis": "Using the Go Programming Language in Practice.",
@@ -82,7 +84,8 @@
       "agTech": "Digitalisering av inbytesprocessen för begagnade maskiner genom en intuitiv självbetjäningsapp för partneråterförsäljare på olika plattformar.",
       "iotSuite": "Digitalisering av fastighetsbranschen genom en IoT-svit som gör uppvärmning klimatvänlig, bekväm och ekonomisk för både hyresgäster och hyresvärdar.",
       "rideSharing": "Implementering av funktioner för flera hyresgäster i användarmodulen, som hanterar registrering, inloggning och profilhantering, samtidigt som kärnfunktionerna förblir intakta i det aktiva systemet.",
-      "netlight": "Konsult för kunder, mentor för kollegor och drivkraft för digital transformation oavsett tech-stack, teamuppsättning eller företagsstorlek."
+      "netlight": "Konsult för kunder, mentor för kollegor och drivkraft för digital transformation oavsett tech-stack, teamuppsättning eller företagsstorlek.",
+      "tchibo": "Ledning av ingenjörerna inom webbshoppen samtidigt som övergripande tekniska initiativ drivs för att säkerställa skalbarhet och tillförlitlighet."
     },
     "companyDescription": {
       "axis": "Axis Communications är en svensk tillverkare av nätverkskameror för fysisk säkerhet och videoövervakning. Företaget är marknadsledande inom detta område och opererar i flera olika marknadssegment.",
@@ -94,7 +97,8 @@
       "agTech": "Ett Hamburg-baserat, internationellt AgTech e-handelsstart-up som sedan 2015 strävar efter att revolutionera och digitalisera marknaden för begagnade jordbruksmaskiner. Företaget vill lösa de många smärtpunkterna för bönder och återförsäljare som verkar på denna marknad genom att skapa pristransparens, globalisera en annars ganska regional marknad och förhindra bedrägeri.",
       "iotSuite": "Ett start-up som vill göra fastigheter klimatvänliga, bekväma och ekonomiska: För att uppnå detta digitaliserar och nätverkar de byggnader på uppdrag av sina kunder och utvecklar nya, intelligenta produkter. De erbjuder effektiva, skräddarsydda arbetsflöden och applikationer för drift av IoT-infrastrukturer och har skapat en flexibel företags-IoT-svit som hanterar data från många miljoner sensorer för intelligenta applikationer och tjänster.",
       "rideSharing": "Ett innovativt, växande företag som står för mobilitet och gemenskap. Det har det högre målet att göra våra städer till en bättre plats att leva i. De är redan på väg med helelektriska samåkningsfordon för mer än två miljoner människor.",
-      "netlight": "Netlight är ett konsultföretag med starkt fokus på kultur och ledarskap. De arbetar med några av de största företagen i Europa och hjälper dem med deras digitala transformation."
+      "netlight": "Netlight är ett konsultföretag med starkt fokus på kultur och ledarskap. De arbetar med några av de största företagen i Europa och hjälper dem med deras digitala transformation.",
+      "tchibo": "En ledande europeisk multikanalsåterförsäljare, e-handelsplattform och kaffeproducent i världsklass, med över 900 butiker och 24 000 försäljningsställen i åtta länder."
     },
     "roleDescription": {
       "axis": {
@@ -123,7 +127,11 @@
         "productOwner": "Fredrik var ansvarig för att konceptualisera, avgränsa och planera nya funktioner för kundportalen i nära samarbete med ledningen, andra produktägare och sitt team. I denna snabbrörliga miljö var det viktigt att tillhandahålla ledningen och andra produktägare uppskattningar, riskbedömningar och möjligheter för att stödja utvecklingen av relaterade produkter. Fredrik tog också på sig uppgiften att översätta externa krav till användarhistorier för utvecklingsteamet att arbeta med.",
         "teamTechLead": "Fredriks huvudansvar som teknisk ledare var att stödja och möjliggöra för teamet och varje utvecklare att prestera och leverera på hög nivå. Rollen innebar också nära samarbete med produktägaren under konceptfasen och att säkerställa tydlig kommunikation av förväntningar till utvecklingsteamet samt att tillhandahålla realistiska utvärderingar till produktavdelningen och ledningen. Dessutom var Fredrik ansvarig för att säkerställa att produktmålen uppfylldes, teknisk skuld förblev låg och att vi adresserade tekniska excellensämnen som disaster recovery, observability och metrics."
       },
-      "rideSharing": "Medan han var en del av den regelbundna utvecklingsprocessen stödde Fredrik också teamet genom rådgivning och coaching om observability, testautomation och continuous delivery."
+      "rideSharing": "Medan han var en del av den regelbundna utvecklingsprocessen stödde Fredrik också teamet genom rådgivning och coaching om observability, testautomation och continuous delivery.",
+      "tchibo": {
+        "0": "Som Head of Engineering ansvarar Fredrik för ledarskap och professionell utveckling av ingenjörerna inom sin organisation och bygger en högpresterande kultur i teamen Customer Account, Customer Growth och Product Presentation. Han ansvarar för utveckling, mentorskap och ledning av sina direktrapporterande medarbetare samt säkerställer att engineering-praktiker stödjer leveransen av nyckelfunktioner.",
+        "1": "Utöver ledningen av sina tre specialiserade team ansvarar Fredrik för övergripande tekniska frågor i hela det digitala ekosystemet. Han driver tvärfunktionella arkitekturbeslut, säkerställer den långsiktiga skalbarheten i mikrotjänstlandskapet och anpassar teknisk excellens till bredare affärsmål."
+      }
     },
     "homeLinkLabel": "Startsida"
   },

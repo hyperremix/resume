@@ -55,7 +55,8 @@
       "iotSuite": "IoT Suite for Smart Heating",
       "parentalLeave": "Parental Leave",
       "rideSharing": "Ride Sharing Service",
-      "netlight": "Netlight"
+      "netlight": "Netlight",
+      "tchibo": "Tchibo"
     },
     "role": {
       "engineeringManager": "Engineering Manager",
@@ -68,7 +69,8 @@
       "masterThesisStudent": "Master Thesis Student",
       "fullStackDeveloper": "Full Stack Developer",
       "devOps": "DevOps",
-      "consultantManager": "Consultant / Manager"
+      "consultantManager": "Consultant / Manager",
+      "headOfEngineering": "Head of Engineering"
     },
     "projectDescription": {
       "axis": "Using the Go Programming Language in Practice.",
@@ -82,7 +84,8 @@
       "agTech": "Digitalization of the trade-in process of used machinery by providing partnered dealers with an intuitive self-service cross-platform app.",
       "iotSuite": "Digitilization of the real estate industry through an IoT suite that makes heating climate-friendly, comfortable and economical for both tenants and landlords.",
       "rideSharing": "Implementation of multi-tenant capabilities in the user module, which handles registration, login, and profile management, while ensuring core functionalities remain intact in the live system.",
-      "netlight": "Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size."
+      "netlight": "Genuine consultant for clients, mentor to fellow colleagues and driver of digital transformation regardless of tech stack, team setup or company size.",
+      "tchibo": "Management of the engineers within the webshop while steering overarching technical initiatives to ensure the scalability and reliability."
     },
     "companyDescription": {
       "axis": "Axis Communications is a Swedish manufacturer of network cameras for the physical security and video surveillance industries. The company is the market leader in this area and operates in several different market segments.",
@@ -94,7 +97,8 @@
       "agTech": "A Hamburg based, international AgTech e-commerce start-up that is striving to revolutionise and digitalise the market for used agricultural machinery since 2015. The company wants to resolve the many pain points for farmers and dealers operating on this market by bringing transparency to pricing, globalising an otherwise fairly regional market, and prevent fraud.",
       "iotSuite": "Startup that wants to make real estate climate-friendly, comfortable and economical: To achieve this they digitise and network buildings on behalf of their customers and develop new, intelligent products. They offer efficient, customised workflows and applications for operating IoT infrastructures, and have created a flexible enterprise IoT suite that manages data from many millions of sensors for intelligent applications and services.",
       "rideSharing": "An innovative, growing company, that stands for mobility and community. It has the higher objective of making our cities a better place to live in. They are already on the move with fully electric ride-sharing vehicles for more than two million people.",
-      "netlight": "Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation."
+      "netlight": "Netlight is a consultancy company with a strong focus on culture and leadership. They are working with some of the largest companies in Europe, helping them with their digital transformation.",
+      "tchibo": "A leading European multichannel retailer, e-commerce platform and world-class coffee roaster, operating over 900 shops and 24,000 retail points across eight countries"
     },
     "roleDescription": {
       "axis": {
@@ -123,7 +127,11 @@
         "productOwner": "Fredrik was responsible for conceptualizing, scoping, and planning new features for the customer portal in close collaboration with management, other Product Owners, and his team. In this fast-paced environment, it was essential to provide management and other POs with estimates, risk evaluations, and potential opportunities to support the development of related products. Fredrik also took on the task of translating external requirements into user stories for the development team to work on.",
         "teamTechLead": "Fredrik's primary responsibility as a tech lead was to support and enable the team and each developer to perform and deliver at a high level. The role also involved close collaboration with the Product Owner during the conception phase and ensuring clear communication of expectations to the development team, as well as providing realistic evaluations to the product department and management. Additionally, Fredrik was responsible for ensuring that while product goals were met, tech debt remained low, and we addressed technical excellence topics such as disaster recovery, observability, and metrics."
       },
-      "rideSharing": "While being part of the regular development process, Fredrik also supported the team by advising and coaching on observability, test automation and continuous delivery."
+      "rideSharing": "While being part of the regular development process, Fredrik also supported the team by advising and coaching on observability, test automation and continuous delivery.",
+      "tchibo": {
+        "0": "As Head of Engineering, Fredrik provides leadership and professional development for the engineers within his organization, fostering a high-performance culture across the Customer Account, Customer Growth, and Product Presentation teams. He is responsible for the growth, mentorship, and management of his directs while ensuring that engineering practices align with the delivery of key features.",
+        "1": "In addition to directing his three specialized teams, Fredrik carries responsibility for overarching technical topics across the digital ecosystem. He steers cross-departmental architectural decisions, ensures the long-term scalability of the microservices landscape, and aligns technical excellence with broader business objectives."
+      }
     },
     "homeLinkLabel": "Home"
   },

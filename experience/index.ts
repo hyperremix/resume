@@ -5,8 +5,10 @@ import { Cdon2012Experience } from './experiences/Cdon2012Experience';
 import { Cdon2013Experience } from './experiences/Cdon2013Experience';
 import { LundUniversityExperience } from './experiences/LundUniversityExperience';
 import { NetlightExperience } from './experiences/NetlightExperience';
+import { TchiboExperience } from './experiences/TchiboExperience';
 
 export const experiences = [
+  TchiboExperience,
   NetlightExperience,
   BrainwareGroupExperience,
   Cdon2013Experience,

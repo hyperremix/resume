@@ -14,6 +14,7 @@ export const NetlightExperience: TExperience = {
   slug: 'netlight',
   title: translations.experience.title.netlight,
   from: '2016-04-01',
+  to: '2025-05-01',
   icon: <Netlight />,
   roles: [{ title: translations.experience.role.consultantManager }],
   companyDescription: translations.experience.companyDescription.netlight,

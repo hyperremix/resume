@@ -55,7 +55,8 @@
       "iotSuite": "IoT Suite für smartes Heizen",
       "parentalLeave": "Elternzeit",
       "rideSharing": "Ride-Sharing Dienst",
-      "netlight": "Netlight"
+      "netlight": "Netlight",
+      "tchibo": "Tchibo"
     },
     "role": {
       "engineeringManager": "Engineering Manager",
@@ -68,7 +69,8 @@
       "masterThesisStudent": "Masterarbeitstudent",
       "fullStackDeveloper": "Full Stack Entwickler",
       "devOps": "DevOps",
-      "consultantManager": "Berater / Manager"
+      "consultantManager": "Berater / Manager",
+      "headOfEngineering": "Head of Engineering"
     },
     "projectDescription": {
       "axis": "Using the Go Programming Language in Practice.",
@@ -82,7 +84,8 @@
       "agTech": "Digitalisierung des Eintauschprozesses von Gebrauchtmaschinen durch die Bereitstellung einer intuitiven Self-Service-App für verschiedene Plattformen an Partnerhändler.",
       "iotSuite": "Digitalisierung der Immobilienwirtschaft durch eine IoT-Suite, die das Heizen sowohl für Mieter als auch für Vermieter klimafreundlich, komfortabel und wirtschaftlich macht.",
       "rideSharing": "Implementierung von Multi-Tenant-Funktionen im Benutzermodul, das die Registrierung, die Anmeldung und die Profilverwaltung abwickelt, während gleichzeitig sichergestellt wird, dass die Kernfunktionen im Live-System intakt bleiben.",
-      "netlight": "Berater für Kunden, Mentor für Kollegen und Treiber der digitalen Transformation, unabhängig von Technologie, Teamzusammensetzung oder Unternehmensgröße."
+      "netlight": "Berater für Kunden, Mentor für Kollegen und Treiber der digitalen Transformation, unabhängig von Technologie, Teamzusammensetzung oder Unternehmensgröße.",
+      "tchibo": "Führung der Ingenieure im Webshop und gleichzeitige Steuerung übergreifender technischer Initiativen, um Skalierbarkeit und Zuverlässigkeit sicherzustellen."
     },
     "companyDescription": {
       "axis": "Axis Communications ist ein schwedischer Hersteller von Netzwerkkameras für die physische Sicherheit und Videoüberwachungsindustrie. Das Unternehmen ist Marktführer in diesem Bereich und operiert in mehreren verschiedenen Marktsegmenten.",
@@ -94,7 +97,8 @@
       "agTech": "Ein in Hamburg ansässiges, internationales AgTech-E-Commerce-Start-up, das seit 2015 bestrebt ist, den Markt für gebrauchte landwirtschaftliche Maschinen zu revolutionieren und zu digitalisieren. Das Unternehmen möchte viele Schmerzpunkte für Landwirte und Händler auf diesem Markt lösen, indem es Transparenz bei der Preisgestaltung schafft, einen ansonsten ziemlich regionalen Markt globalisiert und Betrug verhindert.",
       "iotSuite": "Ein Start-up, das Immobilien umweltfreundlich, komfortabel und wirtschaftlich machen will: Um dies zu erreichen, digitalisieren und vernetzen sie Gebäude im Auftrag ihrer Kunden und entwickeln neue, intelligente Produkte. Sie bieten effiziente, maßgeschneiderte Workflows und Anwendungen für den Betrieb von IoT-Infrastrukturen und haben eine flexible Enterprise-IoT-Suite geschaffen, die Daten von vielen Millionen Sensoren für intelligente Anwendungen und Dienste verwaltet.",
       "rideSharing": "Ein innovatives, wachsendes Unternehmen, das für Mobilität und Gemeinschaft steht. Es hat das höhere Ziel, unsere Städte lebenswerter zu machen. Sie sind bereits mit vollelektrischen Ride-Sharing-Fahrzeugen für mehr als zwei Millionen Menschen unterwegs.",
-      "netlight": "Netlight ist ein Beratungsunternehmen mit starkem Fokus auf Kultur und Führung. Sie arbeiten mit einigen der größten Unternehmen in Europa zusammen und unterstützen sie bei ihrer digitalen Transformation."
+      "netlight": "Netlight ist ein Beratungsunternehmen mit starkem Fokus auf Kultur und Führung. Sie arbeiten mit einigen der größten Unternehmen in Europa zusammen und unterstützen sie bei ihrer digitalen Transformation.",
+      "tchibo": "Ein führender europäischer Multichannel-Händler, eine E-Commerce-Plattform und ein erstklassiger Kaffeeröster mit mehr als 900 Filialen und 24.000 Verkaufsstellen in acht Ländern."
     },
     "roleDescription": {
       "axis": {
@@ -123,7 +127,11 @@
         "productOwner": "Fredrik war verantwortlich für die Konzeption, Abgrenzung und Planung neuer Funktionen für das Kundenportal in enger Zusammenarbeit mit dem Management, anderen Product-Ownern und seinem Team. In diesem schnelllebigen Umfeld war es wichtig, dem Management und anderen Product-Ownern Schätzungen, Risiko- und Chancenbewertungen zur Unterstützung der Entwicklung verwandter Produkte bereitzustellen. Fredrik übernahm auch die Aufgabe, externe Anforderungen in User Stories für das Entwicklungsteam zu übersetzen.",
         "teamTechLead": "Fredriks Hauptverantwortung als technischer Leiter bestand darin, das Team und jeden Entwickler zu unterstützen und zu befähigen, auf hohem Niveau zu arbeiten und zu liefern. Die Rolle beinhaltete auch eine enge Zusammenarbeit mit dem Product-Owner während der Konzeptionsphase und die Sicherstellung einer klaren Kommunikation der Erwartungen an das Entwicklungsteam sowie die Bereitstellung realistischer Bewertungen für die Produktabteilung und das Management. Zusätzlich war Fredrik dafür verantwortlich, sicherzustellen, dass Produktziele erreicht wurden, technische Schulden gering blieben und technische Exzellenzthemen wie Disaster-Recovery, Observability und Metriken auf letzter Stand gehalten wurden."
       },
-      "rideSharing": "Während er Teil des regulären Entwicklungsprozesses war, unterstützte Fredrik das Team auch durch Beratung und Coaching zu Observability, Testautomatisierung und Continuous-Delivery."
+      "rideSharing": "Während er Teil des regulären Entwicklungsprozesses war, unterstützte Fredrik das Team auch durch Beratung und Coaching zu Observability, Testautomatisierung und Continuous-Delivery.",
+      "tchibo": {
+        "0": "Als Head of Engineering übernimmt Fredrik die fachliche Führung und Weiterentwicklung der Ingenieure in seiner Organisation und fördert eine leistungsstarke Kultur in den Teams Customer Account, Customer Growth und Product Presentation. Er verantwortet Wachstum, Mentoring und Management seiner direkten Mitarbeitenden und stellt sicher, dass Engineering-Praktiken mit der Umsetzung zentraler Features im Einklang stehen.",
+        "1": "Zusätzlich zur Leitung seiner drei spezialisierten Teams trägt Fredrik Verantwortung für übergreifende technische Themen im gesamten digitalen Ökosystem. Er steuert bereichsübergreifende Architekturentscheidungen, sichert die langfristige Skalierbarkeit der Microservices-Landschaft und richtet technische Exzellenz an den übergeordneten Geschäftszielen aus."
+      }
     },
     "homeLinkLabel": "Startseite"
   },
