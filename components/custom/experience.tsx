@@ -59,7 +59,7 @@ const RightExperience = ({
             <OpenInNew className="sm:hidden " />
           </div>
 
-          <div className="sm:ml-4.5 relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-left-8 before:top-2">
+          <div className="sm:-ml-px relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-left-8 before:top-2">
             <Typography>{roles?.map((role) => t(role.title)).join(' | ')}</Typography>
             <TimePeriod from={from} to={to} />
             {projectDescription && (
@@ -112,7 +112,7 @@ const LeftExperience = ({
             <OpenInNew className="sm:hidden " />
           </div>
 
-          <div className="sm:mr-4.5 relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-right-8 before:top-2 flex flex-col items-start sm:items-end">
+          <div className="sm:mr-0.5 relative h-full before:absolute before:bg-zinc-950 dark:before:bg-zinc-300 before:h-full sm:before:w-1 sm:before:-right-8 before:top-2 flex flex-col items-start sm:items-end">
             <Typography>{roles?.map((role) => t(role.title)).join(' | ')}</Typography>
             <TimePeriod from={from} to={to} />
             {projectDescription && (

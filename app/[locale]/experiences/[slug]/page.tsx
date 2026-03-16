@@ -67,7 +67,7 @@ const ExperienceDescription = ({
 
   return (
     <div className="flex flex-col gap-1 pt-1">
-      <Typography>{t(companyDescription)}</Typography>
+      {companyDescription && <Typography>{t(companyDescription)}</Typography>}
       {projectDescription && (
         <>
           <Typography variant="h2">{t(translations.projectHeader)}</Typography>

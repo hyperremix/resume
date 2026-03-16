@@ -31,7 +31,7 @@ export const SkillGauge = ({ skill, months, maxMonths }: Props) => {
       <Tooltip delayDuration={0}>
         <TooltipTrigger
           className="relative size-40 group"
-          aria-label={t(translations.skillGaugeLabel, { skill: skillConfig[skill].label, months })}
+          aria-label={t(translations.skillGaugeLabel, { skill: skillConfig[skill].label ?? skill, months })}
         >
           <svg
             className="rotate-[135deg] size-full"
