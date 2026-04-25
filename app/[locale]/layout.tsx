@@ -1,6 +1,5 @@
 import { translations } from '@/i18n';
 import { routing, TLocale } from '@/i18n/routing';
-import { PostHogProvider } from '@/providers/posthog-provider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -43,9 +42,7 @@ const RootLayout = async ({
     <html lang={locale}>
       <body className="bg-zinc-200 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 fill-zinc-800 dark:fill-zinc-300 border-zinc-300 dark:border-zinc-800 selection:bg-pink-700/80 selection:text-zinc-300 px-1">
         <main>
-          <NextIntlClientProvider messages={messages}>
-            <PostHogProvider>{children}</PostHogProvider>
-          </NextIntlClientProvider>
+          <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
         </main>
       </body>
     </html>
