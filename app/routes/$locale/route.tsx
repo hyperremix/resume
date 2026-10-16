@@ -1,5 +1,5 @@
 import { translations } from '@/i18n';
-import { isLocale, loadMessages, TLocale } from '@/i18n/routing';
+import { isLocale, loadMessages, localizedPathname, locales, TLocale } from '@/i18n/routing';
 import { Outlet, createFileRoute, notFound } from '@tanstack/react-router';
 import { IntlProvider, Messages, createTranslator } from 'use-intl';
 
@@ -12,7 +12,7 @@ export const Route = createFileRoute('/$locale')({
   loader: async ({ params }) => ({
     messages: await loadMessages(params.locale as TLocale),
   }),
-  head: ({ params, loaderData }) => {
+  head: ({ params, loaderData, matches }) => {
     if (!loaderData) return {};
 
     const t = createTranslator<Messages>({ locale: params.locale, messages: loaderData.messages });
@@ -22,6 +22,11 @@ export const Route = createFileRoute('/$locale')({
         { title: t(translations.name) },
         { name: 'description', content: t(translations.metadata.description) },
       ],
+      links: locales.map((locale) => ({
+        rel: 'alternate',
+        hrefLang: locale,
+        href: localizedPathname(matches[matches.length - 1].pathname, locale),
+      })),
     };
   },
   component: LocaleLayout,
