@@ -65,8 +65,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 Run these from the repository root:
 
-1. `pnpm ts:check`
-2. `pnpm lint`
-3. `pnpm build`
+1. `bun run ts:check`
+2. `bun run lint`
+3. `bun run build`
 
 There is no test suite. If any command fails, fix the issue and re-run from the failing step onward.

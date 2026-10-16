@@ -41,10 +41,16 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
-      "pnpm lint"
+      "bun run lint"
     ],
     "*.{md,json}": [
       "prettier --write"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@swc/core",
+    "sharp",
+    "unrs-resolver"
+  ]
 }
