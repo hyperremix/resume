@@ -61,6 +61,19 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
+## 5. Equal Quality on Every Screen
+
+**Mobile, tablet and desktop are first-class. None of them falls out of the others.**
+
+The site must be equally good at roughly 390px (phone), 820px (tablet portrait) and 1280px and up (desktop):
+
+- The first screen shows who Fredrik is on every size: name, role and photo, not only a headline.
+- The same information is reachable with the same ease; nothing is hidden on small screens because it was inconvenient to lay out.
+- No horizontal overflow, no orphaned words in headlines, no column that is mostly empty space.
+- Tap targets are at least 44px on touch devices, and hover-only affordances have a touch equivalent.
+
+Check every UI change at all three widths, in light and dark mode, before calling it done. Designing for desktop and letting smaller screens degrade is not acceptable.
+
 ## Required quality gates (must pass before completion)
 
 Run these from the repository root:

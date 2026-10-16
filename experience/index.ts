@@ -57,17 +57,40 @@ export const getRecursiveSkills = (experiences: TExperience[]): Partial<Record<S
   return skills;
 };
 
-const getMonthsBetween = (from: string, to?: string): number => {
+export const getMonthsBetween = (from: string, to?: string): number => {
   const fromDateTime = new Date(from);
   const toDateTime = to ? new Date(to) : new Date();
 
-  const yearsDifference = toDateTime.getFullYear() - fromDateTime.getFullYear();
-  const monthsDifference = toDateTime.getMonth() - fromDateTime.getMonth();
+  const yearsDifference = toDateTime.getUTCFullYear() - fromDateTime.getUTCFullYear();
+  const monthsDifference = toDateTime.getUTCMonth() - fromDateTime.getUTCMonth();
 
   const totalMonths = yearsDifference * 12 + monthsDifference;
 
   return totalMonths;
 };
+
+// Months spent in experiences that list the skill or one of its sub-skills (AWS covers AWS Lambda, AWS S3, ...)
+export const getMonthsWithSkill = (skill: Skill, list: TExperience[] = experiences): number =>
+  list.reduce((sum, experience) => {
+    const hasSkill = (experience.skills ?? []).some(
+      (candidate) => candidate === skill || candidate.startsWith(`${skill} `),
+    );
+    return (
+      sum +
+      (hasSkill ? getMonthsBetween(experience.from, experience.to) : 0) +
+      getMonthsWithSkill(skill, experience.subExperiences ?? [])
+    );
+  }, 0);
+
+export const getAllSkills = (list: TExperience[] = experiences): Skill[] =>
+  Array.from(
+    new Set(
+      list.flatMap((experience) => [
+        ...(experience.skills ?? []),
+        ...getAllSkills(experience.subExperiences ?? []),
+      ]),
+    ),
+  );
 
 const withoutBasicSkills = (experience: Skill): boolean =>
   experience !== Skill.HTML &&

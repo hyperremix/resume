@@ -25,8 +25,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="bg-zinc-200 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 fill-zinc-800 dark:fill-zinc-300 border-zinc-300 dark:border-zinc-800 selection:bg-pink-700/80 selection:text-zinc-300 px-1">
-        <main>{children}</main>
+      <body className="min-h-screen bg-paper text-ink antialiased selection:bg-accent-soft">
+        {children}
         <Scripts />
       </body>
     </html>

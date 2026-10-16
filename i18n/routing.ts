@@ -3,6 +3,8 @@ export type TLocale = 'en' | 'de' | 'sv';
 export const locales: TLocale[] = ['en', 'de', 'sv'];
 export const defaultLocale: TLocale = 'en';
 
+export const localeNames: Record<TLocale, string> = { en: 'English', de: 'Deutsch', sv: 'Svenska' };
+
 export const isLocale = (value: string | undefined): value is TLocale =>
   locales.includes(value as TLocale);
 

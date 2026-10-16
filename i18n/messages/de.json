@@ -1,51 +1,61 @@
 {
   "metadata": {
-    "description": "Fredrik Petterssons Lebenslauf"
-  },
-  "home": {
-    "view": "Druckbare Version",
-    "pdf": "anzeigen",
-    "or": "oder",
-    "findOutMoreBelow": "weiterschauen um mehr zu erfahren",
-    "builtWith": "Erstellt mit"
+    "description": "Fredrik Pettersson, Software-Generalist und Head of Engineering bei Tchibo in Hamburg. Erfahrung, Fähigkeiten und Kontakt."
   },
   "name": "Fredrik Pettersson",
-  "role": "Software Generalist",
-  "elevatorPitch": "Fredrik ist ein vielseitiger Experte mit Fachkenntnissen in einer breiten Palette von Technologien und Disziplinen. Sein Schwerpunkt liegt auf allen Aspekten der Softwareentwicklung, und er glänzt in dynamischen Teams, die in schnelllebigen Umgebungen arbeiten und stets das Wichtigste priorisieren. Fredrik ist dem Problemlösen gewidmet und hat eine Leidenschaft für kontinuierliches berufliches Wachstum. Er teilt gerne sein Wissen und unterstützt Kollegen, wann immer möglich.",
-  "profilePictureAriaLabel": "Fredrik Petterssons Profilbild",
+  "headline": "Ich habe die meisten Jobs in der Softwareentwicklung selbst gemacht. Heute führe ich die Menschen, die sie machen.",
+  "role": "Software-Generalist, Head of Engineering bei Tchibo",
+  "elevatorPitch": "Seit 2012 entwickle ich beruflich Software: als Entwickler, Architekt, Tech Lead, Product Owner und Engineering Manager, die meiste Zeit als Berater bei Netlight. Heute führe ich Engineering-Teams bei Tchibo und helfe dabei, KI in die Arbeit aller Engineering-Teams dort zu bringen. Am besten arbeite ich in schnellen Teams mit klaren Prioritäten, und was ich lerne, gebe ich weiter, wo ich kann.",
+  "profilePictureAriaLabel": "Porträt von Fredrik Pettersson",
   "locationLabel": "Hamburg, Deutschland",
   "githubProfileLabel": "GitHub-Profil",
   "linkedinProfileLabel": "LinkedIn-Profil",
-  "researchGateProfileLabel": "ResearchGate-Profil",
-  "personalWebsiteLabel": "Link zur persönlichen Website",
-  "skillsHeader": "Fähigkeiten",
-  "skillGaugeYearsTooltip": "{years, plural, one {# Jahr} other {# Jahre}}",
-  "skillGaugeMonthsTooltip": "{months, plural, one {# Monat} other {# Monate}}",
-  "skillGaugeLabel": "{skill} - {months, plural, one {# Monat} other {# Monate}} Erfahrung",
+  "researchGateProfileLabel": "Masterarbeit auf ResearchGate",
+  "personalWebsiteLabel": "Persönliche Website",
+  "nav": {
+    "label": "Seiten",
+    "languages": "Sprache",
+    "print": "Druckversion",
+    "home": "Übersicht"
+  },
+  "home": {
+    "experienceHeader": "Erfahrung",
+    "topSkillsHeader": "Kernkompetenzen",
+    "allSkillsHeader": "Alles, womit ich gearbeitet habe",
+    "languagesHeader": "Sprachen",
+    "builtWith": "Gebaut mit",
+    "sourceCode": "Quellcode auf GitHub",
+    "skillsLead": "Wähle eine Fähigkeit, um zu sehen, wo ich sie eingesetzt habe.",
+    "skillFilter": "Zeigt, wo ich {skill} eingesetzt habe.",
+    "clearFilter": "Alles anzeigen"
+  },
+  "skillYears": "{years, plural, =0 {unter einem Jahr} one {# Jahr} other {# Jahre}}",
   "language": {
     "Swedish": {
       "name": "Schwedisch",
-      "level": "Muttersprachliche Kenntnisse"
+      "level": "Muttersprache"
     },
     "English": {
       "name": "Englisch",
-      "level": "Vollständige berufliche Kenntnisse"
+      "level": "verhandlungssicher"
     },
     "German": {
       "name": "Deutsch",
-      "level": "Zweisprachige Kenntnisse"
+      "level": "zweisprachig"
     }
   },
   "pdf": {
-    "topSkillsHeader": "Top-Fähigkeiten",
+    "topSkillsHeader": "Kernkompetenzen",
     "languagesHeader": "Sprachen",
-    "experiencesHeader": "Erfahrungen",
-    "educationHeader": "Ausbildung"
+    "experiencesHeader": "Erfahrung",
+    "educationHeader": "Ausbildung",
+    "print": "Drucken",
+    "back": "Zurück zur Website"
   },
   "experience": {
     "title": {
       "axis": "Axis Communications",
-      "university": "M.Sc in Engineering",
+      "university": "M.Sc. in Engineering",
       "CDON": "CDON",
       "brainware": "Brainware Group",
       "glassesRetailer": "Brillenhändler",
@@ -54,7 +64,7 @@
       "agTech": "AgTech E-Commerce",
       "iotSuite": "IoT Suite für smartes Heizen",
       "parentalLeave": "Elternzeit",
-      "rideSharing": "Ride-Sharing Dienst",
+      "rideSharing": "Ride-Sharing-Dienst",
       "netlight": "Netlight",
       "tchibo": "Tchibo"
     },
@@ -66,7 +76,7 @@
       "teamTechLead": "Team / Tech Lead",
       "productOwner": "Product Owner",
       "student": "Student",
-      "masterThesisStudent": "Masterarbeitstudent",
+      "masterThesisStudent": "Masterand",
       "fullStackDeveloper": "Full Stack Entwickler",
       "devOps": "DevOps",
       "consultantManager": "Berater / Manager",
@@ -74,72 +84,75 @@
     },
     "projectDescription": {
       "axis": "Using the Go Programming Language in Practice.",
-      "university": "Computer Science and Engineering.",
-      "CDON2012": ".NET WebForms-Migration zu .NET MVC.",
+      "university": "Informatik an der Universität Lund.",
+      "CDON2012": "Migration von .NET WebForms zu .NET MVC.",
       "CDON2013": "Einführung der abonnementbasierten Mitgliedschaft CDON+.",
-      "brainware": "Automatische Softwareerkennung für ein IT-Lizenz-Compliance Produkt.",
-      "glassesRetailer": "Digitalisierung des stationären Einzelhandelssystems für den Verkauf von Kontaktlinsenprodukten für alle Filialen in der DACH-Region.",
-      "mro": "Eine innovative und ganzheitliche Plattform, die eine umfangreiche Vielfalt an digitalen Produkten und Dienstleistungen für MRO bietet, indem sie mehrere webbasierte Apps an einem Ort vereint.",
-      "gambling": "Vereinigung zweier verschiedener Plattformen zu einer einzigen Plattform als Teil des Teams, das für die Kernkomponenten verantwortlich ist.",
-      "agTech": "Digitalisierung des Eintauschprozesses von Gebrauchtmaschinen durch die Bereitstellung einer intuitiven Self-Service-App für verschiedene Plattformen an Partnerhändler.",
-      "iotSuite": "Digitalisierung der Immobilienwirtschaft durch eine IoT-Suite, die das Heizen sowohl für Mieter als auch für Vermieter klimafreundlich, komfortabel und wirtschaftlich macht.",
-      "rideSharing": "Implementierung von Multi-Tenant-Funktionen im Benutzermodul, das die Registrierung, die Anmeldung und die Profilverwaltung abwickelt, während gleichzeitig sichergestellt wird, dass die Kernfunktionen im Live-System intakt bleiben.",
+      "brainware": "Automatische Softwareerkennung für ein Produkt zur IT-Lizenz-Compliance.",
+      "glassesRetailer": "Digitalisierung des Filialsystems für den Verkauf von Kontaktlinsenprodukten in allen Filialen der DACH-Region.",
+      "mro": "Eine ganzheitliche Plattform, die viele webbasierte Apps für Wartung, Reparatur und Überholung an einem Ort vereint.",
+      "gambling": "Zusammenführung zweier Plattformen zu einer, als Teil des Teams für die Kernkomponenten.",
+      "agTech": "Digitalisierung des Eintauschprozesses von Gebrauchtmaschinen mit einer plattformübergreifenden Self-Service-App für Partnerhändler.",
+      "iotSuite": "Digitalisierung der Immobilienwirtschaft durch eine IoT-Suite, die das Heizen für Mieter und Vermieter klimafreundlich, komfortabel und wirtschaftlich macht.",
+      "rideSharing": "Mandantenfähigkeit im Benutzermodul für Registrierung, Anmeldung und Profilverwaltung, ausgeliefert in ein laufendes System.",
       "netlight": "Berater für Kunden, Mentor für Kollegen und Treiber der digitalen Transformation, unabhängig von Technologie, Teamzusammensetzung oder Unternehmensgröße.",
-      "tchibo": "Führung der Ingenieure im Webshop und gleichzeitige Steuerung übergreifender technischer Initiativen, um Skalierbarkeit und Zuverlässigkeit sicherzustellen."
+      "tchibo": "Führung der Webshop-Engineers, Steuerung der technischen Initiativen, die die Plattform skalierbar und zuverlässig halten, und Mitarbeit an der KI-Transformation im gesamten Engineering."
     },
     "companyDescription": {
-      "axis": "Axis Communications ist ein schwedischer Hersteller von Netzwerkkameras für die physische Sicherheit und Videoüberwachungsindustrie. Das Unternehmen ist Marktführer in diesem Bereich und operiert in mehreren verschiedenen Marktsegmenten.",
-      "CDON": "CDON ist eines der führenden E-Commerce-Unternehmen in Skandinavien mit über zwei Millionen aktiven Kunden. Sie verkaufen Filme, Musik, Spiele, Bücher und Elektronik sowie viele andere Dinge.",
-      "brainware": "Brainwaregroup ist ein internationales Unternehmen mit Hauptsitz in der Schweiz, das IT-Service- und Vertragsmanagementlösungen anbietet. Unternehmen wie Vodafone, OMV, Linde, Allianz GI und ERGO sind langjährige Kunden des breiten Produktangebots der Brainwaregroup.",
+      "axis": "Axis Communications ist ein schwedischer Hersteller von Netzwerkkameras für physische Sicherheit und Videoüberwachung. Das Unternehmen ist Marktführer in diesem Bereich und in mehreren Marktsegmenten aktiv.",
+      "CDON": "CDON ist eines der führenden E-Commerce-Unternehmen in Skandinavien mit über zwei Millionen aktiven Kunden. Verkauft werden Filme, Musik, Spiele, Bücher, Elektronik und vieles mehr.",
+      "brainware": "Brainwaregroup ist ein internationales Unternehmen mit Hauptsitz in der Schweiz, das Lösungen für IT-Service- und Vertragsmanagement anbietet. Unternehmen wie Vodafone, OMV, Linde, Allianz GI und ERGO sind langjährige Kunden.",
       "glassesRetailer": "Das führende Optikerunternehmen in Deutschland.",
       "mro": "Ein führender Anbieter von Wartungs-, Reparatur-, Überholungs- und Modifikationsdiensten für zivile Flugzeuge.",
-      "gambling": "Ein deutscher Marktführer für Lotto-Ticket-Vermittlung für staatliche Lotterien in Deutschland.",
-      "agTech": "Ein in Hamburg ansässiges, internationales AgTech-E-Commerce-Start-up, das seit 2015 bestrebt ist, den Markt für gebrauchte landwirtschaftliche Maschinen zu revolutionieren und zu digitalisieren. Das Unternehmen möchte viele Schmerzpunkte für Landwirte und Händler auf diesem Markt lösen, indem es Transparenz bei der Preisgestaltung schafft, einen ansonsten ziemlich regionalen Markt globalisiert und Betrug verhindert.",
-      "iotSuite": "Ein Start-up, das Immobilien umweltfreundlich, komfortabel und wirtschaftlich machen will: Um dies zu erreichen, digitalisieren und vernetzen sie Gebäude im Auftrag ihrer Kunden und entwickeln neue, intelligente Produkte. Sie bieten effiziente, maßgeschneiderte Workflows und Anwendungen für den Betrieb von IoT-Infrastrukturen und haben eine flexible Enterprise-IoT-Suite geschaffen, die Daten von vielen Millionen Sensoren für intelligente Anwendungen und Dienste verwaltet.",
-      "rideSharing": "Ein innovatives, wachsendes Unternehmen, das für Mobilität und Gemeinschaft steht. Es hat das höhere Ziel, unsere Städte lebenswerter zu machen. Sie sind bereits mit vollelektrischen Ride-Sharing-Fahrzeugen für mehr als zwei Millionen Menschen unterwegs.",
-      "netlight": "Netlight ist ein Beratungsunternehmen mit starkem Fokus auf Kultur und Führung. Sie arbeiten mit einigen der größten Unternehmen in Europa zusammen und unterstützen sie bei ihrer digitalen Transformation.",
+      "gambling": "Ein deutscher Marktführer für die Vermittlung von Lotto-Tickets der staatlichen Lotterien.",
+      "agTech": "Ein internationales AgTech-E-Commerce-Start-up aus Hamburg, das seit 2015 den Markt für gebrauchte Landmaschinen digitalisiert. Es schafft Preistransparenz, öffnet einen sonst regionalen Markt und verhindert Betrug, für Landwirte wie Händler.",
+      "iotSuite": "Ein Start-up, das Immobilien klimafreundlich, komfortabel und wirtschaftlich macht. Es digitalisiert und vernetzt Gebäude im Auftrag seiner Kunden und hat eine flexible Enterprise-IoT-Suite geschaffen, die Daten von vielen Millionen Sensoren verwaltet.",
+      "rideSharing": "Ein wachsendes Unternehmen, das für Mobilität und Gemeinschaft steht und Städte lebenswerter machen will. Seine vollelektrischen Ride-Sharing-Fahrzeuge fahren bereits für mehr als zwei Millionen Menschen.",
+      "netlight": "Netlight ist ein Beratungsunternehmen mit starkem Fokus auf Kultur und Führung. Es begleitet einige der größten Unternehmen Europas bei ihrer digitalen Transformation.",
       "tchibo": "Ein führender europäischer Multichannel-Händler, eine E-Commerce-Plattform und ein erstklassiger Kaffeeröster mit mehr als 900 Filialen und 24.000 Verkaufsstellen in acht Ländern."
     },
     "roleDescription": {
       "axis": {
-        "0": "Zu der Zeit entwickelte das Unternehmen ihre Software hauptsächlich in C, begann aber auch, andere, modernere Sprachen in Betracht zu ziehen. Ziel der Arbeit war es, die Herausforderungen bei der Einführung von Go als Hauptsprache für die Entwicklung ihrer Software zu untersuchen. Da der Standard-Compiler für Go die Architektur vieler Unternehmensprodukte nicht unterstützte, sollte auch das Go-Frontend für GCC (GNU Compiler Collection) untersucht werden.",
-        "1": "Das Fazit war, dass Go wirklich leicht zu erlernen ist, es eine großartige Unterstützung für das Schreiben von concurrent Software bietet, die Build-Tools (im Vergleich zu C) viel einfacher sind und die Builds schnell sind. Go hat auch einen eingebauten Paketmanager, der es sehr einfach macht, Drittanbieterbibliotheken zu verwenden. Allerdings war das Go-Frontend für GCC kompliziert in Kombination mit der spezifischen Architektur, die Axis verwendet, zum Laufen zu bringen."
+        "0": "Damals schrieb Axis den Großteil seiner Software in C und begann, modernere Sprachen zu prüfen. Meine Masterarbeit untersuchte, was nötig wäre, um Go als Hauptsprache für ihre Software einzuführen. Weil der Standard-Compiler für Go die Architektur vieler Axis-Produkte nicht unterstützte, habe ich auch das Go-Frontend für GCC bewertet.",
+        "1": "Das Fazit: Go ist leicht zu lernen, unterstützt nebenläufige Software sehr gut, und die Build-Werkzeuge sind weit einfacher und schneller als bei C. Der eingebaute Paketmanager macht Drittanbieterbibliotheken leicht nutzbar. Das GCC-Frontend war allerdings nur schwer mit der Axis-Architektur zum Laufen zu bringen."
       },
-      "CDON2012": "Im Sommer 2012 wurde Fredrik von CDON eingestellt, um bei der Migration ihres Legacy-Codes, der mit .NET WebForms geschrieben wurde, zu .NET MVC zu helfen. Genauer gesagt umfasste das Projekt die Registrierungsseite, Benutzerbearbeitungsseite, Passwort-Wiederherstellungsseite usw. Der Auftrag war ein wichtiger Schritt zur Modernisierung der Website. Außerdem bot die neue Implementierung durch die hohe Testbarkeit von .NET MVC eine bessere Testbarkeit und Wartbarkeit des Code-Basis.",
-      "CDON2013": "Im Sommer 2013 war Fredrik Teil des Entwicklungsteams, das die Funktion CDON+ auf die Website brachte. CDON+ ist eine kostenpflichtige Mitgliedschaft, die Kunden kostenlosen Versand für jeden Einkauf über SEK 100 und die Möglichkeit bietet, Punkte zu sammeln, die am Ende eines Jahres in eine Geschenkkarte umgewandelt werden. Fredrik war an allen Teilen des Projekts beteiligt, einschließlich Planung, Datenbankdesign, Implementierung der Geschäftslogik sowie GUI-Design.",
+      "CDON2012": "Im Sommer 2012 stellte mich CDON ein, um den Legacy-Code von .NET WebForms nach .NET MVC zu migrieren, angefangen mit Registrierung, Benutzerbearbeitung und Passwort-Wiederherstellung. Die Migration war ein Schritt zur Modernisierung der Website, und die MVC-Implementierung ließ sich deutlich besser testen und warten.",
+      "CDON2013": "Im Sommer 2013 war ich Teil des Teams, das CDON+ gebaut hat: eine kostenpflichtige Mitgliedschaft mit kostenlosem Versand ab 100 SEK und Punkten, die am Jahresende zu einem Gutschein werden. Ich war an allen Teilen des Projekts beteiligt: Planung, Datenbankdesign, Geschäftslogik und Benutzeroberfläche.",
       "brainware": {
-        "0": "Das Unternehmen hatte ein kleines Entwicklungsteam, das Schwierigkeiten hatte, mit den Kundenanforderungen Schritt zu halten und gleichzeitig ihre Produkte zu innovieren. Fredrik wurde eingestellt, um diesen Druck zu lindern, indem er an neuen Projekten arbeitete und den vorhandenen Code pflegte. Bedeutende Projekte umfassten die Implementierung eines GUI für ein CLI, die Migration von SourceSafe zu Git und die Integration von Elasticsearch.",
-        "1": "Das GUI für das CLI wurde zunächst von Fredrik vorgeschlagen und zielte darauf ab, dem Entwicklungsteam das Debuggen zahlreicher CLI zu erleichtern. Sein Potenzial wurde schnell erkannt, was zur Hinzufügung weiterer Funktionen führte, und es wird jetzt unternehmensweit genutzt.",
-        "2": "Das Unternehmen nutzte ursprünglich Visual SourceSafe für die Versionskontrolle, was die parallele Arbeit aufgrund schlechter Branching- und Merging-Möglichkeiten erschwerte. Fredrik führte Git und ein neues Workflow- und Branching-Modell ein, das erfolgreich übernommen und geschätzt wurde.",
-        "3": "Um die Suchleistung in den Produkten der Brainwaregroup zu verbessern, spiegelte Fredrik die Datenbank in Elasticsearch. Dieser Wechsel ermöglichte es, Suchanfragen an Elasticsearch statt an die Datenbank zu richten, was nahezu sofortige Ergebnisse lieferte."
+        "0": "Ein kleines Entwicklungsteam kam mit den Kundenanforderungen kaum hinterher und wollte gleichzeitig seine Produkte weiterentwickeln. Ich wurde eingestellt, um diesen Druck zu nehmen, mit neuen Projekten und der Pflege des bestehenden Codes. Die größten Projekte waren eine Oberfläche für die Kommandozeilenwerkzeuge, die Migration von SourceSafe zu Git und die Integration von Elasticsearch.",
+        "1": "Die Oberfläche begann als meine eigene Idee, um die vielen Kommandozeilenwerkzeuge leichter debuggen zu können. Ihr Potenzial wurde schnell erkannt, weitere Funktionen folgten, und heute wird sie unternehmensweit genutzt.",
+        "2": "Die Versionskontrolle lief auf Visual SourceSafe, dessen schwaches Branching und Merging paralleles Arbeiten erschwerte. Ich habe Git zusammen mit einem neuen Workflow- und Branching-Modell eingeführt, das vom Team übernommen und geschätzt wurde.",
+        "3": "Um die Suche in den Produkten zu beschleunigen, habe ich die Datenbank nach Elasticsearch gespiegelt und Suchanfragen dorthin geleitet. Die Ergebnisse kamen danach nahezu sofort."
       },
       "glassesRetailer": {
-        "0": "Fredrik war Teil des Teams für die In-Store-Verwaltungsanwendung. Unter Verwendung von Scrum nahm er an der Definition von Stories, der Implementierung und der Qualitätssicherung teil. Im Laufe der Zeit wurde er zu einem zentralen Informationspunkt für Teammitglieder und externe Stakeholder. Während seiner Zeit im Projekt konzentrierte sich Fredrik darauf, die Selenium-Test-Suite zu stabilisieren, indem er ein robustes Framework erstellte und dessen Ausführung auf dem Build-Server automatisierte. Fredrik war auch Teil einer speziellen Taskforce, die sich mit Leistungsproblemen in der Anwendung befasste. Er half dabei, mehrere Schmerzpunkte zu identifizieren, die die Leistung beeinträchtigten, was zu Maßnahmen führte, die die Leistung um bis zu 80% verbesserten.",
-        "1": "Fredrik wurde 2017 für ein strategisch wichtiges Projekt ausgewählt: die Internationalisierung. Zusammen mit einem anderen Entwickler und einem Product-Owner half er, ein neues Team zu bilden, um die Anwendung für mehrere Länder vorzubereiten. Sie stellten sich Herausforderungen wie länderspezifische Produktportfolios, Lokalisierung, Logistik und Funktionen. Als technischer Teamleiter leitete Fredrik das Team durch das Projekt. Nach zwei Jahren fast ausschließlicher Konzentration auf Funktionen wurde das monolithische Backend aufgrund schlechter architektonischer Entscheidungen schwer wartbar und erweiterbar. Fredrik war Teil einer ausgewählten Gruppe, die mit der Modularisierung des Backends begann, beginnend mit der Extraktion des Mitarbeitermanagementsystems in ein separates Modul. Fredrik optimierte auch die Build-Pipeline, indem er die Abhängigkeit von TeamCity durch ein Build-Skript reduzierte, das auf jedem Betriebssystem ausführbar war. Zusätzlich baute er einen maßgeschneiderten Build-Monitor, um den Teams wichtige Informationen bereitzustellen."
+        "0": "Ich war Teil des Teams für die Verwaltungsanwendung in den Filialen. Wir arbeiteten mit Scrum, und ich war an Story-Definition, Umsetzung und Qualitätssicherung beteiligt. Mit der Zeit wurde ich zur zentralen Anlaufstelle für Team und externe Stakeholder. Ich habe die Selenium-Testsuite mit einem robusten Framework stabilisiert und ihre Ausführung auf dem Build-Server automatisiert. In einer Taskforce für Performance half ich, die Engpässe zu finden, die zu Verbesserungen von bis zu 80 Prozent führten.",
+        "1": "2017 wurde ich für ein strategisch wichtiges Projekt ausgewählt: die Internationalisierung. Mit einem weiteren Entwickler und einem Product Owner bildete ich ein neues Team, um die Anwendung für mehrere Länder vorzubereiten, mit länderspezifischen Sortimenten, Lokalisierung, Logistik und eigenen Funktionen. Als technischer Teamlead führte ich das Team durch das Projekt. Nach zwei Jahren fast reiner Feature-Arbeit war das monolithische Backend schwer wartbar geworden, deshalb gehörte ich zur Gruppe, die mit der Modularisierung begann, zuerst mit der Mitarbeiterverwaltung. Außerdem habe ich die Build-Pipeline mit einem Build-Skript auf jedem Betriebssystem lauffähig gemacht, was die Abhängigkeit von TeamCity reduzierte, und einen eigenen Build-Monitor für die Teams gebaut."
       },
       "mro": {
-        "fullStackDeveloper": "Fredrik trat dem Team bei, das für die Kern-Frontend- und Backend-Komponenten verantwortlich war. Seine Hauptaufgabe bestand darin, die Entwicklung von Java-basierten Microservices mit Vert.X sowie von Angular-Komponenten zu unterstützen. Während seiner Zeit dort bemerkte Fredrik das Fehlen von Tests und arbeitete daran, das Bewusstsein zu schärfen und das Team über die Bedeutung von Tests zu coachen, um zukünftige Probleme zu mindern.",
-        "devOps": "Ein neues Team namens Developer Experience wurde gegründet, um die Geschwindigkeit und Qualität der Entwicklung in allen anderen Teams zu verbessern. Während seiner Zeit dort entwickelte Fredrik Konzepte für einfache Anwendungstests mit Cypress, führte Helm ein, um reproduzierbare Bereitstellungen in einer OpenShift-Umgebung zu erleichtern, und half bei der Einrichtung von SonarQube und Snyk zur Verbesserung der Codequalität. Er implementierte auch mehrere auf Golang basierende Prometheus-Exporter, einen benutzerdefinierten Usabilla-Jira-Connector mit Kotlin, Quarkus und GraalVM sowie eine sichere Methode zur Geheimnisverwaltung in Microservices mit HashiCorp Vault. Um diese Tools und Prozesse zu fördern, schrieb Fredrik Dokumentationen, Blogbeiträge und führte Lightning-Talks durch. Gelegentlich schloss er sich anderen Teams an, um ihnen bei der Einführung neuer Konzepte und Tools zu helfen."
+        "fullStackDeveloper": "Ich kam in das Team für die Kernkomponenten in Frontend und Backend und baute Java-Microservices mit Vert.x sowie Angular-Komponenten. Das Fehlen von Tests fiel mir früh auf, und ich habe das Team darin gecoacht, warum Tests spätere Probleme verhindern.",
+        "devOps": "Ein neues Team namens Developer Experience sollte Geschwindigkeit und Qualität der Entwicklung in allen anderen Teams verbessern. Dort entwickelte ich Konzepte für einfache Anwendungstests mit Cypress, führte Helm für reproduzierbare Deployments auf OpenShift ein und half, SonarQube und Snyk aufzusetzen. Ich schrieb außerdem mehrere Prometheus-Exporter in Go, einen Usabilla-Jira-Connector in Kotlin mit Quarkus und GraalVM und einen sicheren Umgang mit Secrets in Microservices über HashiCorp Vault. Um diese Werkzeuge zu verbreiten, schrieb ich Dokumentation und Blogbeiträge, hielt Lightning Talks und unterstützte gelegentlich andere Teams bei der Einführung."
       },
-      "gambling": "Das Team stand vor mehreren Herausforderungen während des Projekts. Fredrik arbeitete an verschiedenen Aufgaben, darunter das Management der Cookie-Einwilligung, der Traffic-Migration und der Einrichtung von unternehmensweiten Testsystemen. Sein bedeutendster Beitrag war die Einführung von Monitoring und Alerting, die Transparenz schafften und zuvor unbekannte Fehler in der gesamten Plattform aufdeckten. Zusätzlich entwarf und implementierte Fredrik ein Berechtigungsmanagementmodul für einfache und erweiterbare Berechtigungsprüfungen in Micro-Frontends. Er steigerte auch die Effizienz des Teams, indem er agile Prozesse verbesserte, Qualitätsprüfungen einführte und sich auf klare Akzeptanzkriterien und kollektive Ausrichtung konzentrierte. Diese Bemühungen verbesserten die Leistung des Teams erheblich und inspirierten andere Teams, ihre Prozesse zu überprüfen.",
-      "agTech": "Fredriks Hauptfokus als Engineering Manager bestand darin, das Unternehmen und das Team dabei zu unterstützen, eine schnelle, skalierbare, zuverlässige und wartbare Lösung von Grund auf für den Eintauschprozess bei Händlern zu entwickeln. Dies umfasste die Beteiligung an und das Vorantreiben von Entscheidungen von hoch- bis niedrigstufigen Themen im Zusammenhang mit der Anwendung, wie der Auswahl von Technologien, der Wahl von Diensten und der Festlegung von Teamprozessen. Fredrik unterstützte den Head of Product and Engineering bei der Gestaltung von Lösungen für die breitere IT-Landschaft. Er übernahm auch die Rolle des Mentors und Coaches und war eng in den Einstellungsprozess eingebunden.",
+      "gambling": "Das Team stand im Projekt vor mehreren Herausforderungen. Ich arbeitete an Cookie-Einwilligung, Traffic-Migration und unternehmensweiten Testsystemen. Mein wichtigster Beitrag war die Einführung von Monitoring und Alerting, die Transparenz schuf und bis dahin unbekannte Fehler auf der ganzen Plattform aufdeckte. Außerdem entwarf und baute ich ein Berechtigungsmodul für einfache, erweiterbare Berechtigungsprüfungen über Micro-Frontends hinweg. Durch bessere agile Prozesse, Quality Gates und klare Akzeptanzkriterien stieg die Leistung des Teams spürbar, und andere Teams begannen, ihre eigenen Prozesse zu überprüfen.",
+      "agTech": "Als Engineering Manager habe ich Unternehmen und Team dabei unterstützt, eine schnelle, skalierbare und wartbare Lösung für den Eintauschprozess bei Händlern von Grund auf zu bauen. Ich trieb Entscheidungen von der Technologie- und Dienstauswahl bis zu den Teamprozessen, unterstützte den Head of Product and Engineering beim Entwurf der weiteren IT-Landschaft, war Mentor und Coach des Teams und eng in die Einstellung neuer Kollegen eingebunden.",
       "iotSuite": {
-        "productOwner": "Fredrik war verantwortlich für die Konzeption, Abgrenzung und Planung neuer Funktionen für das Kundenportal in enger Zusammenarbeit mit dem Management, anderen Product-Ownern und seinem Team. In diesem schnelllebigen Umfeld war es wichtig, dem Management und anderen Product-Ownern Schätzungen, Risiko- und Chancenbewertungen zur Unterstützung der Entwicklung verwandter Produkte bereitzustellen. Fredrik übernahm auch die Aufgabe, externe Anforderungen in User Stories für das Entwicklungsteam zu übersetzen.",
-        "teamTechLead": "Fredriks Hauptverantwortung als technischer Leiter bestand darin, das Team und jeden Entwickler zu unterstützen und zu befähigen, auf hohem Niveau zu arbeiten und zu liefern. Die Rolle beinhaltete auch eine enge Zusammenarbeit mit dem Product-Owner während der Konzeptionsphase und die Sicherstellung einer klaren Kommunikation der Erwartungen an das Entwicklungsteam sowie die Bereitstellung realistischer Bewertungen für die Produktabteilung und das Management. Zusätzlich war Fredrik dafür verantwortlich, sicherzustellen, dass Produktziele erreicht wurden, technische Schulden gering blieben und technische Exzellenzthemen wie Disaster-Recovery, Observability und Metriken auf letzter Stand gehalten wurden."
+        "productOwner": "Ich war für Konzeption, Abgrenzung und Planung neuer Funktionen des Kundenportals verantwortlich, in enger Zusammenarbeit mit Management, anderen Product Ownern und meinem Team. In einem schnellen Umfeld hieß das: Schätzungen, Risikobewertungen und Chancen für verwandte Produkte liefern und externe Anforderungen in User Stories übersetzen.",
+        "teamTechLead": "Als Tech Lead war meine erste Aufgabe, das Team und jeden Einzelnen darin zu befähigen, auf hohem Niveau zu arbeiten und zu liefern. Ich arbeitete in der Konzeptionsphase eng mit dem Product Owner, hielt die Erwartungen an das Team klar und die Schätzungen gegenüber Produkt und Management realistisch, und sorgte dafür, dass die technischen Schulden niedrig blieben, während wir Disaster Recovery, Observability und Metriken angingen."
       },
-      "rideSharing": "Während er Teil des regulären Entwicklungsprozesses war, unterstützte Fredrik das Team auch durch Beratung und Coaching zu Observability, Testautomatisierung und Continuous-Delivery.",
+      "rideSharing": "Neben der regulären Entwicklungsarbeit habe ich das Team zu Observability, Testautomatisierung und Continuous Delivery beraten und gecoacht.",
       "tchibo": {
-        "0": "Als Head of Engineering übernimmt Fredrik die fachliche Führung und Weiterentwicklung der Ingenieure in seiner Organisation und fördert eine leistungsstarke Kultur in den Teams Customer Account, Customer Growth und Product Presentation. Er verantwortet Wachstum, Mentoring und Management seiner direkten Mitarbeitenden und stellt sicher, dass Engineering-Praktiken mit der Umsetzung zentraler Features im Einklang stehen.",
-        "1": "Zusätzlich zur Leitung seiner drei spezialisierten Teams trägt Fredrik Verantwortung für übergreifende technische Themen im gesamten digitalen Ökosystem. Er steuert bereichsübergreifende Architekturentscheidungen, sichert die langfristige Skalierbarkeit der Microservices-Landschaft und richtet technische Exzellenz an den übergeordneten Geschäftszielen aus."
+        "0": "Als Head of Engineering führe und entwickle ich die Engineers in den Teams Customer Account, Customer Growth und Product Presentation. Ich verantworte Wachstum, Mentoring und Führung meiner direkten Mitarbeitenden und sorge dafür, dass die Engineering-Praxis zur Umsetzung zentraler Features passt.",
+        "1": "Über meine drei Teams hinaus verantworte ich übergreifende technische Themen im gesamten digitalen Ökosystem: Ich steuere bereichsübergreifende Architekturentscheidungen, sichere die langfristige Skalierbarkeit der Microservices-Landschaft und richte technische Exzellenz an den Geschäftszielen aus.",
+        "2": "Außerdem gehöre ich zum Kernteam, das die KI-Transformation und -Befähigung über alle Engineering-Bereiche bei Tchibo vorantreibt: Wir erarbeiten, wie KI die Art verändert, wie wir Software bauen und betreiben, und helfen jedem Team, sie im Arbeitsalltag einzusetzen."
       }
     },
-    "homeLinkLabel": "Startseite"
+    "homeLinkLabel": "Alle Erfahrungen",
+    "openPage": "Auf eigener Seite öffnen",
+    "projectsHeader": "Projekte",
+    "notFound": "Unter dieser Adresse gibt es keine Erfahrung."
   },
-  "projectHeader": "Projekt",
-  "rolesHeader": "Rollen",
+  "skillsHeader": "Fähigkeiten",
   "skillCategory": {
     "Languages": "Sprachen",
-    "Frameworks": "Rahmenwerke",
+    "Frameworks": "Frameworks",
     "CI_CD": "CI/CD",
     "Monitoring": "Monitoring",
     "Tools": "Werkzeuge",
@@ -148,18 +161,22 @@
     "SoftSkills": "Soft Skills",
     "Testing": "Testing",
     "IAM": "IAM",
-    "Methodologies": "Methodologien"
+    "Methodologies": "Methoden"
   },
-  "softSkill": {
-    "fastLearner": "Schneller Lerner",
-    "proactive": "Proaktiv",
-    "teamPlayer": "Teamplayer",
-    "coach": "Coach",
-    "mentor": "Mentor",
-    "leader": "Führungskraft",
-    "follower": "Folger",
-    "problemSolver": "Problemlöser"
+  "present": "heute",
+  "month": {
+    "1": "Jan",
+    "2": "Feb",
+    "3": "Mär",
+    "4": "Apr",
+    "5": "Mai",
+    "6": "Jun",
+    "7": "Jul",
+    "8": "Aug",
+    "9": "Sep",
+    "10": "Okt",
+    "11": "Nov",
+    "12": "Dez"
   },
-  "present": "Heute",
   "duration": "{years, plural, =0 {} one {# Jahr} other {# Jahre}}{months, plural, =0 {} one { # Monat} other { # Monate}}"
 }

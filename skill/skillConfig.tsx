@@ -171,6 +171,19 @@ export const skillConfig: SkillConfigMap = {
     label: Skill.CoachingAndMentoring,
     category: SkillCategory.SoftSkills,
   },
+  [Skill.EngineeringManagement]: {
+    label: Skill.EngineeringManagement,
+    category: SkillCategory.SoftSkills,
+  },
+  [Skill.TechnicalStrategy]: {
+    label: Skill.TechnicalStrategy,
+    category: SkillCategory.SoftSkills,
+  },
+  [Skill.StakeholderManagement]: {
+    label: Skill.StakeholderManagement,
+    category: SkillCategory.SoftSkills,
+  },
+  [Skill.AIEnablement]: { label: Skill.AIEnablement, category: SkillCategory.SoftSkills },
   [Skill.HTML]: { label: Skill.HTML, category: SkillCategory.Languages, icon: <Html /> },
   [Skill.CSS]: { label: Skill.CSS, category: SkillCategory.Languages, icon: <Css /> },
   [Skill.Go]: { category: SkillCategory.Languages, icon: <Go /> },

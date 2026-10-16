@@ -1,22 +1,17 @@
-import { HighlightedSkill } from '@/components/custom/highlighted-skill';
-import { HoverableLanguage } from '@/components/custom/hoverable-language';
-import { LocationLink } from '@/components/custom/location-link';
+import { ContactList } from '@/components/custom/contact-list';
+import { ExperienceList } from '@/components/custom/experience-list';
+import { HighlightProvider } from '@/components/custom/highlight';
 import { ProfilePicture } from '@/components/custom/profile-picture';
-import { SkillLevels } from '@/components/custom/skill-levels';
-import { SocialMediaLink } from '@/components/custom/social-media-link';
-import { Timeline } from '@/components/custom/timeline';
-import { Typography } from '@/components/custom/typography';
-import { Badge } from '@/components/ui/badge';
-import { experiences, topSkills } from '@/experience';
+import { Reveal } from '@/components/custom/reveal';
+import { SiteFooter } from '@/components/custom/site-footer';
+import { SiteHeader } from '@/components/custom/site-header';
+import { SkillsSection } from '@/components/custom/skills-section';
+import { experiences } from '@/experience';
 import { translations } from '@/i18n';
-import ArrowDown from '@/icons/common/arrow-down';
-import Github from '@/icons/tech/github';
 import { languages } from '@/language/languages';
 import { socialMediaLinks } from '@/link/socialMediaLinks';
-import { poweredBySkills } from '@/skill/poweredBySkills';
-import { softSkills } from '@/skill/softSkills';
-import { createFileRoute, Link } from '@tanstack/react-router';
-import { useLocale, useTranslations } from 'use-intl';
+import { createFileRoute } from '@tanstack/react-router';
+import { useTranslations } from 'use-intl';
 
 export const Route = createFileRoute('/$locale/')({
   component: Home,
@@ -24,89 +19,83 @@ export const Route = createFileRoute('/$locale/')({
 
 function Home() {
   const t = useTranslations();
-  const locale = useLocale();
 
   return (
-    <div className="max-w-4xl mx-auto flex flex-col gap-4">
-      <div className="flex flex-col gap-4 items-center h-screen p-2 justify-start md:p-0 md:justify-center">
-        <div className="flex flex-row items-center gap-4">
-          <ProfilePicture className="size-28 sm:size-40" />
-          <div className="flex flex-col">
-            <Typography variant="h1">{t(translations.name)}</Typography>
-            <div className="flex flex-col items-start gap-2">
-              <Typography
-                variant="h2"
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
-              >
-                {t(translations.role)}
-              </Typography>
-              <div className="flex flex-row items-center gap-3">
-                {Object.entries(languages).map(([key, value]) => (
-                  <HoverableLanguage language={value} key={key} />
-                ))}
-              </div>
-              <div className="flex flex-row flex-wrap gap-3">
-                <LocationLink />
-                {socialMediaLinks.map((link) => (
-                  <SocialMediaLink key={link.label} link={link} />
-                ))}
-              </div>
+    <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <SiteHeader />
+
+      <HighlightProvider>
+        <main>
+          {/* Identity first on small screens, in a side column from tablet width; the statement spans both rows there */}
+          <section className="pt-6 pb-14 sm:pt-10 md:grid md:grid-cols-[1fr_14rem] md:grid-rows-[auto_1fr] md:gap-x-12 md:gap-y-8 lg:grid-cols-[1fr_17rem] lg:gap-x-16">
+            <Reveal order={0} className="md:col-start-2 md:row-start-1 md:pt-2">
+              <aside className="flex items-center gap-4 md:flex-col md:items-start md:gap-6">
+                {/* Tinted towards the accent; resolves to colour on hover, or while pressed on touch screens */}
+                <ProfilePicture
+                  size={28}
+                  className="size-16 shrink-0 transition-[filter] duration-500 sm:size-20 md:size-28 [filter:grayscale(1)_sepia(1)_hue-rotate(-50deg)_saturate(1.4)_brightness(0.95)] hover:[filter:none] active:[filter:none]"
+                />
+                <div>
+                  <p className="font-serif text-lg leading-snug">{t(translations.name)}</p>
+                  <p className="mt-0.5 font-sans text-sm text-muted">{t(translations.role)}</p>
+                </div>
+              </aside>
+            </Reveal>
+
+            <div className="mt-8 md:col-start-1 md:row-span-2 md:row-start-1 md:mt-0">
+              <Reveal order={1}>
+                <h1 className="max-w-[26ch] font-serif text-3xl leading-[1.15] sm:text-4xl sm:leading-[1.12] lg:text-5xl">
+                  {t(translations.headline)}
+                </h1>
+              </Reveal>
+              <Reveal order={2}>
+                <p className="mt-6 max-w-prose leading-relaxed sm:mt-8 sm:text-lg">
+                  {t(translations.elevatorPitch)}
+                </p>
+              </Reveal>
             </div>
+
+            <Reveal order={3} className="mt-8 md:col-start-2 md:row-start-2 md:mt-0 md:self-start">
+              <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-1">
+                <ContactList
+                  links={socialMediaLinks}
+                  className="flex flex-col gap-1.5 text-[15px]"
+                />
+                <ul
+                  aria-label={t(translations.home.languagesHeader)}
+                  className="flex flex-col gap-1.5 font-sans text-[15px]"
+                >
+                  {Object.entries(languages).map(([key, { icon, name, level }]) => (
+                    <li key={key} className="flex items-center gap-2.5">
+                      <span aria-hidden className="flex shrink-0">
+                        {icon}
+                      </span>
+                      <span>
+                        {t(name)} <span className="text-muted">{t(level)}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </section>
+
+          <section aria-labelledby="experience" className="mt-4">
+            <h2 id="experience" className="font-serif text-3xl leading-tight sm:text-4xl">
+              {t(translations.home.experienceHeader)}
+            </h2>
+            <div className="mt-6">
+              <ExperienceList experiences={experiences} />
+            </div>
+          </section>
+
+          <div className="mt-24">
+            <SkillsSection />
           </div>
-        </div>
-        <Typography className="text-center lg:text-left">
-          {t(translations.elevatorPitch)}
-        </Typography>
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-row flex-wrap justify-center items-center gap-2">
-            {softSkills.map((skill) => (
-              <Badge key={skill}>{<Typography variant="small">{t(skill)}</Typography>}</Badge>
-            ))}
-          </div>
-          <div className="flex flex-row flex-wrap justify-center items-center gap-2">
-            {topSkills.map((skill) => (
-              <HighlightedSkill key={skill} skill={skill} />
-            ))}
-          </div>
-        </div>
-        <div className="absolute bottom-1 flex flex-col items-center">
-          <Typography variant="h4">
-            {`${t(translations.home.view)} `}
-            <Link
-              className="underline text-blue-500 hover:text-blue-700 visited:text-purple-500"
-              to="/$locale/pdf"
-              params={{ locale }}
-            >
-              {t(translations.home.pdf)}
-            </Link>
-            {` ${t(translations.home.or)}`}
-          </Typography>
-          <Typography variant="h4">{t(translations.home.findOutMoreBelow)}</Typography>
-          <ArrowDown className="text-2xl" />
-        </div>
-      </div>
-      <Timeline experiences={experiences} />
-      <SkillLevels />
-      <div className="flex flex-col gap-8 mt-12">
-        <div className="flex flex-col gap-3 items-center mt-5">
-          <Typography variant="h3">{t(translations.home.builtWith)}</Typography>
-          <div className="flex flex-row gap-2 items-center">
-            {poweredBySkills.map((skill) => (
-              <HighlightedSkill key={skill} skill={skill} />
-            ))}
-          </div>
-        </div>
-        <div className="flex flex-col items-center mb-2">
-          <a
-            href="https://www.github.com/hyperremix/resume"
-            target="_blank"
-            className="text-4xl"
-            aria-label="GitHub repo"
-          >
-            <Github />
-          </a>
-        </div>
-      </div>
+        </main>
+      </HighlightProvider>
+
+      <SiteFooter />
     </div>
   );
 }

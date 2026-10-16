@@ -40,6 +40,7 @@ export const AgTechECommerceExperience: TExperience = {
     Skill.Scrum,
     Skill.Hiring,
     Skill.CoachingAndMentoring,
+    Skill.EngineeringManagement,
     Skill.UnitTesting,
     Skill.IntegrationTesting,
     Skill.E2ETesting,
