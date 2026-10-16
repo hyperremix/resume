@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { TExperience } from '@/experience/TExperience';
 import { translations } from '@/i18n';
 import { skillConfig } from '@/skill/skillConfig';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { TableStack } from './table-stack';
 import { TableStackItem } from './table-stack-item';
 

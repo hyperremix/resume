@@ -1,11 +1,9 @@
-'use client';
-
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { translations } from '@/i18n';
 import { Skill } from '@/skill/Skill';
 import { skillConfig } from '@/skill/skillConfig';
 import { motion } from 'motion/react';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { useMemo } from 'react';
 import { Typography } from './typography';
 

@@ -1,7 +1,7 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { translations } from '@/i18n';
 import MapMarker from '@/icons/common/map-marker';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { Typography } from './typography';
 
 export const LocationLink = () => {

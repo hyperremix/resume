@@ -1,6 +1,11 @@
-import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
-import nextTypeScript from 'eslint-config-next/typescript';
+import js from '@eslint/js';
+import reactHooks from 'eslint-plugin-react-hooks';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
-const config = [...nextCoreWebVitals, ...nextTypeScript];
-
-export default config;
+export default defineConfig([
+  globalIgnores(['.output/', '.nitro/', '.tanstack/', '.vercel/', 'app/routeTree.gen.ts']),
+  js.configs.recommended,
+  tseslint.configs.recommended,
+  reactHooks.configs.flat.recommended,
+]);

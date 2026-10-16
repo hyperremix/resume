@@ -11,10 +11,15 @@ import { translations } from '@/i18n';
 import { languages } from '@/language/languages';
 import { pdfSocialMediaLinks } from '@/link/socialMediaLinks';
 import { skillConfig } from '@/skill/skillConfig';
-import { useTranslations } from 'next-intl';
+import { createFileRoute } from '@tanstack/react-router';
 import React from 'react';
+import { useTranslations } from 'use-intl';
 
-const Pdf = () => {
+export const Route = createFileRoute('/$locale/pdf')({
+  component: Pdf,
+});
+
+function Pdf() {
   const t = useTranslations();
 
   return (
@@ -120,6 +125,4 @@ const Pdf = () => {
       </TableStack>
     </div>
   );
-};
-
-export default Pdf;
+}

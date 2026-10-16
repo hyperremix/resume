@@ -1,10 +1,8 @@
-'use client';
-
 import { TExperience } from '@/experience/TExperience';
-import { Link } from '@/i18n/routing';
 import OpenInNew from '@/icons/common/open-in-new';
+import { Link } from '@tanstack/react-router';
 import { motion } from 'motion/react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'use-intl';
 import { HighlightedSkill } from './highlighted-skill';
 import { TimePeriod } from './time-period';
 import { Typography } from './typography';
@@ -40,6 +38,7 @@ const RightExperience = ({
   experience: TExperience;
 }) => {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <motion.div
@@ -49,7 +48,7 @@ const RightExperience = ({
       transition={{ duration: 1, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
-      <Link href={{ pathname: '/experiences/[slug]', params: { slug: slug } }}>
+      <Link to="/$locale/experiences/$slug" params={{ locale, slug }}>
         <div className="flex flex-col">
           <div className="flex flex-row items-center justify-between gap-1 w-full">
             <div className="flex flex-row items-center gap-2 relative">
@@ -93,6 +92,7 @@ const LeftExperience = ({
   experience: TExperience;
 }) => {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <motion.div
@@ -102,7 +102,7 @@ const LeftExperience = ({
       transition={{ duration: 1, ease: 'easeInOut' }}
       viewport={{ once: true }}
     >
-      <Link href={{ pathname: '/experiences/[slug]', params: { slug: slug } }}>
+      <Link to="/$locale/experiences/$slug" params={{ locale, slug }}>
         <div className="flex flex-col">
           <div className="flex flex-row items-center justify-between sm:justify-end gap-1 w-full">
             <div className="flex flex-row items-center gap-2 relative">

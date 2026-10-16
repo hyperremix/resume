@@ -1,7 +1,5 @@
-'use client';
-
 import { translations } from '@/i18n';
-import { useFormatter, useTranslations } from 'next-intl';
+import { useFormatter, useTranslations } from 'use-intl';
 import { useMemo } from 'react';
 import { Typography } from './typography';
 

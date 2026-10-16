@@ -2,10 +2,11 @@
   "name": "resume",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --webpack",
-    "start": "next start",
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "node .output/server/index.mjs",
     "ts:check": "tsc --noEmit",
     "lint": "eslint .",
     "prepare": "husky"
@@ -13,31 +14,36 @@
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@tanstack/react-router": "^1.170.44",
+    "@tanstack/react-start": "^1.169.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.577.0",
     "motion": "^12.36.0",
-    "next": "16.1.6",
-    "next-intl": "^4.8.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "tailwind-merge": "^3.5.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-intl": "^4.14.9"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
-    "@tailwindcss/postcss": "^4.2.1",
+    "@eslint/js": "^9.39.2",
+    "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.1.2",
     "eslint": "^9.39.2",
-    "eslint-config-next": "16.1.6",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "postcss": "^8.5.8",
+    "nitro": "^3.0.260903-beta",
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^8.3.4"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -46,11 +52,5 @@
     "*.{md,json}": [
       "prettier --write"
     ]
-  },
-  "trustedDependencies": [
-    "@parcel/watcher",
-    "@swc/core",
-    "sharp",
-    "unrs-resolver"
-  ]
+  }
 }
