@@ -17,7 +17,6 @@ export const Cdon2012Experience: TExperience = {
       description: [translations.experience.roleDescription.CDON2012],
     },
   ],
-  highlightedSkills: [Skill.CSharp, Skill.DotNetFramework, Skill.SQLServer],
   skills: [
     Skill.CSharp,
     Skill.HTML,

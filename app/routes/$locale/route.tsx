@@ -3,6 +3,7 @@ import { isLocale, loadMessages, localizedPathname, locales, TLocale } from '@/i
 import { createIsomorphicFn } from '@tanstack/react-start';
 import { getRequestUrl } from '@tanstack/react-start/server';
 import { Outlet, createFileRoute, notFound } from '@tanstack/react-router';
+import { MotionConfig } from 'motion/react';
 import { IntlProvider, Messages, createTranslator } from 'use-intl';
 
 const getOrigin = createIsomorphicFn()
@@ -48,7 +49,9 @@ function LocaleLayout() {
 
   return (
     <IntlProvider locale={locale} messages={messages} timeZone="UTC">
-      <Outlet />
+      <MotionConfig reducedMotion="user">
+        <Outlet />
+      </MotionConfig>
     </IntlProvider>
   );
 }

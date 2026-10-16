@@ -13,7 +13,6 @@ export type TExperience = {
   roles?: TRole[];
   companyDescription?: string;
   projectDescription?: string;
-  highlightedSkills?: Skill[];
   skills?: Skill[];
   subExperiences?: TExperience[];
 };

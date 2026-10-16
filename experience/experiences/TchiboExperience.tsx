@@ -8,8 +8,24 @@ export const TchiboExperience: TExperience = {
   title: translations.experience.title.tchibo,
   from: '2025-05-01',
   icon: <Tchibo />,
-  roles: [{ title: translations.experience.role.headOfEngineering }],
+  roles: [
+    {
+      title: translations.experience.role.headOfEngineering,
+      description: [
+        translations.experience.roleDescription.tchibo[0],
+        translations.experience.roleDescription.tchibo[1],
+        translations.experience.roleDescription.tchibo[2],
+      ],
+    },
+  ],
   companyDescription: translations.experience.companyDescription.tchibo,
   projectDescription: translations.experience.projectDescription.tchibo,
-  skills: [Skill.CoachingAndMentoring, Skill.Hiring],
+  skills: [
+    Skill.EngineeringManagement,
+    Skill.TechnicalStrategy,
+    Skill.AIEnablement,
+    Skill.StakeholderManagement,
+    Skill.CoachingAndMentoring,
+    Skill.Hiring,
+  ],
 };

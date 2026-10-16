@@ -81,4 +81,8 @@ export enum Skill {
   Kanban = 'Kanban',
   Hiring = 'Hiring',
   CoachingAndMentoring = 'Coaching & Mentoring',
+  EngineeringManagement = 'Engineering Management',
+  TechnicalStrategy = 'Technical Strategy',
+  StakeholderManagement = 'Stakeholder Management',
+  AIEnablement = 'AI Enablement',
 }

@@ -21,15 +21,6 @@ export const IotSuiteExperience: TExperience = {
       description: [translations.experience.roleDescription.iotSuite.teamTechLead],
     },
   ],
-  highlightedSkills: [
-    Skill.Kotlin,
-    Skill.SpringBoot,
-    Skill.TypeScript,
-    Skill.Vue,
-    Skill.PostgreSQL,
-    Skill.Kafka,
-    Skill.Kubernetes,
-  ],
   skills: [
     Skill.Kotlin,
     Skill.SpringBoot,

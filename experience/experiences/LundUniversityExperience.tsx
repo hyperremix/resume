@@ -13,6 +13,5 @@ export const LundUniversityExperience: TExperience = {
   roles: [{ title: translations.experience.role.student }],
   projectDescription: translations.experience.projectDescription.university,
   skills: [Skill.Java],
-  highlightedSkills: [Skill.Java],
   subExperiences: [MasterThesisExperience],
 };

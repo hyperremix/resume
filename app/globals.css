@@ -1,13 +1,112 @@
-@config "../tailwind.config.ts";
-@import "tailwindcss";
+@import 'tailwindcss';
+@import '@fontsource-variable/literata/opsz.css';
+@import '@fontsource-variable/literata/opsz-italic.css';
+@import '@fontsource-variable/hanken-grotesk';
+
+/* Touch screens get 44px hit areas; mouse and print layouts stay compact */
+@custom-variant touch (@media screen and (pointer: coarse));
+
+@theme inline {
+  --font-serif: 'Literata Variable', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Hanken Grotesk Variable', system-ui, sans-serif;
+
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+}
 
 @layer base {
   :root {
-    --radius: 0.5rem;
+    color-scheme: light dark;
+    --paper: #f3f4f1;
+    --ink: #1f2422;
+    --muted: #5f6763;
+    --rule: #d2d6d1;
+    --accent: #8c2f3f;
+    --accent-soft: #ecdfe2;
   }
-  
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1b211e;
+      --ink: #e7e9e4;
+      --muted: #9ba39e;
+      --rule: #343d38;
+      --accent: #e39aa6;
+      --accent-soft: #3b272c;
+    }
+  }
+
+  /* The print view is a document: always light, whatever the system setting */
+  .light-only,
+  :root:has(.light-only) {
+    color-scheme: light;
+    --paper: #ffffff;
+    --ink: #1f2422;
+    --muted: #5f6763;
+    --rule: #d2d6d1;
+    --accent: #8c2f3f;
+    --accent-soft: #ecdfe2;
+  }
+
+  html {
+    font-family: var(--font-serif);
+    font-optical-sizing: auto;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    fill: currentColor;
+  }
+
   svg {
     width: 1em;
     height: 1em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .reveal {
+    animation: reveal 0.5s ease-out both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+      animation: none;
+    }
+  }
+
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
   }
 }
