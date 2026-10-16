@@ -33,7 +33,6 @@ import Kubernetes from '@/icons/tech/kubernetes';
 import MongoDB from '@/icons/tech/mongodb';
 import Motion from '@/icons/tech/motion';
 import NestJS from '@/icons/tech/nestjs';
-import NextJS from '@/icons/tech/nextjs';
 import OpenShift from '@/icons/tech/openshift';
 import Playwright from '@/icons/tech/playwright';
 import Postgres from '@/icons/tech/postgres';
@@ -48,6 +47,7 @@ import Splunk from '@/icons/tech/splunk';
 import SpringBoot from '@/icons/tech/spring-boot';
 import SqlServer from '@/icons/tech/sql-server';
 import Tailwind from '@/icons/tech/tailwind';
+import TanStackStart from '@/icons/tech/tanstack-start';
 import TypeScript from '@/icons/tech/typescript';
 import Vercel from '@/icons/tech/vercel';
 import Vite from '@/icons/tech/vite';
@@ -81,6 +81,11 @@ export const skillConfig: SkillConfigMap = {
     icon: <React />,
   },
   [Skill.Vite]: { label: Skill.Vite, category: SkillCategory.Tools, icon: <Vite /> },
+  [Skill.TanStackStart]: {
+    label: Skill.TanStackStart,
+    category: SkillCategory.Frameworks,
+    icon: <TanStackStart />,
+  },
   [Skill.Tailwind]: { label: Skill.Tailwind, category: SkillCategory.Tools, icon: <Tailwind /> },
   [Skill.Shadcn]: { label: Skill.Shadcn, category: SkillCategory.Tools, icon: <Shadcn /> },
   [Skill.Motion]: { label: Skill.Motion, category: SkillCategory.Tools, icon: <Motion /> },
@@ -203,5 +208,4 @@ export const skillConfig: SkillConfigMap = {
     icon: <Protobuf />,
   },
   [Skill.Vercel]: { label: Skill.Vercel, category: SkillCategory.Tools, icon: <Vercel /> },
-  [Skill.NextJS]: { label: Skill.NextJS, category: SkillCategory.Frameworks, icon: <NextJS /> },
 };

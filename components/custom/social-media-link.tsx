@@ -1,6 +1,6 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Link } from '@/link/Link';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { Typography } from './typography';
 
 type Props = {

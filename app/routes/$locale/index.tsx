@@ -9,17 +9,22 @@ import { Typography } from '@/components/custom/typography';
 import { Badge } from '@/components/ui/badge';
 import { experiences, topSkills } from '@/experience';
 import { translations } from '@/i18n';
-import { Link } from '@/i18n/routing';
 import ArrowDown from '@/icons/common/arrow-down';
 import Github from '@/icons/tech/github';
 import { languages } from '@/language/languages';
 import { socialMediaLinks } from '@/link/socialMediaLinks';
 import { poweredBySkills } from '@/skill/poweredBySkills';
 import { softSkills } from '@/skill/softSkills';
-import { useTranslations } from 'next-intl';
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { useLocale, useTranslations } from 'use-intl';
 
-const Home = () => {
+export const Route = createFileRoute('/$locale/')({
+  component: Home,
+});
+
+function Home() {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <div className="max-w-4xl mx-auto flex flex-col gap-4">
@@ -69,7 +74,8 @@ const Home = () => {
             {`${t(translations.home.view)} `}
             <Link
               className="underline text-blue-500 hover:text-blue-700 visited:text-purple-500"
-              href="/pdf"
+              to="/$locale/pdf"
+              params={{ locale }}
             >
               {t(translations.home.pdf)}
             </Link>
@@ -103,6 +109,4 @@ const Home = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}

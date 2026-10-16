@@ -9,7 +9,7 @@ import { translations } from '@/i18n';
 import { Skill } from '@/skill/Skill';
 import { SkillCategory } from '@/skill/SkillCategory';
 import { skillConfig } from '@/skill/skillConfig';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { useMemo } from 'react';
 import { SkillGauge } from './skill-gauge';
 import { Typography } from './typography';

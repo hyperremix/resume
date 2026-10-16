@@ -1,6 +1,6 @@
 import { translations } from '@/i18n';
 import MapMarker from '@/icons/common/map-marker';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { TableStack } from './table-stack';
 import { TableStackItem } from './table-stack-item';
 

@@ -1,5 +1,5 @@
 import { Link } from '@/link/Link';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'use-intl';
 import { TableStack } from './table-stack';
 import { TableStackItem } from './table-stack-item';
 

@@ -4,14 +4,18 @@ import { Badge } from '@/components/ui/badge';
 import { experiences } from '@/experience';
 import { TExperience } from '@/experience/TExperience';
 import { translations } from '@/i18n';
-import { Link } from '@/i18n/routing';
 import ArrowLeft from '@/icons/common/arrow-left';
 import { skillConfig } from '@/skill/skillConfig';
-import { useTranslations } from 'next-intl';
+import { createFileRoute, Link } from '@tanstack/react-router';
 import React from 'react';
+import { useLocale, useTranslations } from 'use-intl';
 
-const Experience = async ({ params }: { params: Promise<{ slug: string }> }) => {
-  const experienceSlug = (await params).slug;
+export const Route = createFileRoute('/$locale/experiences/$slug')({
+  component: Experience,
+});
+
+function Experience() {
+  const { slug: experienceSlug } = Route.useParams();
   const experience = experiences
     .map((experience) => [experience, ...(experience.subExperiences ?? [])])
     .flat()
@@ -22,7 +26,7 @@ const Experience = async ({ params }: { params: Promise<{ slug: string }> }) => 
       {experience ? <ExperienceContent experience={experience} /> : <ExperienceNotFoundDisplay />}
     </div>
   );
-};
+}
 
 type Props = {
   experience: TExperience;
@@ -32,10 +36,11 @@ const ExperienceContent = ({
   experience: { title, from, to, icon, roles, location, ...description },
 }: Props) => {
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <>
-      <Link href="/" className="flex flex-row items-center gap-1 mb-2">
+      <Link to="/$locale" params={{ locale }} className="flex flex-row items-center gap-1 mb-2">
         <ArrowLeft className="text-3xl fill-zinc-800 dark:fill-zinc-300" />
         <Typography>{t(translations.experience.homeLinkLabel)}</Typography>
       </Link>
@@ -105,4 +110,3 @@ const ExperienceDescription = ({
     </div>
   );
 };
-export default Experience;

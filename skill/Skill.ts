@@ -18,6 +18,7 @@ export enum Skill {
   AngularJS = 'AngularJS',
   ReactNative = 'React Native',
   Vite = 'Vite',
+  TanStackStart = 'TanStack Start',
   Tailwind = 'Tailwind',
   Shadcn = 'Shadcn',
   Motion = 'Motion',
@@ -28,7 +29,6 @@ export enum Skill {
   VertX = 'Vert.x',
   DotNetFramework = '.NET Framework',
   GRPC = 'gRPC',
-  NextJS = 'Next.js',
 
   // Databases
   MongoDB = 'MongoDB',
