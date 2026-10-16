@@ -28,7 +28,6 @@ export enum Skill {
   VertX = 'Vert.x',
   DotNetFramework = '.NET Framework',
   GRPC = 'gRPC',
-  NextJS = 'Next.js',
 
   // Databases
   MongoDB = 'MongoDB',

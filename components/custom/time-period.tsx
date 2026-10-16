@@ -26,18 +26,14 @@ export const TimePeriod = ({ from, to, className, ...props }: Props) => {
     return { years, months };
   }, [from, to]);
 
+  // ICU versions disagree on the German separator ("05.2025" vs "05/2025"), which breaks hydration
+  const formatMonthYear = (date: string) =>
+    format.dateTime(new Date(date), { month: '2-digit', year: 'numeric' }).replace('.', '/');
+
   return (
     <Typography className={`text-pink-500 ${className}`} {...props}>
-      {`${format.dateTime(new Date(from), {
-        month: '2-digit',
-        year: 'numeric',
-      })} - ${
-        to
-          ? format.dateTime(new Date(to), {
-              month: '2-digit',
-              year: 'numeric',
-            })
-          : t(translations.present)
+      {`${formatMonthYear(from)} - ${
+        to ? formatMonthYear(to) : t(translations.present)
       } | ${t(translations.duration, { years, months })}`}
     </Typography>
   );

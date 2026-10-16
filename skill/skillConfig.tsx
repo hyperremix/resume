@@ -33,7 +33,6 @@ import Kubernetes from '@/icons/tech/kubernetes';
 import MongoDB from '@/icons/tech/mongodb';
 import Motion from '@/icons/tech/motion';
 import NestJS from '@/icons/tech/nestjs';
-import NextJS from '@/icons/tech/nextjs';
 import OpenShift from '@/icons/tech/openshift';
 import Playwright from '@/icons/tech/playwright';
 import Postgres from '@/icons/tech/postgres';
@@ -203,5 +202,4 @@ export const skillConfig: SkillConfigMap = {
     icon: <Protobuf />,
   },
   [Skill.Vercel]: { label: Skill.Vercel, category: SkillCategory.Tools, icon: <Vercel /> },
-  [Skill.NextJS]: { label: Skill.NextJS, category: SkillCategory.Frameworks, icon: <NextJS /> },
 };
