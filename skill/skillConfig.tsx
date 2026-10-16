@@ -47,6 +47,7 @@ import Splunk from '@/icons/tech/splunk';
 import SpringBoot from '@/icons/tech/spring-boot';
 import SqlServer from '@/icons/tech/sql-server';
 import Tailwind from '@/icons/tech/tailwind';
+import TanStackStart from '@/icons/tech/tanstack-start';
 import TypeScript from '@/icons/tech/typescript';
 import Vercel from '@/icons/tech/vercel';
 import Vite from '@/icons/tech/vite';
@@ -80,6 +81,11 @@ export const skillConfig: SkillConfigMap = {
     icon: <React />,
   },
   [Skill.Vite]: { label: Skill.Vite, category: SkillCategory.Tools, icon: <Vite /> },
+  [Skill.TanStackStart]: {
+    label: Skill.TanStackStart,
+    category: SkillCategory.Frameworks,
+    icon: <TanStackStart />,
+  },
   [Skill.Tailwind]: { label: Skill.Tailwind, category: SkillCategory.Tools, icon: <Tailwind /> },
   [Skill.Shadcn]: { label: Skill.Shadcn, category: SkillCategory.Tools, icon: <Shadcn /> },
   [Skill.Motion]: { label: Skill.Motion, category: SkillCategory.Tools, icon: <Motion /> },

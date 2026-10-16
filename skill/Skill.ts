@@ -18,6 +18,7 @@ export enum Skill {
   AngularJS = 'AngularJS',
   ReactNative = 'React Native',
   Vite = 'Vite',
+  TanStackStart = 'TanStack Start',
   Tailwind = 'Tailwind',
   Shadcn = 'Shadcn',
   Motion = 'Motion',
