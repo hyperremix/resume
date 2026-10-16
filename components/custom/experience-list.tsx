@@ -169,7 +169,13 @@ const ExperienceItem = ({
             onMouseLeave={() => hoverExperience(null)}
           >
             {expandable ? (
-              <AccordionTrigger className="w-full py-0">{heading}</AccordionTrigger>
+              <AccordionTrigger
+                className="w-full py-0"
+                // The panel is unmounted while closed, so there is nothing for aria-controls to point at
+                {...(!open && { 'aria-controls': undefined })}
+              >
+                {heading}
+              </AccordionTrigger>
             ) : (
               heading
             )}
@@ -199,7 +205,7 @@ const ExperienceItem = ({
                           <Link
                             to="/$locale/experiences/$slug"
                             params={{ locale, slug }}
-                            className="mt-6 inline-flex items-center gap-1 font-sans text-sm text-muted hover:text-ink"
+                            className="mt-6 inline-flex items-center gap-1 font-sans text-sm text-muted hover:text-ink touch:min-h-11"
                           >
                             {t(translations.experience.openPage)}
                             <ArrowUpRight aria-hidden className="size-4" />

@@ -17,7 +17,6 @@ export const AgTechECommerceExperience: TExperience = {
       description: [translations.experience.roleDescription.agTech],
     },
   ],
-  highlightedSkills: [Skill.React, Skill.Expo, Skill.NestJS, Skill.AWSDynamoDB, Skill.AWSLambda],
   skills: [
     Skill.TypeScript,
     Skill.React,

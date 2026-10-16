@@ -17,7 +17,6 @@ export const GamblingExperience: TExperience = {
       description: [translations.experience.roleDescription.gambling],
     },
   ],
-  highlightedSkills: [Skill.Kotlin, Skill.SpringBoot, Skill.TypeScript, Skill.Angular],
   skills: [
     Skill.Java,
     Skill.Kotlin,

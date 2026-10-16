@@ -35,7 +35,7 @@ export const SkillsSection = () => {
             <button
               type="button"
               onClick={clear}
-              className="underline decoration-rule underline-offset-4 hover:text-ink"
+              className="underline decoration-rule underline-offset-4 hover:text-ink touch:-my-3 touch:inline-flex touch:min-h-11 touch:items-center"
             >
               {t(translations.home.clearFilter)}
             </button>
@@ -64,7 +64,7 @@ export const SkillsSection = () => {
             <dt className="mb-1 font-sans text-sm text-muted sm:mb-0 sm:pt-1.5">
               {t(translations.skillCategory[category])}
             </dt>
-            <dd className="-ml-2 flex flex-wrap gap-1">
+            <dd className="-ml-2 flex flex-wrap gap-1 touch:gap-y-0">
               {skills.map((skill) => (
                 <SkillButton key={skill} skill={skill} />
               ))}
@@ -103,7 +103,10 @@ const SkillButton = ({ skill }: { skill: Skill }) => {
     <button
       type="button"
       {...props}
-      className={cn('inline-flex items-center gap-1.5 px-2 py-1 text-sm', buttonStyle(active, lit))}
+      className={cn(
+        'inline-flex items-center gap-1.5 px-2 py-1 text-sm touch:min-h-11 touch:min-w-11',
+        buttonStyle(active, lit),
+      )}
     >
       {icon && (
         <span aria-hidden className="flex text-[1.1em]">

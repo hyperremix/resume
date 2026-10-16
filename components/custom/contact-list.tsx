@@ -28,7 +28,7 @@ export const ContactList = ({ links, className }: Props) => {
             target="_blank"
             rel="noreferrer"
             aria-label={t(ariaLabel)}
-            className="truncate underline decoration-rule underline-offset-4 hover:decoration-ink"
+            className="truncate underline decoration-rule underline-offset-4 hover:decoration-ink touch:py-[calc((2.75rem_-_1lh)/2)]"
           >
             {label}
           </a>

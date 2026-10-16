@@ -20,13 +20,6 @@ export const GlassesRetailerExperience: TExperience = {
       ],
     },
   ],
-  highlightedSkills: [
-    Skill.CSharp,
-    Skill.DotNetFramework,
-    Skill.JavaScript,
-    Skill.AngularJS,
-    Skill.MongoDB,
-  ],
   skills: [
     Skill.CSharp,
     Skill.JavaScript,

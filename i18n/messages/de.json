@@ -3,7 +3,7 @@
     "description": "Fredrik Pettersson, Software-Generalist und Head of Engineering bei Tchibo in Hamburg. Erfahrung, Fähigkeiten und Kontakt."
   },
   "name": "Fredrik Pettersson",
-  "headline": "Ich habe die meisten Jobs in der Softwareentwicklung selbst gemacht. Heute führe ich die Menschen, die sie machen.",
+  "headline": "Ich habe die meisten Jobs in der Softwareentwicklung selbst gemacht. Heute führe ich die Menschen, die sie\u00a0machen.",
   "role": "Software-Generalist, Head of Engineering bei Tchibo",
   "elevatorPitch": "Seit 2012 entwickle ich beruflich Software: als Entwickler, Architekt, Tech Lead, Product Owner und Engineering Manager, die meiste Zeit als Berater bei Netlight. Heute führe ich Engineering-Teams bei Tchibo und helfe dabei, KI in die Arbeit aller Engineering-Teams dort zu bringen. Am besten arbeite ich in schnellen Teams mit klaren Prioritäten, und was ich lerne, gebe ich weiter, wo ich kann.",
   "profilePictureAriaLabel": "Porträt von Fredrik Pettersson",
@@ -15,8 +15,7 @@
   "nav": {
     "label": "Seiten",
     "languages": "Sprache",
-    "print": "Druckversion",
-    "home": "Übersicht"
+    "print": "Druckversion"
   },
   "home": {
     "experienceHeader": "Erfahrung",

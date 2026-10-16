@@ -9,12 +9,19 @@ export const SiteHeader = () => {
   const { pathname } = useLocation();
 
   return (
-    <header className="z-10 flex sm:sticky sm:top-0 flex-wrap items-baseline justify-between gap-x-6 gap-y-2 bg-paper/90 py-4 font-sans text-sm backdrop-blur sm:text-[15px]">
-      <Link to="/$locale" params={{ locale }} className="font-serif text-lg text-ink">
+    <header className="z-10 flex sm:sticky sm:top-0 flex-wrap items-baseline justify-between gap-x-6 gap-y-2 bg-paper/90 py-4 touch:items-center touch:gap-y-0 touch:py-2 font-sans text-sm backdrop-blur sm:text-[15px]">
+      <Link
+        to="/$locale"
+        params={{ locale }}
+        className="font-serif text-lg text-ink touch:inline-flex touch:min-h-11 touch:items-center"
+      >
         {t(translations.name)}
       </Link>
-      <nav aria-label={t(translations.nav.label)} className="flex items-baseline gap-5">
-        <ul aria-label={t(translations.nav.languages)} className="flex gap-3">
+      <nav
+        aria-label={t(translations.nav.label)}
+        className="flex items-baseline gap-5 touch:items-center"
+      >
+        <ul aria-label={t(translations.nav.languages)} className="flex gap-3 touch:items-center">
           {locales.map((candidate) => (
             <li key={candidate}>
               {candidate === locale ? (
@@ -26,7 +33,7 @@ export const SiteHeader = () => {
                   href={localizedPathname(pathname, candidate)}
                   hrefLang={candidate}
                   lang={candidate}
-                  className="text-muted hover:text-ink"
+                  className="text-muted hover:text-ink touch:flex touch:min-h-11 touch:items-center"
                 >
                   {localeNames[candidate]}
                 </a>
@@ -34,7 +41,11 @@ export const SiteHeader = () => {
             </li>
           ))}
         </ul>
-        <Link to="/$locale/pdf" params={{ locale }} className="text-muted hover:text-ink">
+        <Link
+          to="/$locale/pdf"
+          params={{ locale }}
+          className="text-muted hover:text-ink touch:flex touch:min-h-11 touch:items-center"
+        >
           {t(translations.nav.print)}
         </Link>
       </nav>

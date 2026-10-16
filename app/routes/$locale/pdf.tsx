@@ -26,13 +26,17 @@ function Pdf() {
     <div className="light-only min-h-screen bg-paper text-ink">
       <main className="mx-auto max-w-[210mm] px-6 py-6 print:max-w-none print:p-0">
         <div className="mb-8 flex gap-5 font-sans text-sm print:hidden">
-          <Link to="/$locale" params={{ locale }} className="text-muted hover:text-ink">
+          <Link
+            to="/$locale"
+            params={{ locale }}
+            className="text-muted hover:text-ink touch:flex touch:min-h-11 touch:items-center"
+          >
             {t(translations.pdf.back)}
           </Link>
           <button
             type="button"
             onClick={() => window.print()}
-            className="text-muted hover:text-ink"
+            className="text-muted hover:text-ink touch:min-h-11 touch:min-w-11"
           >
             {t(translations.pdf.print)}
           </button>

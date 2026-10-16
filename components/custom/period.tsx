@@ -11,21 +11,6 @@ type Props = {
 const yearOf = (date: string) => new Date(date).getUTCFullYear();
 const monthOf = (date: string) => new Date(date).getUTCMonth() + 1;
 
-// "2016 – 2025", "2012" or "2025 – today"
-export const YearRange = ({ from, to }: Props) => {
-  const t = useTranslations();
-  const start = yearOf(from);
-  const end = to ? yearOf(to) : undefined;
-
-  if (end === start) return <>{start}</>;
-
-  return (
-    <>
-      {start} – {end ?? t(translations.present)}
-    </>
-  );
-};
-
 // "Oct 2024 – Apr 2025" or "May 2025 – today". Month names come from the messages,
 // so server and client render the same markup whatever ICU version they ship with.
 export const useFormatMonthRange = () => {

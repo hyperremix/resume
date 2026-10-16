@@ -22,7 +22,6 @@ export const BrainwareGroupExperience: TExperience = {
       ],
     },
   ],
-  highlightedSkills: [Skill.CSharp, Skill.DotNetFramework, Skill.SQLServer],
   skills: [
     Skill.CSharp,
     Skill.HTML,

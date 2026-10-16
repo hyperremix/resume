@@ -17,15 +17,6 @@ export const RideSharingExperience: TExperience = {
       description: [translations.experience.roleDescription.rideSharing],
     },
   ],
-  highlightedSkills: [
-    Skill.Kotlin,
-    Skill.TypeScript,
-    Skill.React,
-    Skill.GRPC,
-    Skill.AWSDynamoDB,
-    Skill.AWSKinesis,
-    Skill.Kubernetes,
-  ],
   skills: [
     Skill.Kotlin,
     Skill.TypeScript,

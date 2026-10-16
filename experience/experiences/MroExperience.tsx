@@ -21,7 +21,6 @@ export const MroExperience: TExperience = {
       description: [translations.experience.roleDescription.mro.devOps],
     },
   ],
-  highlightedSkills: [Skill.Kotlin, Skill.VertX, Skill.TypeScript, Skill.Angular, Skill.Kubernetes],
   skills: [
     Skill.Java,
     Skill.Kotlin,

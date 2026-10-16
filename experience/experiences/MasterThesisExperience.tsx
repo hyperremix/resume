@@ -21,5 +21,4 @@ export const MasterThesisExperience: TExperience = {
     },
   ],
   skills: [Skill.Go],
-  highlightedSkills: [Skill.Go],
 };

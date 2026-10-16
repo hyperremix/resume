@@ -69,12 +69,14 @@ export const getMonthsBetween = (from: string, to?: string): number => {
   return totalMonths;
 };
 
-// Months spent in experiences that list the skill or one of its sub-skills (AWS covers AWS Lambda, AWS S3, ...)
+// AWS covers AWS Lambda, AWS S3 and friends
+export const skillCovers = (skill: Skill, candidate: Skill) =>
+  candidate === skill || candidate.startsWith(`${skill} `);
+
+// Months spent in experiences that list the skill or one of its sub-skills
 export const getMonthsWithSkill = (skill: Skill, list: TExperience[] = experiences): number =>
   list.reduce((sum, experience) => {
-    const hasSkill = (experience.skills ?? []).some(
-      (candidate) => candidate === skill || candidate.startsWith(`${skill} `),
-    );
+    const hasSkill = (experience.skills ?? []).some((candidate) => skillCovers(skill, candidate));
     return (
       sum +
       (hasSkill ? getMonthsBetween(experience.from, experience.to) : 0) +

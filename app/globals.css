@@ -3,6 +3,9 @@
 @import '@fontsource-variable/literata/opsz-italic.css';
 @import '@fontsource-variable/hanken-grotesk';
 
+/* Touch screens get 44px hit areas; mouse and print layouts stay compact */
+@custom-variant touch (@media screen and (pointer: coarse));
+
 @theme inline {
   --font-serif: 'Literata Variable', Georgia, 'Times New Roman', serif;
   --font-sans: 'Hanken Grotesk Variable', system-ui, sans-serif;
@@ -38,7 +41,8 @@
   }
 
   /* The print view is a document: always light, whatever the system setting */
-  .light-only {
+  .light-only,
+  :root:has(.light-only) {
     color-scheme: light;
     --paper: #ffffff;
     --ink: #1f2422;

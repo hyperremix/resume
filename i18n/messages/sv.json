@@ -15,8 +15,7 @@
   "nav": {
     "label": "Webbplats",
     "languages": "Språk",
-    "print": "Utskriftsversion",
-    "home": "Översikt"
+    "print": "Utskriftsversion"
   },
   "home": {
     "experienceHeader": "Erfarenhet",

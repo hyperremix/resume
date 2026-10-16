@@ -39,7 +39,7 @@ const BackLink = ({ hash }: { hash?: string }) => {
       to="/$locale"
       params={{ locale }}
       hash={hash}
-      className="inline-flex items-center gap-1.5 font-sans text-sm text-muted hover:text-ink"
+      className="inline-flex items-center gap-1.5 font-sans text-sm text-muted hover:text-ink touch:min-h-11"
     >
       <ArrowLeft aria-hidden className="size-4" />
       {t(translations.experience.homeLinkLabel)}

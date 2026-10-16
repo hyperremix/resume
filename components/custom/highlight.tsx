@@ -1,3 +1,4 @@
+import { skillCovers } from '@/experience';
 import { TExperience } from '@/experience/TExperience';
 import { Skill } from '@/skill/Skill';
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react';
@@ -55,10 +56,6 @@ export const useHighlight = () => {
   };
 };
 
-// AWS covers AWS Lambda, AWS S3 and friends, matching how the top-skill years are counted
-const matches = (candidate: Skill, skill: Skill) =>
-  candidate === skill || candidate.startsWith(`${skill} `);
-
 export const experienceUsesSkill = (experience: TExperience, skill: Skill): boolean =>
-  (experience.skills ?? []).some((candidate) => matches(candidate, skill)) ||
+  (experience.skills ?? []).some((candidate) => skillCovers(skill, candidate)) ||
   (experience.subExperiences ?? []).some((sub) => experienceUsesSkill(sub, skill));

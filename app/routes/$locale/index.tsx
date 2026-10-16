@@ -44,7 +44,7 @@ function Home() {
 
             <div className="mt-8 md:col-start-1 md:row-span-2 md:row-start-1 md:mt-0">
               <Reveal order={1}>
-                <h1 className="max-w-[26ch] font-serif text-3xl leading-[1.15] sm:text-4xl sm:leading-[1.12] lg:text-5xl">
+                <h1 className="max-w-[26ch] text-pretty font-serif text-3xl leading-[1.15] sm:text-4xl sm:leading-[1.12] lg:text-5xl">
                   {t(translations.headline)}
                 </h1>
               </Reveal>
